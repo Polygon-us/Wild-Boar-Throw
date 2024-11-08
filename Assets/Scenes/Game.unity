@@ -2305,11 +2305,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb4843bae7d24943842ea23130dcd55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FramingMode: 2
+  FramingMode: 0
   FramingSize: 0.8
   CenterOffset: {x: 0, y: 0}
   Damping: 0
-  SizeAdjustment: 2
+  SizeAdjustment: 1
   LateralAdjustment: 0
   FovRange: {x: 1, y: 100}
   DollyRange: {x: -100, y: 100}
