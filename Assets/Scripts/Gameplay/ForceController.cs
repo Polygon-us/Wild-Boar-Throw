@@ -31,7 +31,7 @@ public class ForceController : MonoBehaviour
         forceSlider.maxValue = maxForce;
         forceSlider.minValue = 0f;
         
-        Reset();
+        ResetThrow();
     }
 
     private void OnDisable()
@@ -39,7 +39,7 @@ public class ForceController : MonoBehaviour
         TapClickController.OnClick -= OnClick;
     }
 
-    public void Reset()
+    public void ResetThrow()
     {
         controlType = ControlType.Charging;
 

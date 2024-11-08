@@ -11,14 +11,14 @@ public class BoarThrower : MonoBehaviour
 
     private void OnEnable()
     {
-        forceController.OnForceReleased += ThrowBoar;
-        forceController.OnReset += Reset;
+        forceController.OnForceReleased += OnThrowBoar;
+        forceController.OnReset += OnReset;
     }
 
     private void OnDisable()
     {
-        forceController.OnForceReleased -= ThrowBoar;
-        forceController.OnReset -= Reset;
+        forceController.OnForceReleased -= OnThrowBoar;
+        forceController.OnReset -= OnReset;
     }
         
     private void Awake()
@@ -26,7 +26,7 @@ public class BoarThrower : MonoBehaviour
         boarRb = boar.GetComponent<Rigidbody>();
     }
 
-    private void ThrowBoar(float force, float angle)
+    private void OnThrowBoar(float force, float angle)
     {
         boarRb.isKinematic = false;
         
@@ -35,7 +35,7 @@ public class BoarThrower : MonoBehaviour
         boarRb.AddForce(force * direction, ForceMode.Impulse);
     }
     
-    private void Reset()
+    private void OnReset()
     {
         boar.transform.position = initialPosition.position;
         boar.transform.rotation = initialPosition.rotation;
