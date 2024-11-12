@@ -1,5 +1,3 @@
-using System;
-using System.Threading.Tasks;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -9,28 +7,30 @@ public class CamerasController : MonoBehaviour
     [SerializeField] private CinemachineCamera followCamera;
     [SerializeField] private CinemachineCamera landingCamera;
     [SerializeField] private ForceController forceController;
-
+    [SerializeField] private BoarThrower boarThrower;
+    
     private void OnEnable()
     {
         forceController.OnForceReleased += OnThrow;
         forceController.OnReset += OnReset;
+
+        boarThrower.OnCollision += ShowLanding;
     }
 
     private void OnDisable()
     {
         forceController.OnForceReleased -= OnThrow;
         forceController.OnReset -= OnReset;
+        
+        boarThrower.OnCollision -= ShowLanding;
     }
 
-    private async void OnThrow(float force, float _)
+    private void OnThrow((float, float) _)
     {
+        
         followCamera.Priority = 10;
         standingCamera.Priority = 0;
         landingCamera.Priority = 0;
-        
-        await Task.Delay(TimeSpan.FromSeconds(2));
-        
-        ShowLanding();
     }
 
     private void OnReset()

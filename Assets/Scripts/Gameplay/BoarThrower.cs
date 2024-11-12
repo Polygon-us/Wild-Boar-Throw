@@ -1,24 +1,31 @@
+using System;
 using UnityEngine;
 
 public class BoarThrower : MonoBehaviour
 {
     [SerializeField] private Transform initialPosition;
-    [SerializeField] private GameObject boar;
+    [SerializeField] private Boar boar;
 
     [SerializeField] private ForceController forceController;
     
     private Rigidbody boarRb;
 
+    public Action OnCollision;
+    
     private void OnEnable()
     {
         forceController.OnForceReleased += OnThrowBoar;
         forceController.OnReset += OnReset;
+
+        boar.OnCollision += CallOnCollision;
     }
 
     private void OnDisable()
     {
         forceController.OnForceReleased -= OnThrowBoar;
         forceController.OnReset -= OnReset;
+
+        boar.OnCollision -= CallOnCollision;
     }
         
     private void Awake()
@@ -26,13 +33,18 @@ public class BoarThrower : MonoBehaviour
         boarRb = boar.GetComponent<Rigidbody>();
     }
 
-    private void OnThrowBoar(float force, float angle)
+    private void CallOnCollision()
+    {
+        OnCollision?.Invoke();
+    }
+
+    private void OnThrowBoar((float force, float angle) args)
     {
         boarRb.isKinematic = false;
         
-        Vector3 direction = Quaternion.Euler(-angle, 0f, 0f) * initialPosition.forward;
+        Vector3 direction = Quaternion.Euler(-args.angle, 0f, 0f) * initialPosition.forward;
         
-        boarRb.AddForce(force * direction, ForceMode.Impulse);
+        boarRb.AddForce(args.force * direction, ForceMode.Impulse);
     }
     
     private void OnReset()

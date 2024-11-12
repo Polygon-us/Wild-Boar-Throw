@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialPosition: {fileID: 1862017157}
-  boar: {fileID: 1837999341}
+  boar: {fileID: 1837999347}
   forceController: {fileID: 1832232754}
 --- !u!4 &198341330
 Transform:
@@ -422,10 +422,10 @@ MonoBehaviour:
   Targets:
   - Object: {fileID: 1862017157}
     Weight: 1
-    Radius: 1
+    Radius: 5
   - Object: {fileID: 1837999345}
     Weight: 1
-    Radius: 1
+    Radius: 5
   m_LegacyTargets: []
 --- !u!1 &330585543
 GameObject:
@@ -1039,6 +1039,7 @@ MonoBehaviour:
   followCamera: {fileID: 124115354}
   landingCamera: {fileID: 1414168964}
   forceController: {fileID: 1832232754}
+  boarThrower: {fileID: 198341329}
 --- !u!1 &791239813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,6 +2679,7 @@ GameObject:
   - component: {fileID: 1837999343}
   - component: {fileID: 1837999342}
   - component: {fileID: 1837999346}
+  - component: {fileID: 1837999347}
   m_Layer: 0
   m_Name: Boar
   m_TagString: Untagged
@@ -2801,6 +2803,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1837999347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837999341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9138c3d6e11cf4a846c2b823a594c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1853812577
 GameObject:
   m_ObjectHideFlags: 0

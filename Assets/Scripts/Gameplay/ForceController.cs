@@ -22,7 +22,7 @@ public class ForceController : MonoBehaviour
     [SerializeField] private int numClicks;
     [SerializeField] private ControlType controlType;
 
-    public Action<float, float> OnForceReleased;
+    public Action<(float force, float angle)> OnForceReleased;
     public Action OnReset;
     
     private void Start()
@@ -93,7 +93,7 @@ public class ForceController : MonoBehaviour
             
         stateText.text = $"{controlType.ToString()}\n{numClicks} clicks\n{force} N";
             
-        OnForceReleased?.Invoke(force, angleController.Angle);
+        OnForceReleased?.Invoke((force, angleController.Angle));
     }
 
     private void UpdateForce(float delta)
