@@ -15,6 +15,10 @@ public class AngleController : MonoBehaviour
     [SerializeField] private TMP_Text angleText;
 
     public float Angle => angleSlider.value;
+    public float MinAngle => minAngle;
+    public float MaxAngle => maxAngle;
+    
+    public Slider AngleSlider => angleSlider;
 
     private void OnEnable()
     {

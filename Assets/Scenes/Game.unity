@@ -356,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialPosition: {fileID: 1862017157}
   boar: {fileID: 1837999347}
-  forceController: {fileID: 1832232754}
+  throwController: {fileID: 1832232754}
 --- !u!4 &198341330
 Transform:
   m_ObjectHideFlags: 0
@@ -1038,7 +1038,7 @@ MonoBehaviour:
   standingCamera: {fileID: 3667138}
   followCamera: {fileID: 124115354}
   landingCamera: {fileID: 1414168964}
-  forceController: {fileID: 1832232754}
+  throwController: {fileID: 1832232754}
   boarThrower: {fileID: 198341329}
 --- !u!1 &791239813
 GameObject:
@@ -1991,7 +1991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 44.21, y: -32.950012}
+  m_AnchoredPosition: {x: 44.20996, y: -32.94995}
   m_SizeDelta: {x: 160, y: 62.9658}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1213550378
@@ -2122,7 +2122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 36.639343, y: 29.012146}
+  m_AnchoredPosition: {x: 36.639404, y: 29.012207}
   m_SizeDelta: {x: 444.71997, y: 192.98785}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1334277004
@@ -2598,7 +2598,7 @@ GameObject:
   - component: {fileID: 1832232755}
   - component: {fileID: 1832232754}
   m_Layer: 0
-  m_Name: ForceController
+  m_Name: ThrowController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2650,7 +2650,6 @@ MonoBehaviour:
   force: 0
   chargeTimer: 0
   numClicks: 0
-  controlType: 0
 --- !u!4 &1832232755
 Transform:
   m_ObjectHideFlags: 0

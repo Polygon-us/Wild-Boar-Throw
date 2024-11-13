@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BoarThrower : MonoBehaviour
 {
     [SerializeField] private Transform initialPosition;
     [SerializeField] private Boar boar;
 
-    [SerializeField] private ForceController forceController;
+    [FormerlySerializedAs("forceController")] [SerializeField] private ThrowController throwController;
     
     private Rigidbody boarRb;
 
@@ -14,16 +15,16 @@ public class BoarThrower : MonoBehaviour
     
     private void OnEnable()
     {
-        forceController.OnForceReleased += OnThrowBoar;
-        forceController.OnReset += OnReset;
+        throwController.OnForceReleased += OnThrowBoar;
+        throwController.OnReset += OnReset;
 
         boar.OnCollision += CallOnCollision;
     }
 
     private void OnDisable()
     {
-        forceController.OnForceReleased -= OnThrowBoar;
-        forceController.OnReset -= OnReset;
+        throwController.OnForceReleased -= OnThrowBoar;
+        throwController.OnReset -= OnReset;
 
         boar.OnCollision -= CallOnCollision;
     }
