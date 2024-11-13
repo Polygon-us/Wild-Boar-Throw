@@ -7,21 +7,21 @@ public class CamerasController : MonoBehaviour
     [SerializeField] private CinemachineCamera standingCamera;
     [SerializeField] private CinemachineCamera followCamera;
     [SerializeField] private CinemachineCamera landingCamera;
-    [FormerlySerializedAs("forceController")] [SerializeField] private ThrowController throwController;
+    [FormerlySerializedAs("throwController")] [FormerlySerializedAs("forceController")] [SerializeField] private ThrowManager throwManager;
     [SerializeField] private BoarThrower boarThrower;
     
     private void OnEnable()
     {
-        throwController.OnForceReleased += OnThrow;
-        throwController.OnReset += OnReset;
+        throwManager.OnForceReleased += OnThrow;
+        throwManager.OnReset += OnReset;
 
         boarThrower.OnCollision += ShowLanding;
     }
 
     private void OnDisable()
     {
-        throwController.OnForceReleased -= OnThrow;
-        throwController.OnReset -= OnReset;
+        throwManager.OnForceReleased -= OnThrow;
+        throwManager.OnReset -= OnReset;
         
         boarThrower.OnCollision -= ShowLanding;
     }

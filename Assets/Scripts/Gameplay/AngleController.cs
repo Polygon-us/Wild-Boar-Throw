@@ -7,16 +7,17 @@ public class AngleController : MonoBehaviour
 {
     [SerializeField] private float minAngle = 30f;
     [SerializeField] private float maxAngle = 60f;
-    
+    [SerializeField] private float anglePingPongTime = 1f;
+
     [Header("Slider")]
     [SerializeField] private Slider angleSlider;
     [SerializeField] private TMP_Text minAngleText;
     [SerializeField] private TMP_Text maxAngleText;
     [SerializeField] private TMP_Text angleText;
 
-    public float Angle => angleSlider.value;
     public float MinAngle => minAngle;
     public float MaxAngle => maxAngle;
+    public float AnglePingPongTime => anglePingPongTime;
     
     public Slider AngleSlider => angleSlider;
 

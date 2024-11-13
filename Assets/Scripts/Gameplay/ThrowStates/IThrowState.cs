@@ -1,9 +1,9 @@
 public interface IThrowState
 {
-    public ThrowController Controller { get; set; }
+    public ThrowManager Manager { get; set; }
     
-    public void OnEnterState(ThrowController controller);
+    public void OnEnterState(ThrowManager manager);
     public void OnExitState();
-    public void OnUpdate(float deltaTime);
+    public void OnUpdate();
     public void OnClick();
 }

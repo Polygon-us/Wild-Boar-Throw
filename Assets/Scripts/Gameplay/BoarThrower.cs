@@ -7,7 +7,7 @@ public class BoarThrower : MonoBehaviour
     [SerializeField] private Transform initialPosition;
     [SerializeField] private Boar boar;
 
-    [FormerlySerializedAs("forceController")] [SerializeField] private ThrowController throwController;
+    [FormerlySerializedAs("throwController")] [FormerlySerializedAs("forceController")] [SerializeField] private ThrowManager throwManager;
     
     private Rigidbody boarRb;
 
@@ -15,16 +15,16 @@ public class BoarThrower : MonoBehaviour
     
     private void OnEnable()
     {
-        throwController.OnForceReleased += OnThrowBoar;
-        throwController.OnReset += OnReset;
+        throwManager.OnForceReleased += OnThrowBoar;
+        throwManager.OnReset += OnReset;
 
         boar.OnCollision += CallOnCollision;
     }
 
     private void OnDisable()
     {
-        throwController.OnForceReleased -= OnThrowBoar;
-        throwController.OnReset -= OnReset;
+        throwManager.OnForceReleased -= OnThrowBoar;
+        throwManager.OnReset -= OnReset;
 
         boar.OnCollision -= CallOnCollision;
     }

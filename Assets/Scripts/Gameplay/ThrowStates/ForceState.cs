@@ -5,30 +5,37 @@ public class ForceState : IThrowState
     private float force;
     private float chargeTimer;
     private int numClicks;
-    
-    public ThrowController Controller { get; set; }
 
-    public void OnEnterState(ThrowController controller)
-    {
-        Controller = controller;
+    private LTDescr timerTween; 
         
-        Controller.ForceSlider.maxValue = Controller.MaxForce;
-        Controller.ForceSlider.minValue = 0f;
-        Controller.ForceSlider.value = 0f;
+    public ThrowManager Manager { get; set; }
+
+    public void OnEnterState(ThrowManager manager)
+    {
+        Manager = manager;
+        
+        Manager.ForceController.ForceSlider.maxValue = Manager.ForceController.MaxForce;
+        Manager.ForceController.ForceSlider.minValue = 0f;
+        Manager.ForceController.ForceSlider.value = 0f;
+        
+        Manager.ForceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
+        
+        timerTween = LeanTween.value(1,0, Manager.ForceController.ForceChargeTime)
+            .setOnUpdate(t => Manager.ForceController.TimerSlider.value = t);
     }
 
     public void OnExitState()
     {
-        
+        LeanTween.cancel(timerTween.uniqueId);
     }
     
-    public void OnUpdate(float deltaTime)
+    public void OnUpdate()
     {
         chargeTimer += Time.deltaTime;
 
-        UpdateForce(-Controller.MaxForce * Controller.DecrementPercentage * Time.deltaTime);
+        UpdateForce(-Manager.ForceController.MaxForce * Manager.ForceController.DecrementPercentage * Time.deltaTime);
 
-        if (chargeTimer >= Controller.ChargeTime)
+        if (chargeTimer >= Manager.ForceController.ForceChargeTime)
         {
             Release();
             chargeTimer = 0f;
@@ -39,26 +46,28 @@ public class ForceState : IThrowState
     {
         numClicks++;
 
-        float forceResistance = Controller.ChargeCurve.Evaluate(force / Controller.MaxForce);
+        float forceResistance = Manager.ForceController.ChargeCurve.Evaluate(force / Manager.ForceController.MaxForce);
 
-        UpdateForce(forceResistance * Controller.MaxForce * Controller.IncrementPercentage);
+        UpdateForce(forceResistance * Manager.ForceController.MaxForce * Manager.ForceController.IncrementPercentage);
 
-        Controller.StateText.text = $"Charging\n{numClicks} clicks";
+        Manager.ForceController.StateText.text = $"Charging\n{numClicks} clicks";
     }
     
     private void UpdateForce(float delta)
     {
-        force = Mathf.Clamp(force + delta, 0f, Controller.MaxForce);
+        force = Mathf.Clamp(force + delta, 0f, Manager.ForceController.MaxForce);
 
-        Controller.ForceSlider.value = force;
+        Manager.ForceController.ForceSlider.value = force;
     }
     
     private void Release()
     {
-        Controller.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
+        Manager.ForceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
 
-        Controller.Force = force;
+        Manager.Force = force;
         
-        Controller.ChangeState(new AngleState());
+        LeanTween.cancel(timerTween.uniqueId);
+
+        Manager.ChangeState(new AngleState());
     }
 }
