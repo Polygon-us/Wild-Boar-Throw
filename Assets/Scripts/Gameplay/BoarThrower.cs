@@ -47,8 +47,11 @@ public class BoarThrower : MonoBehaviour
         boar.MainRb.isKinematic = false;
 
         Vector3 direction = Quaternion.Euler(-args.angle, 0f, 0f) * initialPosition.forward;
-
-        boar.MainRb.AddForce(args.force * direction, ForceMode.Impulse);
+        
+        foreach (var rb in boar.BoarRbs)
+        {
+            rb.AddForce(args.force/boar.BoarRbs.Count * direction, ForceMode.Impulse);
+        }
     }
 
     private void OnReset()

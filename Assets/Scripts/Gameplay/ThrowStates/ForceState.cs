@@ -8,6 +8,8 @@ public class ForceState : IThrowState
 
     private LTDescr timerTween; 
         
+    private bool firstClick = false;
+    
     public ThrowManager Manager { get; set; }
 
     public void OnEnterState(ThrowManager manager)
@@ -18,10 +20,9 @@ public class ForceState : IThrowState
         Manager.ForceController.ForceSlider.minValue = 0f;
         Manager.ForceController.ForceSlider.value = 0f;
         
-        Manager.ForceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
+        Manager.ForceController.TimerSlider.value = Manager.ForceController.ForceChargeTime;
         
-        timerTween = LeanTween.value(1,0, Manager.ForceController.ForceChargeTime)
-            .setOnUpdate(t => Manager.ForceController.TimerSlider.value = t);
+        Manager.ForceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
     }
 
     public void OnExitState()
@@ -31,6 +32,9 @@ public class ForceState : IThrowState
     
     public void OnUpdate()
     {
+        if (!firstClick) 
+            return;
+        
         chargeTimer += Time.deltaTime;
 
         UpdateForce(-Manager.ForceController.MaxForce * Manager.ForceController.DecrementPercentage * Time.deltaTime);
@@ -44,6 +48,14 @@ public class ForceState : IThrowState
 
     public void OnClick()
     {
+        if (!firstClick)
+        {
+            timerTween = LeanTween.value(1,0, Manager.ForceController.ForceChargeTime)
+                .setOnUpdate(t => Manager.ForceController.TimerSlider.value = t);
+            
+            firstClick = true;
+        }
+        
         numClicks++;
 
         float forceResistance = Manager.ForceController.ChargeCurve.Evaluate(force / Manager.ForceController.MaxForce);
