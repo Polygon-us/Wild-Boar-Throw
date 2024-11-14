@@ -6,44 +6,49 @@ public class CamerasController : MonoBehaviour
     [SerializeField] private CinemachineCamera standingCamera;
     [SerializeField] private CinemachineCamera followCamera;
     [SerializeField] private CinemachineCamera landingCamera;
-    [SerializeField] private ForceController forceController;
+    [SerializeField] private ThrowManager throwManager;
     [SerializeField] private BoarThrower boarThrower;
+    
+    private CinemachineCamera currentCamera;
     
     private void OnEnable()
     {
-        forceController.OnForceReleased += OnThrow;
-        forceController.OnReset += OnReset;
+        throwManager.OnForceReleased += OnThrow;
+        throwManager.OnReset += OnReset;
 
         boarThrower.OnCollision += ShowLanding;
     }
 
     private void OnDisable()
     {
-        forceController.OnForceReleased -= OnThrow;
-        forceController.OnReset -= OnReset;
+        throwManager.OnForceReleased -= OnThrow;
+        throwManager.OnReset -= OnReset;
         
         boarThrower.OnCollision -= ShowLanding;
     }
 
     private void OnThrow((float, float) _)
     {
-        
-        followCamera.Priority = 10;
-        standingCamera.Priority = 0;
-        landingCamera.Priority = 0;
+        ChangeCamera(followCamera);
     }
 
     private void OnReset()
     {
-        followCamera.Priority = 0;
-        standingCamera.Priority = 10;
-        landingCamera.Priority = 0;
+        ChangeCamera(standingCamera);
     }
 
     private void ShowLanding()
     {
-        followCamera.Priority = 0;
-        standingCamera.Priority = 0;
-        landingCamera.Priority = 10;
+        ChangeCamera(landingCamera);
+    }
+
+    private void ChangeCamera(CinemachineCamera newCamera)
+    {
+        if (currentCamera)
+            currentCamera.Priority = 0;
+        
+        currentCamera = newCamera;
+        
+        currentCamera.Priority = 10;
     }
 }
