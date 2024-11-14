@@ -34,7 +34,7 @@ public class CountState : IThrowState
             Manager.CountController.CountText.text = count.ToString();
 
             await UniTask.Delay(1000);
-
+            
             count--;
         }
 

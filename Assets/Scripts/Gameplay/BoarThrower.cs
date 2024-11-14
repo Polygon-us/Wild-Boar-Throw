@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BoarThrower : MonoBehaviour
@@ -9,7 +11,10 @@ public class BoarThrower : MonoBehaviour
     [SerializeField] private ThrowManager throwManager;
 
     public Action OnCollision;
-    
+
+    private List<Vector3> initialPositions;
+    private List<Quaternion> initialRotations;
+
     private void OnEnable()
     {
         throwManager.OnForceReleased += OnThrowBoar;
@@ -31,20 +36,33 @@ public class BoarThrower : MonoBehaviour
         OnCollision?.Invoke();
     }
 
+    private void Awake()
+    {
+        initialPositions = boar.BoarRbs.Select(x => x.position - boar.transform.position).ToList();
+        initialRotations = boar.BoarRbs.Select(x => x.rotation).ToList();
+    }
+
     private void OnThrowBoar((float force, float angle) args)
     {
-        boar.BoarRb.isKinematic = false;
-        
+        boar.MainRb.isKinematic = false;
+
         Vector3 direction = Quaternion.Euler(-args.angle, 0f, 0f) * initialPosition.forward;
-        
-        boar.BoarRb.AddForce(args.force * direction, ForceMode.Impulse);
+
+        boar.MainRb.AddForce(args.force * direction, ForceMode.Impulse);
     }
-    
+
     private void OnReset()
     {
-        boar.transform.position = initialPosition.position;
-        boar.transform.rotation = initialPosition.rotation;
+        for (int i = 0; i < boar.BoarRbs.Count; i++)
+        {
+            Rigidbody rb = boar.BoarRbs[i];
 
-        boar.BoarRb.isKinematic = true;
+            rb.isKinematic = true;
+            
+            rb.position = initialPositions[i] + initialPosition.position;
+            rb.rotation = initialRotations[i] * initialPosition.rotation; 
+            
+            rb.isKinematic = rb == boar.MainRb;
+        }
     }
 }
