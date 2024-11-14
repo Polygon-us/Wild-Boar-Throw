@@ -17,25 +17,14 @@ public class ThrowManager : MonoBehaviour
     public AngleController AngleController => angleController;
     public CountController CountController => countController;
 
-    public float Force
-    {
-        get => force;
-        set => force = value;
-    }
-
-    public float Angle
-    {
-        get => angle;
-        set => angle = value;
-    }
+    public float Force { get => force; set => force = value; }
+    public float Angle { get => angle; set => angle = value; }
 
     public Action<(float force, float angle)> OnForceReleased;
     public Action OnReset;
 
     private void Start()
     {
-        ChangeState(new ForceState());
-
         ResetThrow();
     }
 
