@@ -5,7 +5,8 @@ public class ThrowManager : MonoBehaviour
 {
     [SerializeField] private ForceController forceController;
     [SerializeField] private AngleController angleController;
-
+    [SerializeField] private CountController countController;
+    
     [Header("Debug")] 
     [SerializeField] private float force;
     [SerializeField] private float angle;
@@ -14,6 +15,7 @@ public class ThrowManager : MonoBehaviour
 
     public ForceController ForceController => forceController;
     public AngleController AngleController => angleController;
+    public CountController CountController => countController;
 
     public float Force
     {

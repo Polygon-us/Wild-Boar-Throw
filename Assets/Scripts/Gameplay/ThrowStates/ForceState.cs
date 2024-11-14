@@ -68,6 +68,6 @@ public class ForceState : IThrowState
         
         LeanTween.cancel(timerTween.uniqueId);
 
-        Manager.ChangeState(new AngleState());
+        Manager.ChangeState(new CountState());
     }
 }
