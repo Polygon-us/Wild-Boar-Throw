@@ -2,10 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Utils;
 
 public class Boar : MonoBehaviour
 {
+    [SerializeField] private Transform parent;
     [SerializeField] private Rigidbody boarRb;
+    [SerializeField] private LayerMask layerMask;
     
     private List<Rigidbody> boarRbs;
 
@@ -21,11 +24,16 @@ public class Boar : MonoBehaviour
     }
     
     public Rigidbody MainRb => boarRb;
+    public Transform Parent => parent;
     
     public Action OnCollision;
 
-    private void OnCollisionEnter(Collision _)
+
+    private void OnTriggerEnter(Collider other)
     {
+        if (!layerMask.IsInLayerMask(other.gameObject.layer))
+            return;
+        
         OnCollision?.Invoke();
     }
 }

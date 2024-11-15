@@ -33,12 +33,12 @@ public class BoarThrower : MonoBehaviour
 
     private void CallOnCollision()
     {
-        OnCollision?.Invoke();
+        LeanTween.delayedCall(2, OnCollision);
     }
 
     private void Awake()
     {
-        initialPositions = boar.BoarRbs.Select(x => x.position - boar.transform.position).ToList();
+        initialPositions = boar.BoarRbs.Select(x => x.position - boar.Parent.position).ToList();
         initialRotations = boar.BoarRbs.Select(x => x.rotation).ToList();
     }
 
