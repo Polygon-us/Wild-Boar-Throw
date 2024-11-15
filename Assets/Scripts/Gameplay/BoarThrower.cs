@@ -17,6 +17,8 @@ public class BoarThrower : MonoBehaviour
     
     private LTDescr delayedCall;
 
+    public float BoarDistance => boar.transform.position.z - initialPosition.position.z;
+    
     private void OnEnable()
     {
         throwManager.OnForceReleased += OnThrowBoar;
