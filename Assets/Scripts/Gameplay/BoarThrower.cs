@@ -14,6 +14,8 @@ public class BoarThrower : MonoBehaviour
 
     private List<Vector3> initialPositions;
     private List<Quaternion> initialRotations;
+    
+    private LTDescr delayedCall;
 
     private void OnEnable()
     {
@@ -33,7 +35,7 @@ public class BoarThrower : MonoBehaviour
 
     private void CallOnCollision()
     {
-        LeanTween.delayedCall(2, OnCollision);
+        delayedCall = LeanTween.delayedCall(2, OnCollision);
     }
 
     private void Awake()
@@ -56,6 +58,9 @@ public class BoarThrower : MonoBehaviour
 
     private void OnReset()
     {
+        if (delayedCall != null)
+            LeanTween.cancel(delayedCall.uniqueId);
+        
         for (int i = 0; i < boar.BoarRbs.Count; i++)
         {
             Rigidbody rb = boar.BoarRbs[i];
