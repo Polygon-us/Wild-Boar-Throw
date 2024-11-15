@@ -10,7 +10,7 @@ public class CountState : IThrowState
 
         Manager.CountController.Open();
 
-        CountDown();
+        CountDown().Forget();
     }
 
     public void OnExitState()
@@ -25,7 +25,7 @@ public class CountState : IThrowState
     {
     }
 
-    private async void CountDown()
+    private async UniTaskVoid CountDown()
     {
         int count = Manager.CountController.Count;
 
@@ -34,7 +34,7 @@ public class CountState : IThrowState
             Manager.CountController.CountText.text = count.ToString();
 
             await UniTask.Delay(1000);
-
+            
             count--;
         }
 
