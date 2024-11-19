@@ -16,7 +16,6 @@ public class DistanceFollow : MonoBehaviour
     [SerializeField] private ThrowManager throwManager;
     [SerializeField] private BoarThrower boarThrower;
 
-    private Camera _mainCamera;
     private RectTransform _rectRoot;
 
     private Vector3 _screenPos;
@@ -26,6 +25,19 @@ public class DistanceFollow : MonoBehaviour
     private float _currentDistance;
 
     private bool _wasThrown;
+    
+    private Camera _mainCamera;
+
+    private Camera MainCamera
+    {
+        get
+        {
+            if (!_mainCamera)   
+                _mainCamera = Camera.main;
+
+            return _mainCamera;
+        }
+    }
 
     private void OnEnable()
     {
@@ -45,8 +57,6 @@ public class DistanceFollow : MonoBehaviour
 
         CanvasScaler canvasScaler = GetComponentInParent<CanvasScaler>();
         canvasScaler.referenceResolution = new Vector2(Screen.width, Screen.height);
-
-        SetCamera();
     }
 
     private void Start()
@@ -71,11 +81,6 @@ public class DistanceFollow : MonoBehaviour
         distanceText.gameObject.SetActive(false);
     }
 
-    private void SetCamera()
-    {
-        _mainCamera = Camera.main;
-    }
-
     private void Update()
     {
         if (_wasThrown)
@@ -84,14 +89,11 @@ public class DistanceFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_mainCamera)
-            SetCamera();
-
         if (boar)
         {
-            _currentDistance = Vector3.Distance(_mainCamera.transform.position, boar.position);
+            _currentDistance = Vector3.Distance(MainCamera.transform.position, boar.position);
             
-            _screenPos = _mainCamera.WorldToScreenPoint(boar.position) + offset * _initialDistance / _currentDistance;
+            _screenPos = MainCamera.WorldToScreenPoint(boar.position) + offset * _initialDistance / _currentDistance;
         }
         
         _distanceToPos = Vector2.Distance(_rectRoot.anchoredPosition, _screenPos);
