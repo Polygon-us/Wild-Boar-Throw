@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,9 +20,10 @@ public class DistanceFollow : MonoBehaviour
     private RectTransform _rectRoot;
 
     private Vector3 _screenPos;
-    private Vector2 _referenceResolution;
 
-    private float _distance;
+    private float _distanceToPos;
+    private float _initialDistance;
+    private float _currentDistance;
 
     private bool _wasThrown;
 
@@ -41,9 +43,17 @@ public class DistanceFollow : MonoBehaviour
     {
         _rectRoot = transform as RectTransform;
 
-        _referenceResolution = GetComponentInParent<CanvasScaler>().referenceResolution;
+        CanvasScaler canvasScaler = GetComponentInParent<CanvasScaler>();
+        canvasScaler.referenceResolution = new Vector2(Screen.width, Screen.height);
 
         SetCamera();
+    }
+
+    private void Start()
+    {
+        _initialDistance = Vector3.Distance(_mainCamera.transform.position, boar.position);
+        
+        _currentDistance = _initialDistance;
     }
 
     private void OnThrowBoar((float force, float angle) obj)
@@ -66,12 +76,6 @@ public class DistanceFollow : MonoBehaviour
         _mainCamera = Camera.main;
     }
 
-    private void NormalizePosition(ref Vector3 pos)
-    {
-        pos.x = pos.x / Screen.width * _referenceResolution.x;
-        pos.y = pos.y / Screen.height * _referenceResolution.y;
-    }
-
     private void Update()
     {
         if (_wasThrown)
@@ -83,14 +87,16 @@ public class DistanceFollow : MonoBehaviour
         if (!_mainCamera)
             SetCamera();
 
-        if (boar && _mainCamera)
-            _screenPos = _mainCamera.WorldToScreenPoint(boar.position + offset);
+        if (boar)
+        {
+            _currentDistance = Vector3.Distance(_mainCamera.transform.position, boar.position);
+            
+            _screenPos = _mainCamera.WorldToScreenPoint(boar.position) + offset * _initialDistance / _currentDistance;
+        }
+        
+        _distanceToPos = Vector2.Distance(_rectRoot.anchoredPosition, _screenPos);
 
-        NormalizePosition(ref _screenPos);
-
-        _distance = Vector2.Distance(_rectRoot.anchoredPosition, _screenPos);
-
-        if (_distance > snapLimit)
+        if (_distanceToPos > snapLimit)
             _rectRoot.anchoredPosition = _screenPos;
         else
             _rectRoot.anchoredPosition = Vector2.Lerp(_rectRoot.anchoredPosition, _screenPos, Time.fixedDeltaTime * lerpMultiplier);
