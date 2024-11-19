@@ -14,7 +14,9 @@ public class AngleState : IThrowState
             {
                 angle = t;
                 manager.AngleController.AngleSlider.value = angle;
-            }).setLoopPingPong();
+            })
+            .setLoopPingPong(Manager.AngleController.PingPongCount)
+            .setOnComplete(Blunder);
     }
 
     public void OnExitState()
@@ -24,6 +26,17 @@ public class AngleState : IThrowState
 
     public void OnUpdate()
     {
+    }
+    
+    private void Blunder()
+    {
+        angle = 0;
+
+        Manager.Force /= 2;
+        
+        Manager.AngleController.Blunder();
+        
+        OnClick();
     }
 
     public void OnClick()
