@@ -34,7 +34,7 @@ public class AngleController : MonoBehaviour
     
     private void OnDisable()
     {
-        angleSlider.onValueChanged.AddListener(OnAngleChanged);
+        angleSlider.onValueChanged.RemoveListener(OnAngleChanged);
         manager.OnReset -= OnReset;
     }
    
