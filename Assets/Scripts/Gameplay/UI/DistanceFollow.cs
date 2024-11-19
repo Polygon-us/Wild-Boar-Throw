@@ -61,7 +61,7 @@ public class DistanceFollow : MonoBehaviour
 
     private void Start()
     {
-        _initialDistance = Vector3.Distance(_mainCamera.transform.position, boar.position);
+        _initialDistance = Vector3.Distance(MainCamera.transform.position, boar.position);
         
         _currentDistance = _initialDistance;
     }
