@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialPosition: {fileID: 1862017157}
-  boar: {fileID: 1377265296}
+  boar: {fileID: 0}
   throwManager: {fileID: 1832232754}
 --- !u!4 &198341330
 Transform:
@@ -682,11 +682,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!54 &308453794 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 5616911986374115040, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-  m_PrefabInstance: {fileID: 1056058343}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &308453797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1324962713389912452, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
@@ -2477,9 +2472,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6892356950935192634, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1377265296}
-    - targetCorrespondingSourceObject: {fileID: 6892356950935192634, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1377265297}
   m_SourcePrefab: {fileID: 100100000, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
 --- !u!1 &1069689456
@@ -3099,23 +3091,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6892356950935192634, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
   m_PrefabInstance: {fileID: 1056058343}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1377265296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377265293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa9138c3d6e11cf4a846c2b823a594c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: {fileID: 1743141024}
-  boarRb: {fileID: 308453794}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!135 &1377265297
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3715,11 +3690,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!4 &1743141024 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6701341448960675263, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-  m_PrefabInstance: {fileID: 1056058343}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1832232753
 GameObject:
   m_ObjectHideFlags: 0

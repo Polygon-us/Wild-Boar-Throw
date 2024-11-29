@@ -66,7 +66,7 @@ public class BoarThrower : MonoBehaviour
         for (int i = 0; i < boar.BoarRbs.Count; i++)
         {
             Rigidbody rb = boar.BoarRbs[i];
-
+            
             rb.isKinematic = true;
             
             rb.position = initialPositions[i] + initialPosition.position;
