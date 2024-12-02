@@ -10,6 +10,7 @@ public class ThrowManager : MonoBehaviour
     [Header("Debug")] 
     [SerializeField] private float force;
     [SerializeField] private float angle;
+    [SerializeField] private float simulationTimeScale = 1.0f;
 
     private IThrowState currentState;
 
@@ -60,10 +61,16 @@ public class ThrowManager : MonoBehaviour
         OnReset?.Invoke();
 
         ChangeState(new ForceState());
+        
+        // Debug
+        Time.timeScale = 1;
     }
 
     public void Release()
     {
+        // Debug
+        Time.timeScale = simulationTimeScale;
+        
         OnForceReleased?.Invoke((Force, Angle));
     }
 }

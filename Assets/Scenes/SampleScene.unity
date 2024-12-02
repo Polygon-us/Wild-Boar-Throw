@@ -789,11 +789,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!54 &395502466 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 7401791478811084703, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-  m_PrefabInstance: {fileID: 1299144221}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,11 +1125,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456854617}
   m_CullTransparentMesh: 1
---- !u!54 &595783515 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 6828773878304897862, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-  m_PrefabInstance: {fileID: 1299144221}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &675944249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,11 +1478,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
---- !u!54 &1127550298 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 6713961014765766959, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-  m_PrefabInstance: {fileID: 1299144221}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1252985748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,66 +1755,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2874541600541730459, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
-      objectReference: {fileID: 395502466}
-    - target: {fileID: 2874541600541730459, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Swing1Limit.limit
-      value: 15.995665
-      objectReference: {fileID: 0}
-    - target: {fileID: 2874541600541730459, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Swing2Limit.limit
-      value: 19.393536
-      objectReference: {fileID: 0}
-    - target: {fileID: 2874541600541730459, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_LowTwistLimit.limit
-      value: 34.884666
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408163743700396398, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
-      objectReference: {fileID: 595783515}
-    - target: {fileID: 4408163743700396398, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Swing1Limit.limit
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408163743700396398, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Swing2Limit.limit
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408163743700396398, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_LowTwistLimit.limit
-      value: 37
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410089823732243037, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Axis.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410089823732243037, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Axis.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410089823732243037, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
-      objectReference: {fileID: 1127550298}
-    - target: {fileID: 5410089823732243037, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Swing1Limit.limit
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410089823732243037, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Swing2Limit.limit
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410089823732243037, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_LowTwistLimit.limit
-      value: -80
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410089823732243037, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_HighTwistLimit.limit
-      value: 9.727295
-      objectReference: {fileID: 0}
     - target: {fileID: 6319713725814626053, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
       propertyPath: m_Name
       value: BoarThrowing
@@ -2063,6 +1988,7 @@ MonoBehaviour:
   countController: {fileID: 0}
   force: 2000
   angle: 45
+  simulationTimeScale: 0.1
 --- !u!4 &2058165257
 Transform:
   m_ObjectHideFlags: 0
