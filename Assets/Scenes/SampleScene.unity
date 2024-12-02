@@ -1988,7 +1988,7 @@ MonoBehaviour:
   countController: {fileID: 0}
   force: 2000
   angle: 45
-  simulationTimeScale: 0.1
+  simulationTimeScale: 1
 --- !u!4 &2058165257
 Transform:
   m_ObjectHideFlags: 0
