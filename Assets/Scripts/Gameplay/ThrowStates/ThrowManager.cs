@@ -61,6 +61,8 @@ public class ThrowManager : MonoBehaviour
         OnReset?.Invoke();
 
         ChangeState(new ForceState());
+
+        force = 0;
         
         // Debug
         Time.timeScale = 1;

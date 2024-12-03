@@ -70,6 +70,7 @@ public class ForceState : IThrowState
         force = Mathf.Clamp(force + delta, 0f, Manager.ForceController.MaxForce);
 
         Manager.ForceController.ForceSlider.value = force;
+        Manager.Force = force;
     }
     
     private void Release()
