@@ -37,14 +37,12 @@ public class tiemlineControl : MonoBehaviour
 
     void OnRelease((float force, float angle) args)
     {
-        throwManager.isReleased = true;
         MovePlayableDirector(0);
     }
 
     private void ResetThrow()
     {
         MovePlayableDirector(0);
-        throwManager.isReleased = false;
     }
     
     private void MovePlayableDirector(float time)
