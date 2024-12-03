@@ -58,6 +58,14 @@ public class BoarThrower : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (!throwManager.isReleased)
+        {
+            MoveRbToInitialPosition(boar.BoarRbs[0], initialPositions[0], initialRotations[0]);
+        }
+    }
+
     private void OnReset()
     {
         if (delayedCall != null)
@@ -65,14 +73,17 @@ public class BoarThrower : MonoBehaviour
         
         for (int i = 0; i < boar.BoarRbs.Count; i++)
         {
-            Rigidbody rb = boar.BoarRbs[i];
-            
-            rb.isKinematic = true;
-            
-            rb.position = initialPositions[i] + initialPosition.position;
-            rb.rotation = initialRotations[i] * initialPosition.rotation; 
-            
-            rb.isKinematic = rb == boar.MainRb;
+            MoveRbToInitialPosition(boar.BoarRbs[i], initialPositions[i], initialRotations[i]);
         }
+    }
+
+    private void MoveRbToInitialPosition(Rigidbody rb, Vector3 position, Quaternion rotation)
+    {
+        rb.isKinematic = true;
+            
+        rb.position = position + initialPosition.position;
+        rb.rotation = rotation * initialPosition.rotation; 
+            
+        rb.isKinematic = rb == boar.MainRb;
     }
 }

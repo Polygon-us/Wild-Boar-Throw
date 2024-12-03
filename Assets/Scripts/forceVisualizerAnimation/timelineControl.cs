@@ -7,14 +7,12 @@ public class tiemlineControl : MonoBehaviour
     private PlayableDirector playableDirector;
     [SerializeField]
     private ThrowManager throwManager;
-
-    private bool isReleased;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playableDirector = GetComponent<PlayableDirector>();
-        isReleased = false;
+        
         throwManager.OnForceReleased += OnRelease;
         throwManager.OnReset += ResetThrow;
     }
@@ -22,7 +20,7 @@ public class tiemlineControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isReleased)
+        if (!throwManager.isReleased)
         {
             MovePlayableDirector(throwManager.Force / throwManager.ForceController.MaxForce);
         }
@@ -30,14 +28,15 @@ public class tiemlineControl : MonoBehaviour
 
     void OnRelease((float force, float angle) args)
     {
-        isReleased = true;
+        throwManager.isReleased = true;
         MovePlayableDirector(0);
     }
 
     private void ResetThrow()
     {
         MovePlayableDirector(1.0f);
-        isReleased = false;
+        
+        throwManager.isReleased = false;
     }
     
     private void MovePlayableDirector(float time)

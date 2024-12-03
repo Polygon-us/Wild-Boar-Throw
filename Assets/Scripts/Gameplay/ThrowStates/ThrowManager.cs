@@ -11,6 +11,10 @@ public class ThrowManager : MonoBehaviour
     [SerializeField] private float force;
     [SerializeField] private float angle;
     [SerializeField] private float simulationTimeScale = 1.0f;
+    
+    // TODO: is there a way to handle this another way? knowing that we have a state machine...
+    // We will need to change the dependency chain a bit.
+    public bool isReleased;
 
     private IThrowState currentState;
 
@@ -59,6 +63,8 @@ public class ThrowManager : MonoBehaviour
     public void ResetThrow()
     {
         OnReset?.Invoke();
+        
+        isReleased = false;
 
         ChangeState(new ForceState());
 
@@ -72,6 +78,8 @@ public class ThrowManager : MonoBehaviour
     {
         // Debug
         Time.timeScale = simulationTimeScale;
+        
+        isReleased = true;
         
         OnForceReleased?.Invoke((Force, Angle));
     }
