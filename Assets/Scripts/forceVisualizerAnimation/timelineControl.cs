@@ -12,9 +12,18 @@ public class tiemlineControl : MonoBehaviour
     void Start()
     {
         playableDirector = GetComponent<PlayableDirector>();
-        
+    }
+
+    private void OnEnable()
+    {
         throwManager.OnForceReleased += OnRelease;
         throwManager.OnReset += ResetThrow;
+    }
+
+    private void OnDisable()
+    {
+        throwManager.OnForceReleased -= OnRelease;
+        throwManager.OnReset -= ResetThrow;
     }
 
     // Update is called once per frame
@@ -34,8 +43,7 @@ public class tiemlineControl : MonoBehaviour
 
     private void ResetThrow()
     {
-        MovePlayableDirector(1.0f);
-        
+        MovePlayableDirector(0);
         throwManager.isReleased = false;
     }
     

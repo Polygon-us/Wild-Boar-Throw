@@ -416,17 +416,21 @@ PrefabInstance:
       propertyPath: throwManager
       value: 
       objectReference: {fileID: 1832232754}
+    - target: {fileID: 7045089294197237972, guid: 38b737426155c1c4aadf079664282789, type: 3}
+      propertyPath: m_InitialTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7734780299205880343, guid: 38b737426155c1c4aadf079664282789, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.993
       objectReference: {fileID: 0}
     - target: {fileID: 7734780299205880343, guid: 38b737426155c1c4aadf079664282789, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.37
+      value: -0.343
       objectReference: {fileID: 0}
     - target: {fileID: 7734780299205880343, guid: 38b737426155c1c4aadf079664282789, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.19
+      value: -0.886
       objectReference: {fileID: 0}
     - target: {fileID: 7734780299205880343, guid: 38b737426155c1c4aadf079664282789, type: 3}
       propertyPath: m_LocalRotation.w
@@ -493,7 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049ed9f389b466c49b6a9199d057b226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialPosition: {fileID: 1862017157}
+  startPosition: {fileID: 1862017157}
   boar: {fileID: 1377265300}
   throwManager: {fileID: 1832232754}
 --- !u!4 &198341330
@@ -537,7 +541,7 @@ Transform:
   m_GameObject: {fileID: 219884063}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0030654666, y: 0.38267115, z: -0.007400691, w: 0.9238499}
-  m_LocalPosition: {x: 2.5, y: 1.5377808, z: -2.962634}
+  m_LocalPosition: {x: 4.9965, y: 1.1812807, z: -0.31063396}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
