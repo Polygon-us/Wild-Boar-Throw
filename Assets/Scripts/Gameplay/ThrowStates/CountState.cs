@@ -1,45 +1,34 @@
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
-public class CountState : IThrowState
+public class CountState : StateBase
 {
-    public ThrowManager Manager { get; set; }
-
-    public void OnEnterState(ThrowManager manager)
+    [SerializeField] private CountController countController;
+    
+    public override void OnEnterState(StateMachine stateMachine)
     {
-        Manager = manager;
-
-        Manager.CountController.Open();
+        base.OnEnterState(stateMachine);
+        
+        countController.Open();
 
         CountDown().Forget();
     }
-
-    public void OnExitState()
-    {
-    }
-
-    public void OnUpdate()
-    {
-    }
-
-    public void OnClick()
-    {
-    }
-
+    
     private async UniTaskVoid CountDown()
     {
-        int count = Manager.CountController.Count;
+        int count = countController.Count;
 
         while (count > 0)
         {
-            Manager.CountController.CountText.text = count.ToString();
+            countController.CountText.text = count.ToString();
 
             await UniTask.Delay(1000);
-            
+
             count--;
         }
 
-        Manager.CountController.Close();
+        countController.Close();
 
-        Manager.ChangeState(new AngleState());
+        StateMachine.NextState();
     }
 }
