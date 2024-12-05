@@ -674,6 +674,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: forceVisualizerAnimation
       objectReference: {fileID: 0}
+    - target: {fileID: 2820988437894775545, guid: 38b737426155c1c4aadf079664282789, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649986048890692474, guid: 38b737426155c1c4aadf079664282789, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7045089294197237972, guid: 38b737426155c1c4aadf079664282789, type: 3}
       propertyPath: m_WrapMode
       value: 2
@@ -2202,46 +2210,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1434847029333930343, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1760143334981530893, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2332932599739560178, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2418981345535750776, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559759070280796780, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858117421421962895, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027450804008044803, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4279306529411378089, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5064192009877978740, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616911986374115040, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6319713725814626053, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
       propertyPath: m_Name
       value: JabaliRagdoll
@@ -2284,30 +2252,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6701341448960675263, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6713961014765766959, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6828773878304897862, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7401791478811084703, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964435589651595979, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739682139283453309, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8805332855660333690, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
-      propertyPath: m_Interpolate
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3027,7 +2971,7 @@ MonoBehaviour:
   SizeAdjustment: 1
   LateralAdjustment: 0
   FovRange: {x: 1, y: 100}
-  DollyRange: {x: -100, y: 100}
+  DollyRange: {x: -122, y: 100}
   OrthoSizeRange: {x: 1, y: 1000}
 --- !u!114 &1414168964
 MonoBehaviour:
@@ -3116,7 +3060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b37ba2a4db303e4899c0a41ce0fc16a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForce: 2000
+  maxForce: 3000
   incrementPercentage: 0.1
   decrementPercentage: 0.1
   forceChargeTime: 3
