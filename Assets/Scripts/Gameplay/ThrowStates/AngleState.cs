@@ -1,50 +1,57 @@
-public class AngleState : IThrowState
-{
-    public ThrowManager Manager { get; set; }
+using UnityEngine;
 
+public class AngleState : StateBase
+{
+    [SerializeField] private AngleController angleController;
+    [SerializeField] private ThrowManager throwManager;
+    
     private LTDescr pingPongTween;
     private float angle;
 
-    public void OnEnterState(ThrowManager manager)
+    public override void OnEnterState(StateMachine stateMachine)
     {
-        Manager = manager;
-
-        pingPongTween = LeanTween.value(Manager.AngleController.MinAngle, Manager.AngleController.MaxAngle, Manager.AngleController.AnglePingPongTime)
+        base.OnEnterState(stateMachine);
+        
+        pingPongTween = LeanTween.value(angleController.MinAngle, angleController.MaxAngle, angleController.AnglePingPongTime)
             .setOnUpdate(t =>
             {
                 angle = t;
-                manager.AngleController.AngleSlider.value = angle;
+                angleController.AngleSlider.value = angle;
             })
-            .setLoopPingPong(Manager.AngleController.PingPongCount)
+            .setLoopPingPong(angleController.PingPongCount)
             .setOnComplete(Blunder);
     }
 
-    public void OnExitState()
+    public override void OnExitState()
     {
         LeanTween.cancel(pingPongTween.uniqueId);
     }
-
-    public void OnUpdate()
-    {
-    }
     
+    public override void OnClick()
+    {
+        throwManager.Angle = angle;
+
+        LeanTween.cancel(pingPongTween.uniqueId);
+
+        throwManager.NextState();
+    }
+
+    public override void OnReset()
+    {
+        angle = 0;
+        
+        if (pingPongTween != null)
+            LeanTween.cancel(pingPongTween.uniqueId);
+    }
+
     private void Blunder()
     {
         angle = 0;
 
-        Manager.Force /= 2;
+        throwManager.Force /= 2;
         
-        Manager.AngleController.Blunder();
+        angleController.Blunder();
         
         OnClick();
-    }
-
-    public void OnClick()
-    {
-        Manager.Angle = angle;
-
-        LeanTween.cancel(pingPongTween.uniqueId);
-
-        Manager.ChangeState(new ReleaseState());
     }
 }

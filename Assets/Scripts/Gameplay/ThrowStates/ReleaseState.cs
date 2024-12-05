@@ -1,21 +1,13 @@
-public class ReleaseState : IThrowState
+using UnityEngine;
+
+public class ReleaseState : StateBase
 {
-    public ThrowManager Manager { get; set; }
+    [SerializeField] private ThrowManager throwManager;
     
-    public void OnEnterState(ThrowManager manager)
+    public override void OnEnterState(StateMachine stateMachine)
     {
-        manager.Release();
-    }
-
-    public void OnExitState()
-    {
-    }
-
-    public void OnUpdate()
-    {
-    }
-
-    public void OnClick()
-    {
+        base.OnEnterState(stateMachine);
+        
+        throwManager.Release();
     }
 }

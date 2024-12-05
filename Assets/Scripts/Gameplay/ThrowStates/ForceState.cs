@@ -1,85 +1,97 @@
 using UnityEngine;
 
-public class ForceState : IThrowState
+public class ForceState : StateBase
 {
+    [SerializeField] private ForceController forceController;
+    [SerializeField] private ThrowManager throwManager;
+
     private float force;
     private float chargeTimer;
     private int numClicks;
 
-    private LTDescr timerTween; 
-        
+    private LTDescr timerTween;
+
     private bool firstClick = false;
-    
-    public ThrowManager Manager { get; set; }
 
-    public void OnEnterState(ThrowManager manager)
+
+    public override void OnEnterState(StateMachine stateMachine)
     {
-        Manager = manager;
+        base.OnEnterState(stateMachine);
         
-        Manager.ForceController.ForceSlider.maxValue = Manager.ForceController.MaxForce;
-        Manager.ForceController.ForceSlider.minValue = 0f;
-        Manager.ForceController.ForceSlider.value = 0f;
-        
-        Manager.ForceController.TimerSlider.value = Manager.ForceController.ForceChargeTime;
-        
-        Manager.ForceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
+        forceController.ForceSlider.maxValue = forceController.MaxForce;
+        forceController.ForceSlider.minValue = 0f;
+        forceController.ForceSlider.value = 0f;
+
+        forceController.TimerSlider.value = forceController.ForceChargeTime;
+
+        forceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
     }
 
-    public void OnExitState()
+    public override void OnExitState()
     {
-        LeanTween.cancel(timerTween.uniqueId);
+        if (timerTween != null)
+            LeanTween.cancel(timerTween.uniqueId);
     }
-    
-    public void OnUpdate()
+
+    public override void OnUpdate()
     {
-        if (!firstClick) 
+        if (!firstClick)
             return;
-        
+
         chargeTimer += Time.deltaTime;
 
-        UpdateForce(-Manager.ForceController.MaxForce * Manager.ForceController.DecrementPercentage * Time.deltaTime);
+        UpdateForce(-forceController.MaxForce * forceController.DecrementPercentage * Time.deltaTime);
 
-        if (chargeTimer >= Manager.ForceController.ForceChargeTime)
+        if (chargeTimer >= forceController.ForceChargeTime)
         {
             Release();
             chargeTimer = 0f;
         }
     }
 
-    public void OnClick()
+    public override void OnClick()
     {
         if (!firstClick)
         {
-            timerTween = LeanTween.value(1,0, Manager.ForceController.ForceChargeTime)
-                .setOnUpdate(t => Manager.ForceController.TimerSlider.value = t);
-            
+            timerTween = LeanTween.value(1, 0, forceController.ForceChargeTime)
+                .setOnUpdate(t => forceController.TimerSlider.value = t);
+
             firstClick = true;
         }
-        
+
         numClicks++;
 
-        float forceResistance = Manager.ForceController.ChargeCurve.Evaluate(force / Manager.ForceController.MaxForce);
+        float forceResistance = forceController.ChargeCurve.Evaluate(force / forceController.MaxForce);
 
-        UpdateForce(forceResistance * Manager.ForceController.MaxForce * Manager.ForceController.IncrementPercentage);
+        UpdateForce(forceResistance * forceController.MaxForce * forceController.IncrementPercentage);
 
-        Manager.ForceController.StateText.text = $"Charging\n{numClicks} clicks";
+        forceController.StateText.text = $"Charging\n{numClicks} clicks";
     }
-    
+
     private void UpdateForce(float delta)
     {
-        force = Mathf.Clamp(force + delta, 0f, Manager.ForceController.MaxForce);
+        force = Mathf.Clamp(force + delta, 0f, forceController.MaxForce);
 
-        Manager.ForceController.ForceSlider.value = force;
+        forceController.ForceSlider.value = force;
     }
-    
+
     private void Release()
     {
-        Manager.ForceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
+        forceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
 
-        Manager.Force = force;
-        
         LeanTween.cancel(timerTween.uniqueId);
 
-        Manager.ChangeState(new CountState());
+        throwManager.Force = force;
+
+        StateMachine.NextState();
+    }
+
+    public override void OnReset()
+    {
+        force = 0;
+        chargeTimer = 0;
+        numClicks = 0;
+
+        firstClick = false;
     }
 }

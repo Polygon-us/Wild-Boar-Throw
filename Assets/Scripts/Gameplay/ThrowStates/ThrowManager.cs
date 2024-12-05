@@ -3,21 +3,13 @@ using UnityEngine;
 
 public class ThrowManager : MonoBehaviour
 {
-    [SerializeField] private ForceController forceController;
-    [SerializeField] private AngleController angleController;
-    [SerializeField] private CountController countController;
+    [SerializeField] private StateMachine stateMachine;
     
     [Header("Debug")] 
     [SerializeField] private float force;
     [SerializeField] private float angle;
     [SerializeField] private float simulationTimeScale = 1.0f;
-
-    private IThrowState currentState;
-
-    public ForceController ForceController => forceController;
-    public AngleController AngleController => angleController;
-    public CountController CountController => countController;
-
+    
     public float Force { get => force; set => force = value; }
     public float Angle { get => angle; set => angle = value; }
 
@@ -41,26 +33,19 @@ public class ThrowManager : MonoBehaviour
 
     private void OnClick()
     {
-        currentState.OnClick();
+        stateMachine.OnClick();
     }
 
-    private void Update()
+    public void NextState()
     {
-        currentState?.OnUpdate();
-    }
-
-    public void ChangeState(IThrowState newState)
-    {
-        currentState?.OnExitState();
-        currentState = newState;
-        currentState.OnEnterState(this);
+        stateMachine.NextState();
     }
 
     public void ResetThrow()
     {
         OnReset?.Invoke();
 
-        ChangeState(new ForceState());
+        stateMachine.OnReset();
         
         // Debug
         Time.timeScale = 1;
