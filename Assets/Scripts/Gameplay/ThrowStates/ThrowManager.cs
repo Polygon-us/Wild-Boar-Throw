@@ -14,7 +14,6 @@ public class ThrowManager : MonoBehaviour
     public float Angle { get => angle; set => angle = value; }
 
     public Action<(float force, float angle)> OnForceReleased;
-    public Action OnReset;
 
     private void Start()
     {
@@ -43,8 +42,6 @@ public class ThrowManager : MonoBehaviour
 
     public void ResetThrow()
     {
-        OnReset?.Invoke();
-
         stateMachine.OnReset();
         
         // Debug
@@ -55,7 +52,5 @@ public class ThrowManager : MonoBehaviour
     {
         // Debug
         Time.timeScale = simulationTimeScale;
-        
-        OnForceReleased?.Invoke((Force, Angle));
     }
 }

@@ -38,6 +38,8 @@ public class AngleState : StateBase
 
     public override void OnReset()
     {
+        angleController.Reset();
+        
         angle = 0;
         
         if (pingPongTween != null)

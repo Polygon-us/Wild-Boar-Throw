@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BoarThrower : MonoBehaviour
 {
-    [SerializeField] private Transform initialPosition;
+    [SerializeField] private Transform startingPoint;
     [SerializeField] private Boar boar;
 
     [SerializeField] private ThrowManager throwManager;
@@ -17,21 +18,15 @@ public class BoarThrower : MonoBehaviour
     
     private LTDescr delayedCall;
 
-    public float BoarDistance => boar.transform.position.z - initialPosition.position.z;
+    public float BoarDistance => boar.transform.position.z - startingPoint.position.z;
     
     private void OnEnable()
     {
-        throwManager.OnForceReleased += OnThrowBoar;
-        throwManager.OnReset += OnReset;
-
         boar.OnCollision += CallOnCollision;
     }
 
     private void OnDisable()
     {
-        throwManager.OnForceReleased -= OnThrowBoar;
-        throwManager.OnReset -= OnReset;
-
         boar.OnCollision -= CallOnCollision;
     }
 
@@ -46,33 +41,42 @@ public class BoarThrower : MonoBehaviour
         initialRotations = boar.BoarRbs.Select(x => x.rotation).ToList();
     }
 
-    private void OnThrowBoar((float force, float angle) args)
+    public void ThrowBoar(float force, float angle)
     {
         boar.MainRb.isKinematic = false;
 
-        Vector3 direction = Quaternion.Euler(-args.angle, 0f, 0f) * initialPosition.forward;
+        Vector3 direction = Quaternion.Euler(-angle, 0f, 0f) * startingPoint.forward;
         
         foreach (var rb in boar.BoarRbs)
         {
-            rb.AddForce(args.force/boar.BoarRbs.Count * direction, ForceMode.Impulse);
+            rb.AddForce(force/boar.BoarRbs.Count * direction, ForceMode.Impulse);
         }
     }
-
-    private void OnReset()
+    
+    public void MoveBoarWithStartingPosition()
+    {
+        MoveRbToStartingPosition(boar.BoarRbs[0], initialPositions[0], initialRotations[0]);
+    }
+    
+    public void Reset()
     {
         if (delayedCall != null)
             LeanTween.cancel(delayedCall.uniqueId);
         
         for (int i = 0; i < boar.BoarRbs.Count; i++)
         {
-            Rigidbody rb = boar.BoarRbs[i];
-            
-            rb.isKinematic = true;
-            
-            rb.position = initialPositions[i] + initialPosition.position;
-            rb.rotation = initialRotations[i] * initialPosition.rotation; 
-            
-            rb.isKinematic = rb == boar.MainRb;
+            MoveRbToStartingPosition(boar.BoarRbs[i], initialPositions[i], initialRotations[i]);
         }
+    }
+    
+    private void MoveRbToStartingPosition(Rigidbody rb, Vector3 position, Quaternion rotation)
+    {
+        rb.isKinematic = true;
+            
+        rb.position = position + startingPoint.position;
+        rb.rotation = rotation * startingPoint.rotation; 
+            
+        rb.isKinematic = rb == boar.MainRb;
+
     }
 }
