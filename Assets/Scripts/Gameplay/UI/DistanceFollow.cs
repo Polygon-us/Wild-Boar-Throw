@@ -39,18 +39,6 @@ public class DistanceFollow : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        throwManager.OnForceReleased += OnThrowBoar;
-        throwManager.OnReset += OnReset;
-    }
-
-    private void OnDisable()
-    {
-        throwManager.OnForceReleased -= OnThrowBoar;
-        throwManager.OnReset -= OnReset;
-    }
-
     private void Awake()
     {
         _rectRoot = transform as RectTransform;
@@ -66,19 +54,16 @@ public class DistanceFollow : MonoBehaviour
         _currentDistance = _initialDistance;
     }
 
-    private void OnThrowBoar((float force, float angle) obj)
+    public void EnableDistanceText(bool enable)
     {
-        _wasThrown = true;
-        
-        distanceText.gameObject.SetActive(true);
+        _wasThrown = enable;
+        distanceText.gameObject.SetActive(enable);
     }
 
-    private void OnReset()
+    public void Reset()
     {
-        _wasThrown = false;
-        
+        EnableDistanceText(false);
         distanceText.text = "0 m";
-        distanceText.gameObject.SetActive(false);
     }
 
     private void Update()

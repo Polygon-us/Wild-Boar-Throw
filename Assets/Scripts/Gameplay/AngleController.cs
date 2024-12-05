@@ -29,13 +29,11 @@ public class AngleController : MonoBehaviour
     private void OnEnable()
     {
         angleSlider.onValueChanged.AddListener(OnAngleChanged);
-        manager.OnReset += OnReset;
     }
     
     private void OnDisable()
     {
         angleSlider.onValueChanged.RemoveListener(OnAngleChanged);
-        manager.OnReset -= OnReset;
     }
    
     private void Awake()
@@ -57,7 +55,7 @@ public class AngleController : MonoBehaviour
         angleText.text = $"{(int)value}°";
     }
 
-    private void OnReset()
+    public void Reset()
     {
         angleSlider.value = minAngle;
         

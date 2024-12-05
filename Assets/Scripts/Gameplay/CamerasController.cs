@@ -13,26 +13,20 @@ public class CamerasController : MonoBehaviour
     
     private void OnEnable()
     {
-        throwManager.OnForceReleased += OnThrow;
-        throwManager.OnReset += OnReset;
-
         boarThrower.OnCollision += ShowLanding;
     }
 
     private void OnDisable()
     {
-        throwManager.OnForceReleased -= OnThrow;
-        throwManager.OnReset -= OnReset;
-        
         boarThrower.OnCollision -= ShowLanding;
     }
 
-    private void OnThrow((float, float) _)
+    public void FollowCamera()
     {
         ChangeCamera(followCamera);
     }
 
-    private void OnReset()
+    public void Reset()
     {
         ChangeCamera(standingCamera);
     }

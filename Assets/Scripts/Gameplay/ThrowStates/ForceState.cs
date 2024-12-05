@@ -1,9 +1,13 @@
+using forceVisualizerAnimation;
 using UnityEngine;
 
 public class ForceState : StateBase
 {
     [SerializeField] private ForceController forceController;
     [SerializeField] private ThrowManager throwManager;
+    [SerializeField] private ForceVisualizerController forceVisualizerController;
+    [SerializeField] private BoarThrower boarThrower;
+    [SerializeField] private CamerasController camerasController;
 
     private float force;
     private float chargeTimer;
@@ -25,6 +29,8 @@ public class ForceState : StateBase
         forceController.TimerSlider.value = forceController.ForceChargeTime;
 
         forceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
+        
+        forceVisualizerController.MovePlayableDirector(1);
     }
 
     public override void OnExitState()
@@ -41,6 +47,8 @@ public class ForceState : StateBase
         chargeTimer += Time.deltaTime;
 
         UpdateForce(-forceController.MaxForce * forceController.DecrementPercentage * Time.deltaTime);
+        
+        boarThrower.MoveBoarWithStartingPosition();
 
         if (chargeTimer >= forceController.ForceChargeTime)
         {
@@ -71,8 +79,10 @@ public class ForceState : StateBase
     private void UpdateForce(float delta)
     {
         force = Mathf.Clamp(force + delta, 0f, forceController.MaxForce);
-
+        
         forceController.ForceSlider.value = force;
+        
+        forceVisualizerController.MovePlayableDirector(forceController.ChargeCurve.Evaluate(force / forceController.MaxForce));
     }
 
     private void Release()
@@ -91,7 +101,9 @@ public class ForceState : StateBase
         force = 0;
         chargeTimer = 0;
         numClicks = 0;
-
         firstClick = false;
+        forceVisualizerController.MovePlayableDirector(1);
+        camerasController.Reset();
+        boarThrower.Reset();
     }
 }

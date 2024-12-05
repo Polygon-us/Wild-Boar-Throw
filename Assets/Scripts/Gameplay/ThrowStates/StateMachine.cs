@@ -35,7 +35,9 @@ public class StateMachine : MonoBehaviour
     public void OnReset()
     {
         foreach (StateBase state in states)
-            state.OnReset();
+             state.OnReset();
+        
+        // currentState?.OnReset();
         
         if (states.Count > 0)
             ChangeState(states[0]);
