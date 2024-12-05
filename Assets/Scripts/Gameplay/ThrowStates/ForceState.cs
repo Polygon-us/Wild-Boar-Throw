@@ -1,4 +1,4 @@
-using forceVisualizerAnimation;
+using ForceVisualizerAnimation;
 using UnityEngine;
 
 public class ForceState : StateBase
@@ -30,7 +30,7 @@ public class ForceState : StateBase
 
         forceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
         
-        forceVisualizerController.MovePlayableDirector(1);
+        forceVisualizerController.MovePlayableDirector(0);
     }
 
     public override void OnExitState()
@@ -82,7 +82,7 @@ public class ForceState : StateBase
         
         forceController.ForceSlider.value = force;
         
-        forceVisualizerController.MovePlayableDirector(forceController.ChargeCurve.Evaluate(force / forceController.MaxForce));
+        forceVisualizerController.MovePlayableDirector(force / forceController.MaxForce);
     }
 
     private void Release()
@@ -102,7 +102,7 @@ public class ForceState : StateBase
         chargeTimer = 0;
         numClicks = 0;
         firstClick = false;
-        forceVisualizerController.MovePlayableDirector(1);
+        forceVisualizerController.MovePlayableDirector(0);
         camerasController.Reset();
         boarThrower.Reset();
     }

@@ -1,5 +1,5 @@
 using System;
-using forceVisualizerAnimation;
+using ForceVisualizerAnimation;
 using UnityEngine;
 
 public class ReleaseState : StateBase
@@ -22,7 +22,7 @@ public class ReleaseState : StateBase
 
         camerasController.FollowCamera();
         
-        forceVisualizerController.MovePlayableDirector(1);
+        forceVisualizerController.MovePlayableDirector(0);
     }
 
     public override void OnReset()

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7734780299205880343}
   - component: {fileID: 7045089294197237972}
   m_Layer: 0
-  m_Name: forceVisualizerAnimation
+  m_Name: ForceVisualizerAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-namespace forceVisualizerAnimation
+namespace ForceVisualizerAnimation
 {
     public class ForceVisualizerController : MonoBehaviour
     {
