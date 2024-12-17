@@ -8,7 +8,6 @@ public class BoarThrower : MonoBehaviour
 {
     [SerializeField] private Transform startingPoint;
     [SerializeField] private Boar boar;
-
     [SerializeField] private ThrowManager throwManager;
 
     public Action OnCollision;
@@ -17,18 +16,8 @@ public class BoarThrower : MonoBehaviour
     private List<Quaternion> initialRotations;
     
     private LTDescr delayedCall;
-
-    public float BoarDistance => boar.transform.position.z - startingPoint.position.z;
     
-    private void OnEnable()
-    {
-        boar.OnCollision += CallOnCollision;
-    }
-
-    private void OnDisable()
-    {
-        boar.OnCollision -= CallOnCollision;
-    }
+    public float BoarDistance => boar.transform.position.z - startingPoint.position.z;
 
     private void CallOnCollision()
     {

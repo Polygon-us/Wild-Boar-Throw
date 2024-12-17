@@ -153,6 +153,7 @@ MonoBehaviour:
   - {fileID: 1895870144}
   - {fileID: 2141290624}
   - {fileID: 1658575598}
+  - {fileID: 1677123254}
 --- !u!4 &346751
 Transform:
   m_ObjectHideFlags: 0
@@ -2923,8 +2924,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219884063}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0030654666, y: 0.38267115, z: -0.007400691, w: 0.9238499}
-  m_LocalPosition: {x: 0, y: 1.8684021, z: -2.962634}
+  m_LocalRotation: {x: -0.016018333, y: 0.70692533, z: -0.016018333, w: 0.7069254}
+  m_LocalPosition: {x: 0, y: 1.7620695, z: 0.2647321}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2947,7 +2948,7 @@ MonoBehaviour:
   UpdateMethod: 2
   Targets:
   - Object: {fileID: 1862017157}
-    Weight: 1
+    Weight: 0
     Radius: 5
   - Object: {fileID: 308453797}
     Weight: 1
@@ -7166,7 +7167,6 @@ MonoBehaviour:
   landingCamera: {fileID: 1414168964}
   throwManager: {fileID: 1832232754}
   boarThrower: {fileID: 198341329}
-  hideOnLanding: {fileID: 367327112}
 --- !u!1 &630822259
 GameObject:
   m_ObjectHideFlags: 0
@@ -14945,6 +14945,7 @@ Transform:
   - {fileID: 2141290625}
   - {fileID: 1895870143}
   - {fileID: 1658575597}
+  - {fileID: 1677123253}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1221186157
@@ -17348,7 +17349,7 @@ Transform:
   m_GameObject: {fileID: 1414168961}
   serializedVersion: 2
   m_LocalRotation: {x: 0.20082916, y: 0.677988, z: -0.20082916, w: 0.677988}
-  m_LocalPosition: {x: -8.386707, y: 6.4463906, z: 3.5550025}
+  m_LocalPosition: {x: 0, y: 1.8684021, z: -12.962634}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17369,7 +17370,7 @@ MonoBehaviour:
   FramingMode: 0
   FramingSize: 0.8
   CenterOffset: {x: 0, y: 0}
-  Damping: 0
+  Damping: 2
   SizeAdjustment: 1
   LateralAdjustment: 0
   FovRange: {x: 1, y: 100}
@@ -20548,6 +20549,7 @@ MonoBehaviour:
   boarThrower: {fileID: 198341329}
   camerasController: {fileID: 610457163}
   forceVisualizerController: {fileID: 665959105}
+  boar: {fileID: 1377265300}
 --- !u!1 &1658900195
 GameObject:
   m_ObjectHideFlags: 0
@@ -20760,6 +20762,54 @@ Transform:
   - {fileID: 1439594371}
   m_Father: {fileID: 434090756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1677123252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1677123253}
+  - component: {fileID: 1677123254}
+  m_Layer: 0
+  m_Name: LandedState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1677123253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677123252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1217779786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677123254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677123252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4670f2f24032d6640add411253e0777d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraController: {fileID: 610457163}
+  hideOnLanding: {fileID: 367327112}
+  targetGroup: {fileID: 219884065}
+  landingCamTransitionDuration: 2
 --- !u!1 &1679531771
 GameObject:
   m_ObjectHideFlags: 0
