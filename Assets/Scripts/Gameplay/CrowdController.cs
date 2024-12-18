@@ -6,8 +6,6 @@ using UnityEngine.Serialization;
 public class CrowdController : MonoBehaviour
 {
     [SerializeField] private Material crowdMaterial;
-    private ForceController forceController;
-    [SerializeField] [Range(0, 1)] private float force;
     [SerializeField] [Range(5, 70)] private float waveSpeedRange = 70;
     [SerializeField] [Range(0.02f, 0.04f)] private float waveAmplitudeRange = 0.04f;
 
