@@ -8,6 +8,7 @@ public class ForceState : StateBase
     [SerializeField] private ForceVisualizerController forceVisualizerController;
     [SerializeField] private BoarThrower boarThrower;
     [SerializeField] private CamerasController camerasController;
+    [SerializeField] private CrowdController crowdController;
 
     private float force;
     private float chargeTimer;
@@ -92,6 +93,8 @@ public class ForceState : StateBase
         LeanTween.cancel(timerTween.uniqueId);
 
         throwManager.Force = force;
+        
+        crowdController.MakeImpression(force / forceController.MaxForce);
 
         StateMachine.NextState();
     }
@@ -103,6 +106,7 @@ public class ForceState : StateBase
         numClicks = 0;
         firstClick = false;
         forceVisualizerController.MovePlayableDirector(0);
+        crowdController.MakeImpression(0);
         camerasController.Reset();
         boarThrower.Reset();
     }

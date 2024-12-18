@@ -8,7 +8,6 @@ public class BoarThrower : MonoBehaviour
 {
     [SerializeField] private Transform startingPoint;
     [SerializeField] private Boar boar;
-    [SerializeField] private ThrowManager throwManager;
 
     public Action OnCollision;
 
