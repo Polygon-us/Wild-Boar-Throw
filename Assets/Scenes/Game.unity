@@ -1253,7 +1253,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingPoint: {fileID: 1862017157}
   boar: {fileID: 1377265300}
-  throwManager: {fileID: 1832232754}
 --- !u!4 &198341330
 Transform:
   m_ObjectHideFlags: 0
@@ -2603,6 +2602,7 @@ MonoBehaviour:
   forceVisualizerController: {fileID: 665959105}
   boarThrower: {fileID: 198341329}
   camerasController: {fileID: 610457163}
+  crowdController: {fileID: 1854768992}
 --- !u!4 &420501588
 Transform:
   m_ObjectHideFlags: 0
@@ -5138,7 +5138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7456047896663812283, guid: 856e73895c84e8542b6ccd304eb81e8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.850006
+      value: 33.86
       objectReference: {fileID: 0}
     - target: {fileID: 7456047896663812283, guid: 856e73895c84e8542b6ccd304eb81e8b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6457,6 +6457,7 @@ Transform:
   - {fileID: 198341330}
   - {fileID: 610457162}
   - {fileID: 665959104}
+  - {fileID: 1854768991}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1213550376
@@ -10013,6 +10014,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1854768990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854768991}
+  - component: {fileID: 1854768992}
+  m_Layer: 0
+  m_Name: CrowdController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1854768991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854768990}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1210890702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1854768992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854768990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d765dfdf90e8a4482fa6d566e8a01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crowdMaterial: {fileID: 2100000, guid: 41ddf515854d7c04687a18946f1dd149, type: 2}
+  force: 0.1
+  waveSpeedRange: 40
 --- !u!4 &1857020896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7456047896663812283, guid: 856e73895c84e8542b6ccd304eb81e8b, type: 3}
