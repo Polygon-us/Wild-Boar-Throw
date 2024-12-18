@@ -7,12 +7,13 @@ public class CrowdController : MonoBehaviour
 {
     [SerializeField] private Material crowdMaterial;
     private ForceController forceController;
-    [SerializeField][Range(0,1)] private float force;
-
-    [SerializeField][Range(1, 70)] private float waveSpeedRange = 60;
+    [SerializeField] [Range(0, 1)] private float force;
+    [SerializeField] [Range(5, 70)] private float waveSpeedRange = 70;
+    [SerializeField] [Range(0.02f, 0.04f)] private float waveAmplitudeRange = 0.04f;
 
     public void MakeImpression(float amount)
     {
-        crowdMaterial.SetFloat("_waveSpeed", waveSpeedRange * math.clamp(amount, 0, 1));
+        crowdMaterial.SetFloat("_waveSpeed", math.clamp(waveSpeedRange * amount, 5, 70));
+        crowdMaterial.SetFloat("_waveAmplitude", math.clamp(waveAmplitudeRange * amount, 0.02f, 0.04f));
     }
 }

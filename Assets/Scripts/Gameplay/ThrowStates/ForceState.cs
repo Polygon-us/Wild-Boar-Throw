@@ -106,7 +106,7 @@ public class ForceState : StateBase
         numClicks = 0;
         firstClick = false;
         forceVisualizerController.MovePlayableDirector(0);
-        crowdController.MakeImpression(0.1f);
+        crowdController.MakeImpression(0);
         camerasController.Reset();
         boarThrower.Reset();
     }
