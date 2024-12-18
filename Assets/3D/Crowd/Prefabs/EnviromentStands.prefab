@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7777257368822890241}
   m_Layer: 0
-  m_Name: standsPrefab
+  m_Name: EnviromentStands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
