@@ -18,6 +18,8 @@ public class CamerasController : MonoBehaviour
 
     public void Reset()
     {
+        ResetCameras();
+        
         ChangeCamera(standingCamera);
     }
 
@@ -30,9 +32,16 @@ public class CamerasController : MonoBehaviour
     {
         if (currentCamera)
             currentCamera.Priority = 0;
-        
+
         currentCamera = newCamera;
-        
+
         currentCamera.Priority = 10;
+    }
+
+    private void ResetCameras()
+    {
+        standingCamera.Priority = 0;
+        followCamera.Priority = 0;
+        landingCamera.Priority = 0;
     }
 }
