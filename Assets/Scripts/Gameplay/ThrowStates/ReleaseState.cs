@@ -1,4 +1,3 @@
-using System;
 using ForceVisualizerAnimation;
 using UnityEngine;
 

@@ -1,6 +1,5 @@
 using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class LandedState : StateBase
 {
@@ -15,7 +14,7 @@ public class LandedState : StateBase
         
         cameraController.ShowLanding();
 
-        LeanTween.value(this.gameObject, 1f, 0f, landingCamTransitionDuration)
+        LeanTween.value(gameObject, 1f, 0f, landingCamTransitionDuration)
             .setEase(LeanTweenType.easeInOutCubic)
             .setOnUpdate((value) =>
             {
