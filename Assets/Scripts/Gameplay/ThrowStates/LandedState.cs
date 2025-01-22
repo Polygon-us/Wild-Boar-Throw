@@ -23,8 +23,8 @@ public class LandedState : StateBase
 
                 if (value <= 0.5)
                 {
-                    hideOnLanding.localPosition = new Vector3(-13, 11, 0);
-                    hideOnLanding.eulerAngles = new Vector3(0, 0, 36);
+                    hideOnLanding.localPosition = new Vector3(-35f, 0.2f, 70f);
+                    hideOnLanding.eulerAngles = new Vector3(0, 0, 20);
                 }
             });
     }
@@ -33,7 +33,7 @@ public class LandedState : StateBase
     {
         base.OnExitState();
 
-        hideOnLanding.localPosition = new Vector3(14.7f, 0, 0);
+        hideOnLanding.localPosition = new Vector3(-21.5f, 0f, 70.5f);
         hideOnLanding.eulerAngles = new Vector3(0, 0, 0);
     }
 }
