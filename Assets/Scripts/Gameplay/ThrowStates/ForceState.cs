@@ -29,7 +29,7 @@ public class ForceState : StateBase
 
         forceController.TimerSlider.value = forceController.ForceChargeTime;
 
-        forceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
+        forceController.StateText.text = $"Clicks {numClicks}";
         
         forceVisualizerController.MovePlayableDirector(0);
     }
@@ -74,7 +74,7 @@ public class ForceState : StateBase
 
         UpdateForce(forceResistance * forceController.MaxForce * forceController.IncrementPercentage);
 
-        forceController.StateText.text = $"Charging\n{numClicks} clicks";
+        forceController.StateText.text = $"Clicks {numClicks}";
     }
 
     private void UpdateForce(float delta)
@@ -88,8 +88,6 @@ public class ForceState : StateBase
 
     private void Release()
     {
-        forceController.StateText.text = $"Charging\n{numClicks} clicks\n{force} N";
-
         LeanTween.cancel(timerTween.uniqueId);
 
         throwManager.Force = force;
