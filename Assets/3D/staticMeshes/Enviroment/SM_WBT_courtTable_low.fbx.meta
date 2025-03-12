@@ -3,7 +3,12 @@ guid: baf0ea892db52074d881ad8138fd3550
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WBT_courtTable
+    second: {fileID: 2100000, guid: 7f22efdf3c38c4b4094ed5972da207db, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

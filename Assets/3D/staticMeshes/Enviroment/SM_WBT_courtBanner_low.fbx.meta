@@ -3,7 +3,12 @@ guid: 5874f15a2c7fa3c469bb0c898e7900d9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WBT_courtBanner
+    second: {fileID: 2100000, guid: 809cfaccad18c0f4d962cec6ebc56dc5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
