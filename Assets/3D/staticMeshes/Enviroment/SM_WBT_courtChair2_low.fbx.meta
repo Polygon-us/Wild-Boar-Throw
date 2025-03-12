@@ -3,9 +3,14 @@ guid: 66552ff29960ac241a6e24e9aece32ec
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WBT_courtChair2
+    second: {fileID: 2100000, guid: fa961b3b39f0bff48bbabe3ee2cefd4d, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1

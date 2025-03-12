@@ -3,7 +3,17 @@ guid: b9e85dfbd5bc27e4e80b9af0acf12e1e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WBT_stadiumDoor
+    second: {fileID: 2100000, guid: 825465272ceb0094db964df111c39488, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WBT_stadiumDoorBannerH
+    second: {fileID: 2100000, guid: 96b7db3e4dbd07648b8425d00ee3e1a9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

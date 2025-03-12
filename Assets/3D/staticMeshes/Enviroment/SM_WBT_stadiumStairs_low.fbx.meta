@@ -3,9 +3,29 @@ guid: b45414ccf6a779e4ea5cc8c8944a5dd2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WBT_stadiumChairsBannersV
+    second: {fileID: 2100000, guid: 09c487536b767fe41abf452dec8a148b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WBT_stadiumStairs
+    second: {fileID: 2100000, guid: df9d478997971a44a947a8c27d87ba10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WBT_stadiumStairsBannersH
+    second: {fileID: 2100000, guid: c159fa2eaaa448f4795db31a4ea96fd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 39e3253be3a151446bb7c97c0914aada, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
