@@ -4,12 +4,15 @@ using UnityEngine;
 public class CountState : StateBase
 {
     [SerializeField] private CountController countController;
+    [SerializeField] private CamerasController camerasController;
     
     public override void OnEnterState(StateMachine stateMachine)
     {
         base.OnEnterState(stateMachine);
         
         countController.Open();
+        
+        camerasController.FollowCamera();
 
         CountDown().Forget();
     }

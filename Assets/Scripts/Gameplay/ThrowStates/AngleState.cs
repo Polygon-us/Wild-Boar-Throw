@@ -1,9 +1,13 @@
+using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class AngleState : StateBase
 {
     [SerializeField] private AngleController angleController;
     [SerializeField] private ThrowManager throwManager;
+    [SerializeField] private CinemachineCamera followCamera;
+    [SerializeField] private AnimationCurve cameraBounceCurve;
     
     private LTDescr pingPongTween;
     private float angle;
@@ -25,6 +29,7 @@ public class AngleState : StateBase
     public override void OnExitState()
     {
         LeanTween.cancel(pingPongTween.uniqueId);
+        
     }
     
     public override void OnClick()
@@ -32,8 +37,13 @@ public class AngleState : StateBase
         throwManager.Angle = angle;
 
         LeanTween.cancel(pingPongTween.uniqueId);
+        
+        LeanTween.value(0, 1, 1).setOnUpdate((t) =>
+        {
+            float bounceValue = cameraBounceCurve.Evaluate(t);
+            followCamera.Lens.FieldOfView = bounceValue;
+        }).setOnComplete(()=> throwManager.NextState());
 
-        throwManager.NextState();
     }
 
     public override void OnReset()

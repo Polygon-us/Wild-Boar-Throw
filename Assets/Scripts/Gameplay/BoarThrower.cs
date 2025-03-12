@@ -15,6 +15,9 @@ public class BoarThrower : MonoBehaviour
     
     private LTDescr delayedCall;
     
+    [SerializeField]
+    private Vector3 boarOffsetFromStartPoint = new Vector3(0f, 0f, 0f); 
+    
     public float BoarDistance => boar.transform.position.z - startingPoint.position.z;
 
     private void CallOnCollision()
@@ -56,11 +59,11 @@ public class BoarThrower : MonoBehaviour
         }
     }
     
-    private void MoveRbToStartingPosition(Rigidbody rb, Vector3 position, Quaternion rotation)
+    private void MoveRbToStartingPosition(Rigidbody rb, Vector3 moveTo, Quaternion rotation)
     {
         rb.isKinematic = true;
             
-        rb.position = position + startingPoint.position;
+        rb.position = moveTo + startingPoint.position - boarOffsetFromStartPoint;
         rb.rotation = rotation * startingPoint.rotation; 
             
         rb.isKinematic = rb == boar.MainRb;

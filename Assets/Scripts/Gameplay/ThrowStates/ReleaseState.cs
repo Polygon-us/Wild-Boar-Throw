@@ -6,7 +6,7 @@ public class ReleaseState : StateBase
     [SerializeField] private ThrowManager throwManager;
     [SerializeField] private DistanceFollow distanceFollow;
     [SerializeField] private BoarThrower boarThrower;
-    [SerializeField] private CamerasController camerasController;
+    
     [SerializeField] private ForceVisualizerController forceVisualizerController;
     [SerializeField] private Boar boar;
     
@@ -22,9 +22,8 @@ public class ReleaseState : StateBase
         
         boarThrower.ThrowBoar(throwManager.Force, throwManager.Angle);
         
-        camerasController.FollowCamera();
-        
         forceVisualizerController.MovePlayableDirector(0);
+        forceVisualizerController.PlayThrowAnimation();
     }
 
     public override void OnExitState()
