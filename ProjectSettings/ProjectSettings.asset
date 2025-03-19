@@ -578,6 +578,7 @@ PlayerSettings:
   openGLRequireES32: 0
   m_TemplateCustomTags:
     PRODUCT_DESCRIPTION: 
+    WEBGL_POWER_PREFERENCE: 
   mobileMTRendering:
     Android: 1
     iPhone: 1
@@ -843,7 +844,7 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: APPLICATION:PWA
+  webGLTemplate: PROJECT:Responsive
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 2
