@@ -523,7 +523,7 @@ Transform:
   m_GameObject: {fileID: 124115350}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 1.8560694, z: 54.161736}
+  m_LocalPosition: {x: 0, y: 0.6060694, z: -4.838268}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -907,7 +907,7 @@ Transform:
   m_GameObject: {fileID: 219884063}
   serializedVersion: 2
   m_LocalRotation: {x: -0.016018333, y: 0.70692533, z: -0.016018333, w: 0.7069254}
-  m_LocalPosition: {x: 0.04, y: 1.7460694, z: 58.651733}
+  m_LocalPosition: {x: 0, y: 0.4960694, z: -0.34826788}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1146,6 +1146,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2820988437894775545, guid: 38b737426155c1c4aadf079664282789, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a9a13133beb73d4992e082e42d37fd8, type: 2}
     - target: {fileID: 4529556189693484659, guid: 38b737426155c1c4aadf079664282789, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1538,7 +1542,7 @@ Transform:
   m_GameObject: {fileID: 367327111}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.5, y: 0, z: 54.4}
+  m_LocalPosition: {x: -13.1, y: 0, z: 54.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1664,13 +1668,13 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.491
@@ -5333,7 +5337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8932673018710354035, guid: cf9be7a8c5c43a343acdf44df77d578f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.41
+      value: -33.1
       objectReference: {fileID: 0}
     - target: {fileID: 8980780856897046469, guid: cf9be7a8c5c43a343acdf44df77d578f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5593,15 +5597,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6701341448960675263, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6701341448960675263, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6701341448960675263, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6701341448960675263, guid: 70046df2e57036944bc52507b33c22f0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6577,13 +6581,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414168961}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70506984, y: 0.05363334, z: 0.05363334, w: 0.70506984}
-  m_LocalPosition: {x: -0.42, y: 2.95, z: -8.47}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1170002312}
-  m_LocalEulerAnglesHint: {x: 81.3, y: 90, z: 90}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1414168963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6596,7 +6600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb4843bae7d24943842ea23130dcd55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FramingMode: 2
+  FramingMode: 1
   FramingSize: 0.8
   CenterOffset: {x: 0, y: 0}
   Damping: 3
@@ -7688,6 +7692,7 @@ MonoBehaviour:
   hideOnLanding: {fileID: 367327112}
   targetGroup: {fileID: 219884065}
   landingCamTransitionDuration: 2
+  hideOnLandingPosition: {x: -13.1, y: 0, z: 54.4}
 --- !u!1001 &1680789721
 PrefabInstance:
   m_ObjectHideFlags: 0
