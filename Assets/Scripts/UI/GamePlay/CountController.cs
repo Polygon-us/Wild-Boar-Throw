@@ -1,26 +1,38 @@
-using TMPro;
 using UnityEngine;
+using System;
+using TMPro;
 
-public class CountController : MonoBehaviour
+namespace UI.Gameplay
 {
-    [SerializeField] private int count = 3;
-    [SerializeField] private TMP_Text countText;
-    
-    public int Count => count;
-    public TMP_Text CountText => countText;
-
-    private void Start()
+    public class CountController : MonoBehaviour
     {
-        Close();
-    }
+        [SerializeField] private int count = 3;
+        [SerializeField] private TMP_Text countText;
 
-    public void Open()
-    {
-        gameObject.SetActive(true);
-    }
+        private void Start()
+        {
+            Close();
+        }
 
-    public void Close()
-    {
-        gameObject.SetActive(false);
+        public void Open()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public void Close()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void StartCountDown(Action callback)
+        {
+            LeanTween.value(count, 0, count)
+                .setOnUpdate(value => countText.text = Mathf.CeilToInt(value).ToString());
+
+            countText.rectTransform.localScale = Vector3.one;
+            LeanTween.scale(countText.rectTransform, Vector3.one * 1.2f, 1)
+                .setRepeat(count)
+                .setOnComplete(callback);
+        }
     }
 }

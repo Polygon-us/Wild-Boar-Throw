@@ -1,37 +1,29 @@
-using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UI.Gameplay;
 
-public class CountState : StateBase
+namespace Gameplay.ThrowStates
 {
-    [SerializeField] private CountController countController;
-    [SerializeField] private CamerasController camerasController;
-    
-    public override void OnEnterState(StateMachine stateMachine)
+    public class CountState : StateBase
     {
-        base.OnEnterState(stateMachine);
-        
-        countController.Open();
-        
-        camerasController.FollowCamera();
+        [SerializeField] private CountController countController;
+        [SerializeField] private CamerasController camerasController;
 
-        CountDown().Forget();
-    }
-    
-    private async UniTaskVoid CountDown()
-    {
-        int count = countController.Count;
-
-        while (count > 0)
+        public override void OnEnterState(StateMachine stateMachine)
         {
-            countController.CountText.text = count.ToString();
+            base.OnEnterState(stateMachine);
 
-            await UniTask.Delay(1000);
+            countController.Open();
 
-            count--;
+            camerasController.FollowCamera();
+
+            countController.StartCountDown(OnCountDownFinished);
         }
 
-        countController.Close();
+        private void OnCountDownFinished()
+        {
+            countController.Close();
 
-        StateMachine.NextState();
+            StateMachine.NextState();
+        }
     }
 }

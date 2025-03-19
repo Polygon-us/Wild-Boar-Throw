@@ -1,47 +1,51 @@
+using Gameplay.ThrowStates;
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class CamerasController : MonoBehaviour
+namespace Gameplay
 {
-    [SerializeField] private CinemachineCamera standingCamera;
-    [SerializeField] private CinemachineCamera followCamera;
-    [SerializeField] private CinemachineCamera landingCamera;
-    [SerializeField] private ThrowManager throwManager;
-    [SerializeField] private BoarThrower boarThrower;
-    
-    private CinemachineCamera currentCamera;
-
-    public void FollowCamera()
+    public class CamerasController : MonoBehaviour
     {
-        ChangeCamera(followCamera);
-    }
+        [SerializeField] private CinemachineCamera standingCamera;
+        [SerializeField] private CinemachineCamera followCamera;
+        [SerializeField] private CinemachineCamera landingCamera;
+        [SerializeField] private ThrowManager throwManager;
+        [SerializeField] private BoarThrower boarThrower;
 
-    public void Reset()
-    {
-        ResetCameras();
-        
-        ChangeCamera(standingCamera);
-    }
+        private CinemachineCamera currentCamera;
 
-    public void ShowLanding()
-    {
-        ChangeCamera(landingCamera);
-    }
+        public void FollowCamera()
+        {
+            ChangeCamera(followCamera);
+        }
 
-    private void ChangeCamera(CinemachineCamera newCamera)
-    {
-        if (currentCamera)
-            currentCamera.Priority = 0;
+        public void Reset()
+        {
+            ResetCameras();
 
-        currentCamera = newCamera;
+            ChangeCamera(standingCamera);
+        }
 
-        currentCamera.Priority = 10;
-    }
+        public void ShowLanding()
+        {
+            ChangeCamera(landingCamera);
+        }
 
-    private void ResetCameras()
-    {
-        standingCamera.Priority = 0;
-        followCamera.Priority = 0;
-        landingCamera.Priority = 0;
+        private void ChangeCamera(CinemachineCamera newCamera)
+        {
+            if (currentCamera)
+                currentCamera.Priority = 0;
+
+            currentCamera = newCamera;
+
+            currentCamera.Priority = 10;
+        }
+
+        private void ResetCameras()
+        {
+            standingCamera.Priority = 0;
+            followCamera.Priority = 0;
+            landingCamera.Priority = 0;
+        }
     }
 }

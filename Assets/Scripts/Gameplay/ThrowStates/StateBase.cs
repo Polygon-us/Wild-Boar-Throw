@@ -1,27 +1,30 @@
 using UnityEngine;
 
-public abstract class StateBase : MonoBehaviour
+namespace Gameplay.ThrowStates
 {
-    protected StateMachine StateMachine { get; private set; }
-    
-    public virtual void OnEnterState(StateMachine stateMachine)
+    public abstract class StateBase : MonoBehaviour
     {
-        StateMachine = stateMachine;
-    }
+        protected StateMachine StateMachine { get; private set; }
 
-    public virtual void OnExitState()
-    {
-    }
+        public virtual void OnEnterState(StateMachine stateMachine)
+        {
+            StateMachine = stateMachine;
+        }
 
-    public virtual void OnUpdate()
-    {
-    }
+        public virtual void OnExitState()
+        {
+        }
 
-    public virtual void OnClick()
-    {
-    }
+        public virtual void OnUpdate()
+        {
+        }
 
-    public virtual void OnReset()
-    {
+        public virtual void OnClick()
+        {
+        }
+
+        public virtual void OnReset()
+        {
+        }
     }
 }

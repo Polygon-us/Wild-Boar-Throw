@@ -1,27 +1,30 @@
-using System;
-using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine;
+using System;
 
-public class TapClickController : MonoBehaviour
+namespace Gameplay
 {
-    private InputAction clickAction;
-    
-    public static Action OnClick;
-    
-    private void Start()
+    public class TapClickController : MonoBehaviour
     {
-        clickAction = InputSystem.actions.FindAction("Click");
-    }
+        private InputAction clickAction;
 
-    private void Update()
-    {
-        if (clickAction.WasPressedThisFrame())
+        public static Action OnClick;
+
+        private void Start()
         {
-            OnClick?.Invoke();
+            clickAction = InputSystem.actions.FindAction("Click");
         }
-        
-        if (clickAction.WasReleasedThisFrame())
+
+        private void Update()
         {
+            if (clickAction.WasPressedThisFrame())
+            {
+                OnClick?.Invoke();
+            }
+
+            if (clickAction.WasReleasedThisFrame())
+            {
+            }
         }
     }
 }
