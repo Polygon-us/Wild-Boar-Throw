@@ -20,7 +20,7 @@ namespace Gameplay.ThrowStates
 
             LeanTween.value(gameObject, 1f, 0f, landingCamTransitionDuration)
                 .setEase(LeanTweenType.easeInOutCubic)
-                .setDelay(1.5f) // Delay needs to be the same as in the cinemachine custom blends
+                .setDelay(1f) // Delay needs to be the same as in the cinemachine custom blends
                 .setOnUpdate((value) =>
                 {
                     targetGroup.Targets[^1].Weight = value + 1;
