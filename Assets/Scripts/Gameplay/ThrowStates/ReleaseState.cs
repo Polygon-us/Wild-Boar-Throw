@@ -1,18 +1,18 @@
 using ForceVisualizerAnimation;
 using UnityEngine;
 using UI.Gameplay;
-using UnityEngine.Serialization;
 
 namespace Gameplay.ThrowStates
 {
     public class ReleaseState : StateBase
     {
         [SerializeField] private ThrowManager throwManager;
-        [FormerlySerializedAs("distanceFollow")] [SerializeField] private DistanceFollowView distanceFollowView;
+        [SerializeField] private DistanceFollowView distanceFollowView;
         [SerializeField] private BoarThrower boarThrower;
-
         [SerializeField] private ForceVisualizerController forceVisualizerController;
         [SerializeField] private Boar boar;
+
+        private int _delayCalleTween;
 
         public override void OnEnterState(StateMachine stateMachine)
         {
@@ -38,11 +38,13 @@ namespace Gameplay.ThrowStates
         public override void OnReset()
         {
             distanceFollowView.Reset();
+
+            LeanTween.cancel(_delayCalleTween);
         }
 
         private void CallOnCollision()
         {
-            LeanTween.delayedCall(2, StateMachine.NextState);
+            _delayCalleTween = LeanTween.delayedCall(2, StateMachine.NextState).uniqueId;
         }
     }
 }

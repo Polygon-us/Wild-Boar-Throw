@@ -19,15 +19,13 @@ namespace Gameplay.Controllers
         [SerializeField] private TMP_Text minAngleText;
         [SerializeField] private TMP_Text maxAngleText;
         [SerializeField] private TMP_Text angleText;
-
-        private Color _originalColor;
-
-        public float MinAngle => minAngle;
-        public float MaxAngle => maxAngle;
-        public float AnglePingPongTime => anglePingPongTime;
+        
         public int AngleSelectionTime => angleSelectionTime;
-    
-        public Slider AngleSlider => angleSlider;
+        public float Angle => angleSlider.value;
+
+        
+        private Color _originalColor;
+        private int _tween;
 
         private void OnEnable()
         {
@@ -68,8 +66,26 @@ namespace Gameplay.Controllers
 
         public void Blunder()
         {
+            angleSlider.value = minAngle;
+            
             angleText.color = Color.red;
             angleText.text = "BLUNDER";
+        }
+
+        public void StartTween()
+        {
+            _tween = LeanTween.value(minAngle, maxAngle,
+                    anglePingPongTime)
+                .setOnUpdate(t =>
+                {
+                    angleSlider.value = t;
+                })
+                .setLoopPingPong().uniqueId;
+        }
+
+        public void StopTween()
+        {
+            LeanTween.cancel(_tween);
         }
     }
 }

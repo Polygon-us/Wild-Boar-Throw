@@ -6,18 +6,13 @@ namespace Gameplay.ThrowStates
 {
     public class AngleState : StateBase
     {
-        private const string AngleMessage = "Apuntando";
-
         [SerializeField] private AngleController angleController;
         [SerializeField] private CountdownController countdownController;
         [SerializeField] private CamerasController camerasController;
         [SerializeField] private ThrowManager throwManager;
         [SerializeField] private CinemachineCamera followCamera;
         [SerializeField] private AnimationCurve cameraBounceCurve;
-
-        private LTDescr pingPongTween;
-        private float angle;
-
+        
         private bool _clicked;
 
         public override void OnEnterState(StateMachine stateMachine)
@@ -28,24 +23,15 @@ namespace Gameplay.ThrowStates
             
             camerasController.FollowCamera();
             
-            countdownController.Open(angleController.AngleSelectionTime, AngleMessage);
-            countdownController.StartCountDown();
-            
-            pingPongTween = LeanTween.value(angleController.MinAngle, angleController.MaxAngle,
-                    angleController.AnglePingPongTime)
-                .setOnUpdate(t =>
-                {
-                    angle = t;
-                    angleController.AngleSlider.value = angle;
-                })
-                .setLoopPingPong()
-                .setOnComplete(Blunder);
+            countdownController.StartCountDown(Blunder);
+
+            angleController.StartTween();
         }
 
         public override void OnExitState()
         {
             countdownController.Close();
-            LeanTween.cancel(pingPongTween.uniqueId);
+            angleController.StopTween();
         }
 
         public override void OnClick()
@@ -55,10 +41,11 @@ namespace Gameplay.ThrowStates
              
             _clicked = true;
             
-            throwManager.Angle = angle;
-
-            LeanTween.cancel(pingPongTween.uniqueId);
-
+            countdownController.StopCountDown();
+            angleController.StopTween();
+            
+            throwManager.Angle = angleController.Angle; 
+            
             LeanTween.value(0, 1, 1).setOnUpdate((t) =>
             {
                 float bounceValue = cameraBounceCurve.Evaluate(t);
@@ -69,17 +56,10 @@ namespace Gameplay.ThrowStates
         public override void OnReset()
         {
             angleController.Reset();
-
-            angle = 0;
-
-            if (pingPongTween != null)
-                LeanTween.cancel(pingPongTween.uniqueId);
         }
 
         private void Blunder()
         {
-            angle = 0;
-
             throwManager.Force /= 2;
 
             angleController.Blunder();

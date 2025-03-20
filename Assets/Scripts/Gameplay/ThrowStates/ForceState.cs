@@ -6,8 +6,6 @@ namespace Gameplay.ThrowStates
 {
     public class ForceState : StateBase
     {
-        private const string ChargingMessage = "Cargando";
-        
         [SerializeField] private ForceController forceController;
         [SerializeField] private CountdownController countdownController;
         [SerializeField] private ThrowManager throwManager;
@@ -16,95 +14,78 @@ namespace Gameplay.ThrowStates
         [SerializeField] private CamerasController camerasController;
         [SerializeField] private CrowdController crowdController;
 
-        private float force;
-        private float chargeTimer;
-        private int numClicks;
+        private float _force;
+        private int _numClicks;
         
-        private bool firstClick = false;
+        private bool _firstClick = false;
 
 
         public override void OnEnterState(StateMachine stateMachine)
         {
             base.OnEnterState(stateMachine);
             
-            countdownController.Open(forceController.ForceChargeTime, ChargingMessage);
-            
             forceController.ClickBtn.onClick.AddListener(FirstClick);
             forceController.ClickBtn.gameObject.SetActive(true);
             
-            forceController.StateText.text = $"Clicks {numClicks}";
+            forceController.StateText.text = $"Clicks {_numClicks}";
 
             forceVisualizerController.MovePlayableDirector(0);
         }
 
-        public override void OnExitState()
-        {
-            countdownController.Close();
-        }
-
         public override void OnUpdate()
         {
-            if (!firstClick)
+            if (!_firstClick)
                 return;
-
-            chargeTimer += Time.deltaTime;
-
+            
             UpdateForce(-forceController.MaxForce * forceController.DecrementPercentage * Time.deltaTime);
 
             boarThrower.MoveBoarWithStartingPosition();
-
-            if (chargeTimer >= forceController.ForceChargeTime)
-            {
-                Release();
-                chargeTimer = 0f;
-            }
         }
 
         private void FirstClick()
         {
-            firstClick = true;
+            _firstClick = true;
             forceController.ClickBtn.onClick.RemoveListener(FirstClick);
             forceController.ClickBtn.gameObject.SetActive(false);
             
-            countdownController.StartCountDown();
+            countdownController.StartCountDown(Release);
         }
 
         public override void OnClick()
         {
-            if (!firstClick)
+            if (!_firstClick)
                 return;
 
-            numClicks++;
+            _numClicks++;
 
-            float forceResistance = forceController.ChargeCurve.Evaluate(force / forceController.MaxForce);
+            float forceResistance = forceController.ChargeCurve.Evaluate(_force / forceController.MaxForce);
 
             UpdateForce(forceResistance * forceController.MaxForce * forceController.IncrementPercentage);
 
-            forceController.StateText.text = $"Clicks {numClicks}";
+            forceController.StateText.text = $"Clicks {_numClicks}";
         }
 
         private void UpdateForce(float delta)
         {
-            force = Mathf.Clamp(force + delta, 0f, forceController.MaxForce);
+            _force = Mathf.Clamp(_force + delta, 0f, forceController.MaxForce);
 
-            forceVisualizerController.MovePlayableDirector(force / forceController.MaxForce);
+            forceVisualizerController.MovePlayableDirector(_force / forceController.MaxForce);
         }
 
         private void Release()
         {
-            throwManager.Force = force;
+            throwManager.Force = _force;
 
-            crowdController.MakeImpression(force / forceController.MaxForce);
+            crowdController.MakeImpression(_force / forceController.MaxForce);
 
             StateMachine.NextState();
         }
 
         public override void OnReset()
         {
-            force = 0;
-            chargeTimer = 0;
-            numClicks = 0;
-            firstClick = false;
+            _force = 0;
+            _numClicks = 0;
+            _firstClick = false;
             forceVisualizerController.MovePlayableDirector(0);
             crowdController.MakeImpression(0);
             camerasController.Reset();

@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - {fileID: 420501587}
+  - {fileID: 1836576961}
   - {fileID: 2141290624}
   - {fileID: 1658575598}
   - {fileID: 1677123254}
@@ -5548,6 +5549,7 @@ Transform:
   m_Children:
   - {fileID: 346751}
   - {fileID: 420501588}
+  - {fileID: 1836576962}
   - {fileID: 2141290625}
   - {fileID: 1658575597}
   - {fileID: 1677123253}
@@ -6776,6 +6778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26607798ec44817809a328ef5d0e7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countdownTime: 3
   countdownPanel: {fileID: 251094148}
   actionText: {fileID: 1137490552}
   countText: {fileID: 1306220879}
@@ -7446,6 +7449,51 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1210890702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1836576960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836576962}
+  - component: {fileID: 1836576961}
+  m_Layer: 0
+  m_Name: CountdownState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1836576961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836576960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5082d1268f431f34c95b49bc98333231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownController: {fileID: 1597173244}
+--- !u!4 &1836576962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836576960}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1217779786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1849571805 stripped
 Transform:
