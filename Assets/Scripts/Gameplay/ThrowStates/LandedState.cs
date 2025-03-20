@@ -16,7 +16,7 @@ public class LandedState : StateBase
         cameraController.ShowLanding();
 
         LeanTween.value(gameObject, 1f, 0f, landingCamTransitionDuration)
-            .setEase(LeanTweenType.easeInOutCubic).setDelay(1.5f) // Delay needs to be the same as in the cinemachine custom blends
+            .setEase(LeanTweenType.easeInOutCubic).setDelay(1) // Delay needs to be the same as in the cinemachine custom blends
             .setOnUpdate((value) =>
             {
                 targetGroup.Targets[^1].Weight = value + 1;
