@@ -150,7 +150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - {fileID: 420501587}
-  - {fileID: 0}
   - {fileID: 2141290624}
   - {fileID: 1658575598}
   - {fileID: 1677123254}
@@ -1773,6 +1772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceController: {fileID: 1490453892}
+  countdownController: {fileID: 1597173244}
   throwManager: {fileID: 1832232754}
   forceVisualizerController: {fileID: 665959105}
   boarThrower: {fileID: 198341329}
@@ -5191,6 +5191,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5874f15a2c7fa3c469bb0c898e7900d9, type: 3}
   m_PrefabInstance: {fileID: 1116100897}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1137490552 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1177542034333196796, guid: db3e05941c388074bb518726ded0ebe5, type: 3}
+  m_PrefabInstance: {fileID: 5756935265753546876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1139911544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5538,7 +5549,6 @@ Transform:
   - {fileID: 346751}
   - {fileID: 420501588}
   - {fileID: 2141290625}
-  - {fileID: 1895870143}
   - {fileID: 1658575597}
   - {fileID: 1677123253}
   m_Father: {fileID: 0}
@@ -5697,6 +5707,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7456047896663812283, guid: 856e73895c84e8542b6ccd304eb81e8b, type: 3}
   m_PrefabInstance: {fileID: 1332353754}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1306220879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3675745915234940379, guid: db3e05941c388074bb518726ded0ebe5, type: 3}
+  m_PrefabInstance: {fileID: 5756935265753546876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1332353754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6755,9 +6776,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26607798ec44817809a328ef5d0e7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 3
-  actionText: {fileID: 0}
-  countText: {fileID: 0}
+  countdownPanel: {fileID: 251094148}
+  actionText: {fileID: 1137490552}
+  countText: {fileID: 1306220879}
 --- !u!1001 &1621683807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6883,7 +6904,7 @@ MonoBehaviour:
   minAngle: 15
   maxAngle: 80
   anglePingPongTime: 0.4
-  pingPongCount: 2
+  angleSelectionTime: 3
   manager: {fileID: 1832232754}
   angleSlider: {fileID: 791239815}
   minAngleText: {fileID: 946007981}
@@ -7829,53 +7850,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7456047896663812283, guid: 856e73895c84e8542b6ccd304eb81e8b, type: 3}
   m_PrefabInstance: {fileID: 1887566804}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1895870142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1895870143}
-  - component: {fileID: 1895870144}
-  m_Layer: 0
-  m_Name: CountState
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1895870143
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895870142}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1217779786}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1895870144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895870142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a8669a3e85796c4988b0ad13024de61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <StateMachine>k__BackingField: {fileID: 0}
-  countdownView: {fileID: 0}
-  camerasController: {fileID: 610457163}
 --- !u!4 &1898672235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7456047896663812283, guid: 856e73895c84e8542b6ccd304eb81e8b, type: 3}
@@ -8904,6 +8878,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angleController: {fileID: 1648399724}
+  countdownController: {fileID: 1597173244}
+  camerasController: {fileID: 610457163}
   throwManager: {fileID: 1832232754}
   followCamera: {fileID: 124115354}
   cameraBounceCurve:

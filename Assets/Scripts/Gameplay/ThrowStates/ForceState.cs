@@ -6,7 +6,10 @@ namespace Gameplay.ThrowStates
 {
     public class ForceState : StateBase
     {
+        private const string ChargingMessage = "Cargando";
+        
         [SerializeField] private ForceController forceController;
+        [SerializeField] private CountdownController countdownController;
         [SerializeField] private ThrowManager throwManager;
         [SerializeField] private ForceVisualizerController forceVisualizerController;
         [SerializeField] private BoarThrower boarThrower;
@@ -23,7 +26,9 @@ namespace Gameplay.ThrowStates
         public override void OnEnterState(StateMachine stateMachine)
         {
             base.OnEnterState(stateMachine);
-
+            
+            countdownController.Open(forceController.ForceChargeTime, ChargingMessage);
+            
             forceController.ClickBtn.onClick.AddListener(FirstClick);
             forceController.ClickBtn.gameObject.SetActive(true);
             
@@ -34,6 +39,7 @@ namespace Gameplay.ThrowStates
 
         public override void OnExitState()
         {
+            countdownController.Close();
         }
 
         public override void OnUpdate()
@@ -59,6 +65,8 @@ namespace Gameplay.ThrowStates
             firstClick = true;
             forceController.ClickBtn.onClick.RemoveListener(FirstClick);
             forceController.ClickBtn.gameObject.SetActive(false);
+            
+            countdownController.StartCountDown();
         }
 
         public override void OnClick()

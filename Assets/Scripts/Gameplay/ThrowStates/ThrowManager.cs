@@ -8,7 +8,8 @@ namespace Gameplay.ThrowStates
     {
         [SerializeField] private StateMachine stateMachine;
 
-        [Header("Debug")] [SerializeField] private float force;
+        [Header("Debug")] 
+        [SerializeField] private float force;
         [SerializeField] private float angle;
         [SerializeField] private float simulationTimeScale = 1.0f;
 

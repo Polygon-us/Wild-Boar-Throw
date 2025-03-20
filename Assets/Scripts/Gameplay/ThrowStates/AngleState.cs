@@ -6,7 +6,11 @@ namespace Gameplay.ThrowStates
 {
     public class AngleState : StateBase
     {
+        private const string AngleMessage = "Apuntando";
+
         [SerializeField] private AngleController angleController;
+        [SerializeField] private CountdownController countdownController;
+        [SerializeField] private CamerasController camerasController;
         [SerializeField] private ThrowManager throwManager;
         [SerializeField] private CinemachineCamera followCamera;
         [SerializeField] private AnimationCurve cameraBounceCurve;
@@ -22,6 +26,11 @@ namespace Gameplay.ThrowStates
 
             _clicked = false;
             
+            camerasController.FollowCamera();
+            
+            countdownController.Open(angleController.AngleSelectionTime, AngleMessage);
+            countdownController.StartCountDown();
+            
             pingPongTween = LeanTween.value(angleController.MinAngle, angleController.MaxAngle,
                     angleController.AnglePingPongTime)
                 .setOnUpdate(t =>
@@ -29,12 +38,13 @@ namespace Gameplay.ThrowStates
                     angle = t;
                     angleController.AngleSlider.value = angle;
                 })
-                .setLoopPingPong(angleController.PingPongCount)
+                .setLoopPingPong()
                 .setOnComplete(Blunder);
         }
 
         public override void OnExitState()
         {
+            countdownController.Close();
             LeanTween.cancel(pingPongTween.uniqueId);
         }
 
