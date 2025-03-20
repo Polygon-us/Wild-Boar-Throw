@@ -9,7 +9,6 @@ namespace Gameplay.Controllers
         [SerializeField] private float minAngle = 30f;
         [SerializeField] private float maxAngle = 60f;
         [SerializeField] private float anglePingPongTime = 1f;
-        [SerializeField] private int angleSelectionTime = 3;
         
         [SerializeField] private ThrowManager manager;
 
