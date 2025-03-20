@@ -186,9 +186,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boar: {fileID: 0}
-  offset: {x: 100, y: 100, z: 0}
+  offset: {x: 75, y: 75, z: 0}
   lerpMultiplier: 100
-  snapLimit: 350
+  snapLimit: 200
   distanceText: {fileID: 3046943285508256343}
   throwManager: {fileID: 0}
   boarThrower: {fileID: 0}

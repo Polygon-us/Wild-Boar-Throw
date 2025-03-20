@@ -14,7 +14,8 @@ namespace Gameplay.ThrowStates
         [SerializeField] private AnimationCurve cameraBounceCurve;
         
         private bool _clicked;
-
+        private int _tween;
+        
         public override void OnEnterState(StateMachine stateMachine)
         {
             base.OnEnterState(stateMachine);
@@ -46,15 +47,20 @@ namespace Gameplay.ThrowStates
             
             throwManager.Angle = angleController.Angle; 
             
-            LeanTween.value(0, 1, 1).setOnUpdate((t) =>
-            {
-                float bounceValue = cameraBounceCurve.Evaluate(t);
-                followCamera.Lens.FieldOfView = bounceValue;
-            }).setOnComplete(() => throwManager.NextState());
+            _tween = LeanTween.value(0, 1, 1)
+                .setOnUpdate(t =>
+                {
+                    float bounceValue = cameraBounceCurve.Evaluate(t);
+                    followCamera.Lens.FieldOfView = bounceValue;
+                })
+                .setOnComplete(() => throwManager.NextState())
+                .uniqueId;
         }
 
         public override void OnReset()
         {
+            LeanTween.cancel(_tween);
+            
             angleController.Reset();
         }
 

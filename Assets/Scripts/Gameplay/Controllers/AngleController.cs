@@ -1,5 +1,4 @@
 using Gameplay.ThrowStates;
-using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
@@ -15,58 +14,51 @@ namespace Gameplay.Controllers
         [SerializeField] private ThrowManager manager;
 
         [Header("Slider")] 
-        [SerializeField] private Slider angleSlider;
+        [SerializeField] private RectTransform arrowRoot;
         [SerializeField] private TMP_Text minAngleText;
         [SerializeField] private TMP_Text maxAngleText;
         [SerializeField] private TMP_Text angleText;
         
-        public int AngleSelectionTime => angleSelectionTime;
-        public float Angle => angleSlider.value;
+        public float Angle
+        {
+            get => _angle;
+            private set
+            {
+                float percentage = Mathf.InverseLerp(maxAngle, minAngle, value);
+                float rotation = Mathf.Lerp(0, 90, percentage);
+                arrowRoot.rotation = Quaternion.Euler(0, 0, rotation);
+                
+                angleText.text = $"{(int)value}°";
+                
+                _angle = value;
+            }
+        }
 
-        
+        private float _angle;
         private Color _originalColor;
         private int _tween;
 
-        private void OnEnable()
-        {
-            angleSlider.onValueChanged.AddListener(OnAngleChanged);
-        }
-
-        private void OnDisable()
-        {
-            angleSlider.onValueChanged.RemoveListener(OnAngleChanged);
-        }
-
+        
         private void Awake()
         {
-            angleSlider.minValue = minAngle;
-            angleSlider.maxValue = maxAngle;
-            angleSlider.value = minAngle;
-
             minAngleText.text = $"{minAngle}°";
             maxAngleText.text = $"{maxAngle}°";
 
-            angleText.text = $"{(int) angleSlider.value}°";
+            Angle = minAngle;
 
             _originalColor = angleText.color;
         }
-
-        private void OnAngleChanged(float value)
-        {
-            angleText.text = $"{(int) value}°";
-        }
-
+        
         public void Reset()
         {
-            angleSlider.value = minAngle;
+            Angle = minAngle;
 
             angleText.color = _originalColor;
-            angleText.text = $"{(int) angleSlider.value}°";
         }
 
         public void Blunder()
         {
-            angleSlider.value = minAngle;
+            Angle = minAngle;
             
             angleText.color = Color.red;
             angleText.text = "BLUNDER";
@@ -76,10 +68,7 @@ namespace Gameplay.Controllers
         {
             _tween = LeanTween.value(minAngle, maxAngle,
                     anglePingPongTime)
-                .setOnUpdate(t =>
-                {
-                    angleSlider.value = t;
-                })
+                .setOnUpdate(t => Angle = t)
                 .setLoopPingPong().uniqueId;
         }
 
