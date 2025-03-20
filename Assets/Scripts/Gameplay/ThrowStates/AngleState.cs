@@ -1,69 +1,76 @@
+using Gameplay.Controllers;
 using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class AngleState : StateBase
+namespace Gameplay.ThrowStates
 {
-    [SerializeField] private AngleController angleController;
-    [SerializeField] private ThrowManager throwManager;
-    [SerializeField] private CinemachineCamera followCamera;
-    [SerializeField] private AnimationCurve cameraBounceCurve;
-    
-    private LTDescr pingPongTween;
-    private float angle;
-
-    public override void OnEnterState(StateMachine stateMachine)
+    public class AngleState : StateBase
     {
-        base.OnEnterState(stateMachine);
+        [SerializeField] private AngleController angleController;
+        [SerializeField] private CountdownController countdownController;
+        [SerializeField] private CamerasController camerasController;
+        [SerializeField] private ThrowManager throwManager;
+        [SerializeField] private CinemachineCamera followCamera;
+        [SerializeField] private AnimationCurve cameraBounceCurve;
         
-        pingPongTween = LeanTween.value(angleController.MinAngle, angleController.MaxAngle, angleController.AnglePingPongTime)
-            .setOnUpdate(t =>
-            {
-                angle = t;
-                angleController.AngleSlider.value = angle;
-            })
-            .setLoopPingPong(angleController.PingPongCount)
-            .setOnComplete(Blunder);
-    }
-
-    public override void OnExitState()
-    {
-        LeanTween.cancel(pingPongTween.uniqueId);
+        private bool _clicked;
+        private int _tween;
         
-    }
-    
-    public override void OnClick()
-    {
-        throwManager.Angle = angle;
-
-        LeanTween.cancel(pingPongTween.uniqueId);
-        
-        LeanTween.value(0, 1, 1).setOnUpdate((t) =>
+        public override void OnEnterState(StateMachine stateMachine)
         {
-            float bounceValue = cameraBounceCurve.Evaluate(t);
-            followCamera.Lens.FieldOfView = bounceValue;
-        }).setOnComplete(()=> throwManager.NextState());
+            base.OnEnterState(stateMachine);
 
-    }
+            _clicked = false;
+            
+            camerasController.FollowCamera();
+            
+            countdownController.StartCountDown(Blunder);
 
-    public override void OnReset()
-    {
-        angleController.Reset();
-        
-        angle = 0;
-        
-        if (pingPongTween != null)
-            LeanTween.cancel(pingPongTween.uniqueId);
-    }
+            angleController.StartTween();
+        }
 
-    private void Blunder()
-    {
-        angle = 0;
+        public override void OnExitState()
+        {
+            countdownController.Close();
+            angleController.StopTween();
+        }
 
-        throwManager.Force /= 2;
-        
-        angleController.Blunder();
-        
-        OnClick();
+        public override void OnClick()
+        {
+            if (_clicked)
+                return;
+             
+            _clicked = true;
+            
+            countdownController.StopCountDown();
+            angleController.StopTween();
+            
+            throwManager.Angle = angleController.Angle; 
+            
+            _tween = LeanTween.value(0, 1, 1)
+                .setOnUpdate(t =>
+                {
+                    float bounceValue = cameraBounceCurve.Evaluate(t);
+                    followCamera.Lens.FieldOfView = bounceValue;
+                })
+                .setOnComplete(() => throwManager.NextState())
+                .uniqueId;
+        }
+
+        public override void OnReset()
+        {
+            LeanTween.cancel(_tween);
+            
+            angleController.Reset();
+        }
+
+        private void Blunder()
+        {
+            throwManager.Force /= 2;
+
+            angleController.Blunder();
+
+            OnClick();
+        }
     }
 }

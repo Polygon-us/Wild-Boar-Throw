@@ -1,111 +1,95 @@
 using ForceVisualizerAnimation;
+using Gameplay.Controllers;
 using UnityEngine;
 
-public class ForceState : StateBase
+namespace Gameplay.ThrowStates
 {
-    [SerializeField] private ForceController forceController;
-    [SerializeField] private ThrowManager throwManager;
-    [SerializeField] private ForceVisualizerController forceVisualizerController;
-    [SerializeField] private BoarThrower boarThrower;
-    [SerializeField] private CamerasController camerasController;
-    [SerializeField] private CrowdController crowdController;
-
-    private float force;
-    private float chargeTimer;
-    private int numClicks;
-
-    private LTDescr timerTween;
-
-    private bool firstClick = false;
-
-
-    public override void OnEnterState(StateMachine stateMachine)
+    public class ForceState : StateBase
     {
-        base.OnEnterState(stateMachine);
+        [SerializeField] private ForceController forceController;
+        [SerializeField] private CountdownController countdownController;
+        [SerializeField] private ThrowManager throwManager;
+        [SerializeField] private ForceVisualizerController forceVisualizerController;
+        [SerializeField] private BoarThrower boarThrower;
+        [SerializeField] private CamerasController camerasController;
+        [SerializeField] private CrowdController crowdController;
+
+        private float _force;
+        private int _numClicks;
         
-        forceController.ForceSlider.maxValue = forceController.MaxForce;
-        forceController.ForceSlider.minValue = 0f;
-        forceController.ForceSlider.value = 0f;
+        private bool _firstClick = false;
 
-        forceController.TimerSlider.value = forceController.ForceChargeTime;
 
-        forceController.StateText.text = $"Clicks {numClicks}";
-        
-        forceVisualizerController.MovePlayableDirector(0);
-    }
-
-    public override void OnExitState()
-    {
-        if (timerTween != null)
-            LeanTween.cancel(timerTween.uniqueId);
-    }
-
-    public override void OnUpdate()
-    {
-        if (!firstClick)
-            return;
-
-        chargeTimer += Time.deltaTime;
-
-        UpdateForce(-forceController.MaxForce * forceController.DecrementPercentage * Time.deltaTime);
-        
-        boarThrower.MoveBoarWithStartingPosition();
-
-        if (chargeTimer >= forceController.ForceChargeTime)
+        public override void OnEnterState(StateMachine stateMachine)
         {
-            Release();
-            chargeTimer = 0f;
-        }
-    }
+            base.OnEnterState(stateMachine);
+            
+            forceController.ClickBtn.onClick.AddListener(FirstClick);
+            forceController.ClickBtn.gameObject.SetActive(true);
+            
+            forceController.StateText.text = $"Clicks {_numClicks}";
 
-    public override void OnClick()
-    {
-        if (!firstClick)
-        {
-            timerTween = LeanTween.value(1, 0, forceController.ForceChargeTime)
-                .setOnUpdate(t => forceController.TimerSlider.value = t);
-
-            firstClick = true;
+            forceVisualizerController.MovePlayableDirector(0);
         }
 
-        numClicks++;
+        public override void OnUpdate()
+        {
+            if (!_firstClick)
+                return;
+            
+            UpdateForce(-forceController.MaxForce * forceController.DecrementPercentage * Time.deltaTime);
 
-        float forceResistance = forceController.ChargeCurve.Evaluate(force / forceController.MaxForce);
+            boarThrower.MoveBoarWithStartingPosition();
+        }
 
-        UpdateForce(forceResistance * forceController.MaxForce * forceController.IncrementPercentage);
+        private void FirstClick()
+        {
+            _firstClick = true;
+            forceController.ClickBtn.onClick.RemoveListener(FirstClick);
+            forceController.ClickBtn.gameObject.SetActive(false);
+            
+            countdownController.StartCountDown(Release);
+        }
 
-        forceController.StateText.text = $"Clicks {numClicks}";
-    }
+        public override void OnClick()
+        {
+            if (!_firstClick)
+                return;
 
-    private void UpdateForce(float delta)
-    {
-        force = Mathf.Clamp(force + delta, 0f, forceController.MaxForce);
-        
-        forceController.ForceSlider.value = force;
-        
-        forceVisualizerController.MovePlayableDirector(force / forceController.MaxForce);
-    }
+            _numClicks++;
 
-    private void Release()
-    {
-        LeanTween.cancel(timerTween.uniqueId);
+            float forceResistance = forceController.ChargeCurve.Evaluate(_force / forceController.MaxForce);
 
-        throwManager.Force = force;
-        
-        crowdController.MakeImpression(force / forceController.MaxForce);
+            UpdateForce(forceResistance * forceController.MaxForce * forceController.IncrementPercentage);
 
-        StateMachine.NextState();
-    }
+            forceController.StateText.text = $"Clicks {_numClicks}";
+        }
 
-    public override void OnReset()
-    {
-        force = 0;
-        chargeTimer = 0;
-        numClicks = 0;
-        firstClick = false;
-        forceVisualizerController.MovePlayableDirector(0);
-        crowdController.MakeImpression(0);
-        camerasController.Reset();
-        boarThrower.Reset();
+        private void UpdateForce(float delta)
+        {
+            _force = Mathf.Clamp(_force + delta, 0f, forceController.MaxForce);
+
+            forceVisualizerController.MovePlayableDirector(_force / forceController.MaxForce);
+        }
+
+        private void Release()
+        {
+            throwManager.Force = _force;
+
+            crowdController.MakeImpression(_force / forceController.MaxForce);
+
+            StateMachine.NextState();
+        }
+
+        public override void OnReset()
+        {
+            _force = 0;
+            _numClicks = 0;
+            _firstClick = false;
+            forceVisualizerController.MovePlayableDirector(0);
+            crowdController.MakeImpression(0);
+            camerasController.Reset();
+            boarThrower.Reset();
+        }
     }
 }
