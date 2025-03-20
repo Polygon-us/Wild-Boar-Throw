@@ -14,10 +14,14 @@ namespace Gameplay.ThrowStates
         private LTDescr pingPongTween;
         private float angle;
 
+        private bool _clicked;
+
         public override void OnEnterState(StateMachine stateMachine)
         {
             base.OnEnterState(stateMachine);
 
+            _clicked = false;
+            
             pingPongTween = LeanTween.value(angleController.MinAngle, angleController.MaxAngle,
                     angleController.AnglePingPongTime)
                 .setOnUpdate(t =>
@@ -36,6 +40,11 @@ namespace Gameplay.ThrowStates
 
         public override void OnClick()
         {
+            if (_clicked)
+                return;
+             
+            _clicked = true;
+            
             throwManager.Angle = angle;
 
             LeanTween.cancel(pingPongTween.uniqueId);

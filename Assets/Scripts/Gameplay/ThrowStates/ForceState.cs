@@ -15,9 +15,7 @@ namespace Gameplay.ThrowStates
         private float force;
         private float chargeTimer;
         private int numClicks;
-
-        private LTDescr timerTween;
-
+        
         private bool firstClick = false;
 
 
@@ -25,12 +23,9 @@ namespace Gameplay.ThrowStates
         {
             base.OnEnterState(stateMachine);
 
-            forceController.ForceSlider.maxValue = forceController.MaxForce;
-            forceController.ForceSlider.minValue = 0f;
-            forceController.ForceSlider.value = 0f;
-
-            forceController.TimerSlider.value = forceController.ForceChargeTime;
-
+            forceController.ClickBtn.onClick.AddListener(FirstClick);
+            forceController.ClickBtn.gameObject.SetActive(true);
+            
             forceController.StateText.text = $"Clicks {numClicks}";
 
             forceVisualizerController.MovePlayableDirector(0);
@@ -38,8 +33,6 @@ namespace Gameplay.ThrowStates
 
         public override void OnExitState()
         {
-            if (timerTween != null)
-                LeanTween.cancel(timerTween.uniqueId);
         }
 
         public override void OnUpdate()
@@ -60,15 +53,17 @@ namespace Gameplay.ThrowStates
             }
         }
 
+        private void FirstClick()
+        {
+            firstClick = true;
+            forceController.ClickBtn.onClick.RemoveListener(FirstClick);
+            forceController.ClickBtn.gameObject.SetActive(false);
+        }
+
         public override void OnClick()
         {
             if (!firstClick)
-            {
-                timerTween = LeanTween.value(1, 0, forceController.ForceChargeTime)
-                    .setOnUpdate(t => forceController.TimerSlider.value = t);
-
-                firstClick = true;
-            }
+                return;
 
             numClicks++;
 
@@ -83,15 +78,11 @@ namespace Gameplay.ThrowStates
         {
             force = Mathf.Clamp(force + delta, 0f, forceController.MaxForce);
 
-            forceController.ForceSlider.value = force;
-
             forceVisualizerController.MovePlayableDirector(force / forceController.MaxForce);
         }
 
         private void Release()
         {
-            LeanTween.cancel(timerTween.uniqueId);
-
             throwManager.Force = force;
 
             crowdController.MakeImpression(force / forceController.MaxForce);

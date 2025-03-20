@@ -12,8 +12,7 @@ namespace Gameplay
         [SerializeField] private float forceChargeTime = 3;
         [SerializeField] private AnimationCurve chargeCurve;
 
-        [Header("Slider")] [SerializeField] private Slider forceSlider;
-        [SerializeField] private Slider timerSlider;
+        [SerializeField] private Button clickBtn;
         [SerializeField] private TMP_Text stateText;
 
         public float MaxForce => maxForce;
@@ -23,8 +22,7 @@ namespace Gameplay
 
         public AnimationCurve ChargeCurve => chargeCurve;
 
-        public Slider ForceSlider => forceSlider;
-        public Slider TimerSlider => timerSlider;
+        public Button ClickBtn => clickBtn;
 
         public TMP_Text StateText => stateText;
     }

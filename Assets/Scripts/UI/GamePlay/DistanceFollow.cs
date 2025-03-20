@@ -21,6 +21,7 @@ namespace UI.Gameplay
 
         private RectTransform _rectRoot;
 
+        private Vector3 _referenceResolution;
         private Vector3 _screenPos;
 
         private float _distanceToPos;
@@ -46,8 +47,7 @@ namespace UI.Gameplay
         {
             _rectRoot = transform as RectTransform;
 
-            CanvasScaler canvasScaler = GetComponentInParent<CanvasScaler>();
-            canvasScaler.referenceResolution = new Vector2(Screen.width, Screen.height);
+            _referenceResolution = GetComponentInParent<CanvasScaler>().referenceResolution;
         }
 
         private void Start()
@@ -65,6 +65,7 @@ namespace UI.Gameplay
 
         public void Reset()
         {
+            _wasThrown = false;
             EnableDistanceText(false);
             distanceText.text = "0 m";
         }
@@ -77,11 +78,17 @@ namespace UI.Gameplay
 
         private void FixedUpdate()
         {
+            if (!_wasThrown)
+                return;
+            
             if (boar)
             {
                 _currentDistance = Vector3.Distance(MainCamera.transform.position, boar.position);
 
-                _screenPos = MainCamera.WorldToScreenPoint(boar.position) +
+                Vector3 screenPos = MainCamera.WorldToScreenPoint(boar.position);
+                screenPos.x *= _referenceResolution.x / Screen.width;
+                screenPos.y *= _referenceResolution.y / Screen.height;
+                _screenPos = screenPos +
                              offset * _initialDistance / _currentDistance;
             }
 
