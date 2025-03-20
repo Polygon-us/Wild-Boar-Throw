@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: 5614114211583120832}
   - component: {fileID: 1975591892891397994}
   - component: {fileID: 268492533909879147}
-  - component: {fileID: 3610893974538703974}
   m_Layer: 5
   m_Name: CountDownPanel
   m_TagString: Untagged
@@ -214,20 +213,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3610893974538703974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756481801057669530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f26607798ec44817809a328ef5d0e7b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  count: 3
-  countText: {fileID: 3675745915234940379}
 --- !u!1 &975954526800558083
 GameObject:
   m_ObjectHideFlags: 0

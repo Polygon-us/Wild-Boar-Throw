@@ -1,4 +1,5 @@
 using ForceVisualizerAnimation;
+using Gameplay.Controllers;
 using UnityEngine;
 
 namespace Gameplay.ThrowStates

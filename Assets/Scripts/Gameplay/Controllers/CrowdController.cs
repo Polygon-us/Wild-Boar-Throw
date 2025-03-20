@@ -1,7 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace Gameplay
+namespace Gameplay.Controllers
 {
     public class CrowdController : MonoBehaviour
     {

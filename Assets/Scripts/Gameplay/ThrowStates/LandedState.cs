@@ -1,3 +1,4 @@
+using Gameplay.Controllers;
 using Unity.Cinemachine;
 using UnityEngine;
 

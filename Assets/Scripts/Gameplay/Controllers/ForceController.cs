@@ -2,7 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
-namespace Gameplay
+namespace Gameplay.Controllers
 {
     public class ForceController : MonoBehaviour
     {

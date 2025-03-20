@@ -2,7 +2,7 @@ using Gameplay.ThrowStates;
 using Unity.Cinemachine;
 using UnityEngine;
 
-namespace Gameplay
+namespace Gameplay.Controllers
 {
     public class CamerasController : MonoBehaviour
     {

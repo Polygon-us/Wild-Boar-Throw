@@ -2,11 +2,12 @@ using UnityEngine;
 using System;
 using TMPro;
 
-namespace UI.Gameplay
+namespace Gameplay.Controllers
 {
-    public class CountController : MonoBehaviour
+    public class CountdownController : MonoBehaviour
     {
         [SerializeField] private int count = 3;
+        [SerializeField] private TMP_Text actionText;
         [SerializeField] private TMP_Text countText;
 
         private void Start()
@@ -14,9 +15,10 @@ namespace UI.Gameplay
             Close();
         }
 
-        public void Open()
+        public void Open(string text)
         {
             gameObject.SetActive(true);
+            actionText.text = text;
         }
 
         public void Close()

@@ -1,13 +1,14 @@
 using ForceVisualizerAnimation;
 using UnityEngine;
 using UI.Gameplay;
+using UnityEngine.Serialization;
 
 namespace Gameplay.ThrowStates
 {
     public class ReleaseState : StateBase
     {
         [SerializeField] private ThrowManager throwManager;
-        [SerializeField] private DistanceFollow distanceFollow;
+        [FormerlySerializedAs("distanceFollow")] [SerializeField] private DistanceFollowView distanceFollowView;
         [SerializeField] private BoarThrower boarThrower;
 
         [SerializeField] private ForceVisualizerController forceVisualizerController;
@@ -21,7 +22,7 @@ namespace Gameplay.ThrowStates
 
             throwManager.Release();
 
-            distanceFollow.EnableDistanceText(true);
+            distanceFollowView.EnableDistanceText(true);
 
             boarThrower.ThrowBoar(throwManager.Force, throwManager.Angle);
 
@@ -36,7 +37,7 @@ namespace Gameplay.ThrowStates
 
         public override void OnReset()
         {
-            distanceFollow.Reset();
+            distanceFollowView.Reset();
         }
 
         private void CallOnCollision()

@@ -1,6 +1,6 @@
+using Gameplay.Controllers;
 using Unity.Cinemachine;
 using UnityEngine;
-using UI.Gameplay;
 
 namespace Gameplay.ThrowStates
 {

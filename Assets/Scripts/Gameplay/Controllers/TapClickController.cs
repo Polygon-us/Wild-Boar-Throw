@@ -2,7 +2,7 @@ using UnityEngine.InputSystem;
 using UnityEngine;
 using System;
 
-namespace Gameplay
+namespace Gameplay.Controllers
 {
     public class TapClickController : MonoBehaviour
     {

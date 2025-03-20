@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
-namespace UI.Gameplay
+namespace Gameplay.Controllers
 {
     public class AngleController : MonoBehaviour
     {
@@ -14,7 +14,8 @@ namespace UI.Gameplay
 
         [SerializeField] private ThrowManager manager;
 
-        [Header("Slider")] [SerializeField] private Slider angleSlider;
+        [Header("Slider")] 
+        [SerializeField] private Slider angleSlider;
         [SerializeField] private TMP_Text minAngleText;
         [SerializeField] private TMP_Text maxAngleText;
         [SerializeField] private TMP_Text angleText;

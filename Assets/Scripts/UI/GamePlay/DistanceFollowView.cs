@@ -6,7 +6,7 @@ using TMPro;
 
 namespace UI.Gameplay
 {
-    public class DistanceFollow : MonoBehaviour
+    public class DistanceFollowView : MonoBehaviour
     {
         [SerializeField] private Transform boar;
 
