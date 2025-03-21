@@ -19,16 +19,6 @@ namespace Gameplay
 
         public float BoarDistance => boar.transform.position.z - startingPoint.position.z;
 
-        private void OnEnable()
-        {
-            boar.OnCollision += OnCollision;
-        }
-
-        private void OnDestroy()
-        {
-            boar.OnCollision -= OnCollision;
-        }
-
         private void Awake()
         {
             initialPositions = boar.BoarRbs.Select(x => x.position - boar.Parent.position).ToList();

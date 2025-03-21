@@ -10,6 +10,7 @@ namespace Gameplay.ThrowStates
         [SerializeField] private DistanceFollowView distanceFollowView;
         [SerializeField] private BoarThrower boarThrower;
         [SerializeField] private ForceVisualizerController forceVisualizerController;
+        [SerializeField] private Boar boar;
 
         private int _delayCallTween;
 
@@ -17,7 +18,7 @@ namespace Gameplay.ThrowStates
         {
             base.OnEnterState(stateMachine);
 
-            boarThrower.OnCollision += CallOnCollision;
+            boar.OnCollision += CallOnCollision;
 
             throwManager.Release();
 
@@ -31,7 +32,7 @@ namespace Gameplay.ThrowStates
 
         public override void OnExitState()
         {
-            boarThrower.OnCollision -= CallOnCollision;
+            boar.OnCollision -= CallOnCollision;
         }
 
         public override void OnReset()
@@ -43,6 +44,8 @@ namespace Gameplay.ThrowStates
 
         private void CallOnCollision()
         {
+            boar.OnCollision -= CallOnCollision;
+            
             _delayCallTween = LeanTween.delayedCall(2, StateMachine.NextState).uniqueId;
         }
     }

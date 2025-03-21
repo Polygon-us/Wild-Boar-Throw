@@ -3,15 +3,16 @@ using UnityEngine;
 
 namespace Gameplay.ThrowStates.Tutorial
 {
-    public class IntroTutorialState : StateBase
+    public class TutorialState : StateBase
     {
+        [SerializeField] private string tutorialMsg;
         [SerializeField] private TutorialController tutorialController;
 
         public override void OnEnterState(StateMachine stateMachine)
         {
             base.OnEnterState(stateMachine);
 
-            tutorialController.Open(StateMachine.NextState);
+            tutorialController.Open(tutorialMsg, StateMachine.NextState);
         }
     }
 }
