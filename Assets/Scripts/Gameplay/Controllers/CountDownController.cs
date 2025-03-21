@@ -8,7 +8,6 @@ namespace Gameplay.Controllers
     {
         [SerializeField] private int countdownTime = 3;
         [SerializeField] private RectTransform countdownPanel;
-        [SerializeField] private TMP_Text actionText;
         [SerializeField] private TMP_Text countText;
 
         private int _countdownTween;
@@ -19,10 +18,9 @@ namespace Gameplay.Controllers
             Close();
         }
 
-        public void Open(string text)
+        public void Open()
         {
             countText.text = countdownTime.ToString();
-            actionText.text = text;
             countdownPanel.gameObject.SetActive(true);
         }
 

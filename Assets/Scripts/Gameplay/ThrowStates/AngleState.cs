@@ -1,5 +1,4 @@
 using Gameplay.Controllers;
-using Unity.Cinemachine;
 using UnityEngine;
 
 namespace Gameplay.ThrowStates
@@ -10,7 +9,6 @@ namespace Gameplay.ThrowStates
         [SerializeField] private CountdownController countdownController;
         [SerializeField] private CamerasController camerasController;
         [SerializeField] private ThrowManager throwManager;
-        [SerializeField] private CinemachineCamera followCamera;
         [SerializeField] private AnimationCurve cameraBounceCurve;
         
         private bool _clicked;
@@ -51,9 +49,9 @@ namespace Gameplay.ThrowStates
                 .setOnUpdate(t =>
                 {
                     float bounceValue = cameraBounceCurve.Evaluate(t);
-                    followCamera.Lens.FieldOfView = bounceValue;
+                    camerasController.CurrentCamera.Lens.FieldOfView = bounceValue;
                 })
-                .setOnComplete(() => throwManager.NextState())
+                .setOnComplete(() => StateMachine.NextState())
                 .uniqueId;
         }
 
