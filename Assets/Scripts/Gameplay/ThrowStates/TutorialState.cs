@@ -1,11 +1,12 @@
 using Gameplay.Controllers;
 using UnityEngine;
 
-namespace Gameplay.ThrowStates.Tutorial
+namespace Gameplay.ThrowStates
 {
     public class TutorialState : StateBase
     {
-        [SerializeField] private string tutorialMsg;
+        [SerializeField, TextArea] private string tutorialMsg;
+        [Space]
         [SerializeField] private TutorialController tutorialController;
 
         public override void OnEnterState(StateMachine stateMachine)

@@ -1,12 +1,14 @@
 using UnityEngine.UI;
 using UnityEngine;
 using System;
+using TMPro;
 
 namespace Gameplay.Controllers
 {
     public class TutorialController : MonoBehaviour
     {
         [SerializeField] private GameObject tutorialPanel;
+        [SerializeField] private TMP_Text messageText;
         [SerializeField] private Button closeBtn;
 
         private Action OnClose;
@@ -14,11 +16,13 @@ namespace Gameplay.Controllers
         private void Awake()
         {
             closeBtn.onClick.AddListener(Close);
+            Close();
         }
 
-        public void Open(Action onClose)
+        public void Open(string text, Action onClose)
         {
             tutorialPanel.SetActive(true);
+            messageText.text = text;
             OnClose = onClose;
         }
 
@@ -26,7 +30,6 @@ namespace Gameplay.Controllers
         {
             tutorialPanel.SetActive(false);
             OnClose?.Invoke();
-            OnClose = null;
         }
     }
 }
