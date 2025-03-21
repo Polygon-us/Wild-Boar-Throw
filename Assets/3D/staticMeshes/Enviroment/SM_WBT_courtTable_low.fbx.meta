@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: M_WBT_courtTable
     second: {fileID: 2100000, guid: 7f22efdf3c38c4b4094ed5972da207db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 75503c164ed90ac49897da25970cb959, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -55,7 +60,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
-    bakeAxisConversion: 0
+    bakeAxisConversion: 1
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
