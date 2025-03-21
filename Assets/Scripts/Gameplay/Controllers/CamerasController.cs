@@ -1,4 +1,3 @@
-using Gameplay.ThrowStates;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -9,10 +8,9 @@ namespace Gameplay.Controllers
         [SerializeField] private CinemachineCamera standingCamera;
         [SerializeField] private CinemachineCamera followCamera;
         [SerializeField] private CinemachineCamera landingCamera;
-        [SerializeField] private ThrowManager throwManager;
-        [SerializeField] private BoarThrower boarThrower;
 
         private CinemachineCamera currentCamera;
+        public CinemachineCamera CurrentCamera => currentCamera;
 
         public void FollowCamera()
         {

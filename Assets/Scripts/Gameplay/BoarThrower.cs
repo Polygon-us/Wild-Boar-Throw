@@ -15,16 +15,9 @@ namespace Gameplay
         private List<Vector3> initialPositions;
         private List<Quaternion> initialRotations;
 
-        private LTDescr delayedCall;
-
         [SerializeField] private Vector3 boarOffsetFromStartPoint = new Vector3(0f, 0f, 0f);
 
         public float BoarDistance => boar.transform.position.z - startingPoint.position.z;
-
-        private void CallOnCollision()
-        {
-            delayedCall = LeanTween.delayedCall(2, OnCollision);
-        }
 
         private void Awake()
         {
@@ -51,9 +44,6 @@ namespace Gameplay
 
         public void Reset()
         {
-            if (delayedCall != null)
-                LeanTween.cancel(delayedCall.uniqueId);
-
             for (int i = 0; i < boar.BoarRbs.Count; i++)
             {
                 MoveRbToStartingPosition(boar.BoarRbs[i], initialPositions[i], initialRotations[i]);
