@@ -11,7 +11,7 @@ namespace Gameplay.ThrowStates
         {
             base.OnEnterState(stateMachine);
             
-            countdownController.Open(string.Empty);
+            countdownController.Open();
             countdownController.StartCountDown(StateMachine.NextState);
         }
 

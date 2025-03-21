@@ -47,11 +47,6 @@ namespace Gameplay.ThrowStates
             stateMachine.OnClick();
         }
 
-        public void NextState()
-        {
-            stateMachine.NextState();
-        }
-
         public void ResetThrow()
         {
             stateMachine.OnReset();
