@@ -87,6 +87,7 @@ namespace Gameplay.ThrowStates
             _numClicks = 0;
             _firstClick = false;
             forceVisualizerController.MovePlayableDirector(0);
+            countdownController.Reset();
             crowdController.MakeImpression(0);
             camerasController.Reset();
             boarThrower.Reset();
