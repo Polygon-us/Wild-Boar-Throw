@@ -11,6 +11,7 @@ namespace Gameplay.Controllers
         [SerializeField] private RectTransform banner;
         [SerializeField] private TMP_Text messageText;
         [SerializeField] private Button closeBtn;
+        [SerializeField] private Button xBtn;
         [SerializeField] private float tweenTime = 0.5f;
         [SerializeField] private LeanTweenType tweenType = LeanTweenType.easeOutCubic;
 
@@ -25,7 +26,8 @@ namespace Gameplay.Controllers
         {
             _backgroundImage = tutorialPanel.GetComponent<Image>();
             _canvasScaler = tutorialPanel.GetComponentInParent<CanvasScaler>();
-            closeBtn.onClick.AddListener(() => Close());
+            closeBtn.onClick.AddListener(Close);
+            xBtn.onClick.AddListener(Close);
             Internal_Close();
         }
 
