@@ -37,5 +37,11 @@ namespace Gameplay.ThrowStates
                 })
                 .setOnComplete(StateMachine.NextState);
         }
+
+        public override void OnReset()
+        {
+            targetGroup.Targets[^1].Weight = 1;
+            targetGroup.Targets[0].Weight = 0;
+        }
     }
 }
