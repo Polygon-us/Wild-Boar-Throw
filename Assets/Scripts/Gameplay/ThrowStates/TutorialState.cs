@@ -5,15 +5,23 @@ namespace Gameplay.ThrowStates
 {
     public class TutorialState : StateBase
     {
+        private const string TutorialKey = "Tutorial";
+        
         [SerializeField, TextArea] private string tutorialMsg;
         [Space]
         [SerializeField] private TutorialController tutorialController;
+        
+        private static bool IsTutorialDone => PlayerPrefs.GetInt(TutorialKey, 0) == 1;
 
         public override void OnEnterState(StateMachine stateMachine)
         {
             base.OnEnterState(stateMachine);
-
-            tutorialController.Open(tutorialMsg, StateMachine.NextState);
+            
+            if (IsTutorialDone)
+                StateMachine.NextState();
+            else
+                tutorialController.Open(tutorialMsg, StateMachine.NextState);
         }
+        
     }
 }
