@@ -2883,8 +2883,10 @@ MonoBehaviour:
   messageText: {fileID: 54980932}
   closeBtn: {fileID: 1981837632}
   xBtn: {fileID: 696917922}
-  tweenTime: 0.5
-  tweenType: 6
+  tweenParams:
+    duration: 0.5
+    inType: 6
+    outType: 5
 --- !u!1001 &568004290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8451,6 +8453,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b45414ccf6a779e4ea5cc8c8944a5dd2, type: 3}
   m_PrefabInstance: {fileID: 1387896722}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1396856669 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2783591598316782009, guid: 5c75a4d4fb0f81340b6f9f94cfad74d4, type: 3}
+  m_PrefabInstance: {fileID: 5575877911629463724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1414168961
 GameObject:
   m_ObjectHideFlags: 0
@@ -8477,13 +8484,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414168961}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1170002312}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &1414168963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8497,8 +8504,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FramingMode: 1
-  FramingSize: 0.8
-  CenterOffset: {x: 0, y: 0}
+  FramingSize: 1.2
+  CenterOffset: {x: 0, y: 0.4}
   Damping: 3
   SizeAdjustment: 1
   LateralAdjustment: 0
@@ -8849,7 +8856,6 @@ MonoBehaviour:
   maxForce: 3000
   incrementPercentage: 0.1
   decrementPercentage: 0.1
-  forceChargeTime: 3
   chargeCurve:
     serializedVersion: 2
     m_Curve:
@@ -8874,8 +8880,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  panel: {fileID: 1396856669}
   clickBtn: {fileID: 354279847}
   stateText: {fileID: 466231524}
+  tweenParams:
+    duration: 0.5
+    inType: 6
+    outType: 5
 --- !u!1001 &1498968442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9689,10 +9700,19 @@ MonoBehaviour:
   maxAngle: 80
   anglePingPongTime: 0.4
   manager: {fileID: 1832232754}
+  panel: {fileID: 1798881812}
   arrowRoot: {fileID: 6832949931672665647}
   minAngleText: {fileID: 946007981}
   maxAngleText: {fileID: 920471448}
   angleText: {fileID: 1334277005}
+  angleParams:
+    duration: 0.5
+    inType: 0
+    outType: 0
+  showParams:
+    duration: 0.5
+    inType: 6
+    outType: 5
 --- !u!1 &1658575596
 GameObject:
   m_ObjectHideFlags: 0
@@ -10245,6 +10265,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a4f843b01820874bb8d8565101a2f99, type: 3}
   m_PrefabInstance: {fileID: 1795755887}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1798881812 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4835505757600269788, guid: 6b067250d2c6bf94e92fa9f38ceb621c, type: 3}
+  m_PrefabInstance: {fileID: 6832949931672665646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1832232753
 GameObject:
   m_ObjectHideFlags: 0
@@ -10323,6 +10348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownController: {fileID: 1597173244}
+  angleController: {fileID: 1648399724}
 --- !u!4 &1836576962
 Transform:
   m_ObjectHideFlags: 0
@@ -12225,6 +12251,7 @@ MonoBehaviour:
   angleController: {fileID: 1648399724}
   countdownController: {fileID: 1597173244}
   camerasController: {fileID: 610457163}
+  forceController: {fileID: 1490453892}
   throwManager: {fileID: 1832232754}
   cameraBounceCurve:
     serializedVersion: 2
