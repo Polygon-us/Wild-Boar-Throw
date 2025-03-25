@@ -29,6 +29,8 @@ namespace Gameplay.ThrowStates
             
             forceController.StateText.text = $"Clicks {_numClicks}";
 
+            forceController.Show();
+            
             forceVisualizerController.MovePlayableDirector(0);
         }
 

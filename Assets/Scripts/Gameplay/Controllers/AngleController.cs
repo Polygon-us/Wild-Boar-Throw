@@ -1,6 +1,7 @@
 using Gameplay.ThrowStates;
 using UnityEngine;
 using TMPro;
+using UI.Generic;
 
 namespace Gameplay.Controllers
 {
@@ -13,10 +14,13 @@ namespace Gameplay.Controllers
         [SerializeField] private ThrowManager manager;
 
         [Header("Slider")] 
+        [SerializeField] private RectTransform panel;
         [SerializeField] private RectTransform arrowRoot;
         [SerializeField] private TMP_Text minAngleText;
         [SerializeField] private TMP_Text maxAngleText;
         [SerializeField] private TMP_Text angleText;
+        [SerializeField] private TweenParams angleParams;
+        [SerializeField] private TweenParams showParams;
         
         public float Angle
         {
@@ -37,7 +41,9 @@ namespace Gameplay.Controllers
         private Color _originalColor;
         private int _tween;
 
-        
+        private int _tweenId;
+        private Vector3 _startPos;
+
         private void Awake()
         {
             minAngleText.text = $"{minAngle}°";
@@ -46,6 +52,8 @@ namespace Gameplay.Controllers
             Angle = minAngle;
 
             _originalColor = angleText.color;
+            _startPos = panel.anchoredPosition;
+            Hide(true);
         }
         
         public void Reset()
@@ -66,11 +74,26 @@ namespace Gameplay.Controllers
         public void StartTween()
         {
             _tween = LeanTween.value(minAngle, maxAngle,
-                    anglePingPongTime)
+                    angleParams.duration)
                 .setOnUpdate(t => Angle = t)
                 .setLoopPingPong().uniqueId;
         }
+        
+        public void Show()
+        {
+            _tweenId = LeanTween.move(panel, _startPos, showParams.duration)
+                .setEase(showParams.inType)
+                .uniqueId;
+        }
 
+        public void Hide(bool instant = false)
+        {
+            Vector3 newPos = _startPos + new Vector3(panel.sizeDelta.x, -panel.sizeDelta.y);
+            _tweenId = LeanTween.move(panel, newPos, instant ? 0 : showParams.duration)
+                .setEase(showParams.outType)
+                .uniqueId;
+        }
+        
         public void StopTween()
         {
             LeanTween.cancel(_tween);
