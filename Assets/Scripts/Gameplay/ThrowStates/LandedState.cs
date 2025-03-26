@@ -12,6 +12,8 @@ namespace Gameplay.ThrowStates
         [SerializeField] private float landingCamTransitionDuration = 2f;
         [SerializeField] private Vector3 hideOnLandingPosition = new Vector3(-35f, 0.2f, 70f);
 
+        private int _tween;
+        
         public override void OnEnterState(StateMachine stateMachine)
         {
             base.OnEnterState(stateMachine);
@@ -21,7 +23,7 @@ namespace Gameplay.ThrowStates
             
             cameraController.ShowLanding();
 
-            LeanTween.value(gameObject, 1f, 0f, landingCamTransitionDuration)
+            _tween = LeanTween.value(gameObject, 1f, 0f, landingCamTransitionDuration)
                 .setEase(LeanTweenType.easeInOutCubic)
                 .setDelay(1f) // Delay needs to be the same as in the cinemachine custom blends
                 .setOnUpdate((value) =>
@@ -35,13 +37,16 @@ namespace Gameplay.ThrowStates
                         hideOnLanding.eulerAngles = new Vector3(0, 0, 20);
                     }*/
                 })
-                .setOnComplete(StateMachine.NextState);
+                .setOnComplete(StateMachine.NextState)
+                .uniqueId;
         }
 
         public override void OnReset()
         {
             targetGroup.Targets[^1].Weight = 1;
             targetGroup.Targets[0].Weight = 0;
+            
+            LeanTween.cancel(_tween);
         }
     }
 }
