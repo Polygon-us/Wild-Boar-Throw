@@ -50,11 +50,11 @@ Material:
     - _QueueOffset: 0
     - _contrast: 0.025
     - _heightOffset: 1
-    - _waveAmplitude: 0.028637415
+    - _waveAmplitude: 0.025908437
     - _waveFreq: 0.5
     - _waveHeight: 1
     - _waveSize: 0.05
-    - _waveSpeed: 28.637417
+    - _waveSpeed: 25.908436
     m_Colors:
     - _jumpAmmount: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -48,7 +48,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _contrast: 1
+    - _contrast: 0.42
     - _heightOffset: -0.82
     - _waveAmplitude: 0.02
     - _waveFreq: 0.5
