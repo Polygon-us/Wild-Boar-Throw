@@ -16,6 +16,9 @@ namespace Gameplay.ThrowStates
         {
             base.OnEnterState(stateMachine);
 
+            targetGroup.Targets[^1].Weight = 1;
+            targetGroup.Targets[0].Weight = 0;
+            
             cameraController.ShowLanding();
 
             LeanTween.value(gameObject, 1f, 0f, landingCamTransitionDuration)
@@ -31,18 +34,14 @@ namespace Gameplay.ThrowStates
                         hideOnLanding.localPosition = new Vector3(-35f, 0.2f, 70f);
                         hideOnLanding.eulerAngles = new Vector3(0, 0, 20);
                     }*/
-                });
+                })
+                .setOnComplete(StateMachine.NextState);
         }
 
-        public override void OnExitState()
+        public override void OnReset()
         {
-            base.OnExitState();
-
             targetGroup.Targets[^1].Weight = 1;
             targetGroup.Targets[0].Weight = 0;
-
-            // hideOnLanding.localPosition = new Vector3(-13.1f, 0f, 70.5f);
-            // hideOnLanding.eulerAngles = new Vector3(0, 0, 0);
         }
     }
 }

@@ -12,6 +12,7 @@ canvas {
 }
 body {
     margin: 0;
+    background: {{{ BACKGROUND_COLOR }}};
 }
 #unity-container {
     width: 100%;
@@ -20,7 +21,6 @@ body {
 #unity-canvas {
     width: 100%;
     height: 100%;
-    background: {{{ BACKGROUND_COLOR }}};
 }
 #loading-cover {
     position: absolute;

@@ -8,6 +8,7 @@ namespace Gameplay.ThrowStates
         [SerializeField] private AngleController angleController;
         [SerializeField] private CountdownController countdownController;
         [SerializeField] private CamerasController camerasController;
+        [SerializeField] private ForceController forceController;
         [SerializeField] private ThrowManager throwManager;
         [SerializeField] private AnimationCurve cameraBounceCurve;
         
@@ -42,6 +43,9 @@ namespace Gameplay.ThrowStates
             
             countdownController.StopCountDown();
             angleController.StopTween();
+            
+            forceController.Hide();
+            angleController.Hide();
             
             throwManager.Angle = angleController.Angle; 
             
