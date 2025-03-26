@@ -146,6 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4015300316746170592}
   - component: {fileID: 5734728324832630540}
+  - component: {fileID: -8356585780061422989}
   m_Layer: 5
   m_Name: DistanceFollow
   m_TagString: Untagged
@@ -192,3 +193,26 @@ MonoBehaviour:
   distanceText: {fileID: 3046943285508256343}
   throwManager: {fileID: 0}
   boarThrower: {fileID: 0}
+--- !u!223 &-8356585780061422989
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8718978748583077244}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
