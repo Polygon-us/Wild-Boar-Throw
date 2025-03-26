@@ -1,4 +1,3 @@
-using Gameplay.ThrowStates;
 using UnityEngine.UI;
 using UnityEngine;
 using Gameplay;
@@ -16,7 +15,6 @@ namespace UI.Gameplay
 
         [SerializeField] private TMP_Text distanceText;
 
-        [SerializeField] private ThrowManager throwManager;
         [SerializeField] private BoarThrower boarThrower;
 
         private RectTransform _rectRoot;

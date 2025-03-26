@@ -1,8 +1,8 @@
-using Gameplay.Controllers;
+using Gameplay.ThrowStates;
 using UnityEngine;
 using System;
 
-namespace Gameplay.ThrowStates
+namespace Gameplay.Controllers
 {
     public class ThrowManager : MonoBehaviour
     {

@@ -26,6 +26,7 @@ namespace Gameplay.Controllers
 
         public void Close()
         {
+            StopCountDown();
             countdownPanel.gameObject.SetActive(false);
         }
 

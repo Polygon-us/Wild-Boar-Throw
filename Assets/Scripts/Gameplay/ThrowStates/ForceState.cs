@@ -34,6 +34,11 @@ namespace Gameplay.ThrowStates
             forceVisualizerController.MovePlayableDirector(0);
         }
 
+        public override void OnExitState()
+        {
+            forceController.ClickBtn.onClick.RemoveListener(FirstClick);
+        }
+
         public override void OnUpdate()
         {
             if (!_firstClick)
