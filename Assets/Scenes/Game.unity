@@ -1252,8 +1252,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049ed9f389b466c49b6a9199d057b226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forceController: {fileID: 1490453892}
   startingPoint: {fileID: 460157193}
   boar: {fileID: 1377265300}
+  forceMode: 2
+  maxTorque: 100
   boarOffsetFromStartPoint: {x: 0, y: 0.25, z: -0.1}
 --- !u!4 &198341330
 Transform:
@@ -8250,7 +8253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b37ba2a4db303e4899c0a41ce0fc16a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForce: 3000
+  maxForce: 500
   incrementPercentage: 0.1
   decrementPercentage: 0.1
   chargeCurve:

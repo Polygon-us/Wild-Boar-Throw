@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
+using Gameplay.Controllers;
 using UnityEngine;
-using System;
 
 namespace Gameplay
 {
     public class BoarThrower : MonoBehaviour
     {
+        [SerializeField] private ForceController forceController;
         [SerializeField] private Transform startingPoint;
         [SerializeField] private Boar boar;
-
-        public Action OnCollision;
+        [SerializeField] private ForceMode forceMode;
+        [SerializeField] private float maxTorque;
 
         private List<Vector3> initialPositions;
         private List<Quaternion> initialRotations;
@@ -31,10 +32,14 @@ namespace Gameplay
 
             Vector3 direction = Quaternion.Euler(-angle, 0f, 0f) * startingPoint.forward;
 
+            Vector3 appliedForce = force / boar.BoarRbs.Count * direction;
+            
             foreach (var rb in boar.BoarRbs)
             {
-                rb.AddForce(force / boar.BoarRbs.Count * direction, ForceMode.Impulse);
+                rb.AddForce(appliedForce, forceMode);
             }
+            
+            boar.MainRb.AddTorque(Vector3.right * force / forceController.MaxForce * maxTorque, forceMode);
         }
 
         public void MoveBoarWithStartingPosition()
