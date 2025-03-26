@@ -17,8 +17,17 @@ namespace UI.MainMenu
         {
             startButton.onClick.AddListener(StartGame);
             exitButton.onClick.AddListener(ExitGame);
+            
+            EnableMobileKeyboard(false);
         }
 
+        public void EnableMobileKeyboard(bool on)
+        {
+#if !UNITY_EDITOR && UNITY_WEBGL
+            WebGLInput.mobileKeyboardSupport = on;
+#endif
+        }
+        
         private void StartGame()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
