@@ -78,9 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   neutralHDRRangeReductionMode:
     m_OverrideState: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
     m_Value: 2.4
   contrast:
     m_OverrideState: 1
-    m_Value: 9.1
+    m_Value: 0
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -133,7 +133,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: 9.9
+    m_Value: 0
 --- !u!114 &7391319092446245454
 MonoBehaviour:
   m_ObjectHideFlags: 3
