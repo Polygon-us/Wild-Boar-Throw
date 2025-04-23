@@ -198,13 +198,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3667136}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11360254, y: 0.22004515, z: -0.016536264, w: 0.9687111}
-  m_LocalPosition: {x: -2.03, y: 2.89, z: -9.1}
+  m_LocalRotation: {x: 0.019781586, y: -0.9061429, z: 0.0644298, w: 0.41756755}
+  m_LocalPosition: {x: 2.362, y: 1.522, z: -0.294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1170002312}
-  m_LocalEulerAnglesHint: {x: 13.142, y: 25.717, z: 1.057}
+  m_LocalEulerAnglesHint: {x: 7.659, y: -130.448, z: 1.038}
 --- !u!114 &3667138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,13 +758,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124115350}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.052335896, y: 0, z: 0, w: 0.9986295}
   m_LocalPosition: {x: 0, y: 1.4960694, z: -4.838268}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1170002312}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6, y: 0, z: 0}
 --- !u!114 &124115353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1716,7 +1716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7734780299205880343, guid: 38b737426155c1c4aadf079664282789, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.66
+      value: -2.78
       objectReference: {fileID: 0}
     - target: {fileID: 7734780299205880343, guid: 38b737426155c1c4aadf079664282789, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2006,8 +2006,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11360254, y: 0.22004515, z: -0.016536264, w: 0.9687111}
-  m_LocalPosition: {x: -2.03, y: 2.89, z: -9.1}
+  m_LocalRotation: {x: 0.019781586, y: -0.9061429, z: 0.0644298, w: 0.41756755}
+  m_LocalPosition: {x: 2.362, y: 1.522, z: -0.294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10019,6 +10019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdownController: {fileID: 1597173244}
   angleController: {fileID: 1648399724}
+  camerasController: {fileID: 610457163}
 --- !u!4 &1836576962
 Transform:
   m_ObjectHideFlags: 0

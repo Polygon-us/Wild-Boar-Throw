@@ -7,10 +7,13 @@ namespace Gameplay.ThrowStates
     {
         [SerializeField] private CountdownController countdownController;
         [SerializeField] private AngleController angleController;
+        [SerializeField] private CamerasController camerasController;
         
         public override void OnEnterState(StateMachine stateMachine)
         {
             base.OnEnterState(stateMachine);
+            
+            camerasController.FollowCamera();
             
             angleController.Show();
             countdownController.Open();

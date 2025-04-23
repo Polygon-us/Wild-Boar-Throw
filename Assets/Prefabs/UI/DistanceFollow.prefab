@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: 105.4 m
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6352fc85200abcb49aab397b574debab, type: 2}
-  m_sharedMaterial: {fileID: -5326698802564964295, guid: 6352fc85200abcb49aab397b574debab, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 7340f4e421dd71447894a68ec63a3ab5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -192,7 +192,6 @@ MonoBehaviour:
   lerpMultiplier: 100
   snapLimit: 200
   distanceText: {fileID: 3046943285508256343}
-  throwManager: {fileID: 0}
   boarThrower: {fileID: 0}
 --- !u!223 &-8356585780061422989
 Canvas:

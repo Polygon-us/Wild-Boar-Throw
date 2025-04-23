@@ -24,11 +24,11 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 4
-  - From: '**ANY CAMERA**'
+  - From: StandingCamera
     To: FollowCamera
     Blend:
-      Style: 1
-      Time: 1
+      Style: 0
+      Time: 0.9
       CustomCurve:
         serializedVersion: 2
         m_Curve: []

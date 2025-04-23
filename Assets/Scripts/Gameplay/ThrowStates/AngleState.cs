@@ -21,8 +21,6 @@ namespace Gameplay.ThrowStates
 
             _clicked = false;
             
-            camerasController.FollowCamera();
-            
             countdownController.StartCountDown(Blunder);
 
             angleController.StartTween();
