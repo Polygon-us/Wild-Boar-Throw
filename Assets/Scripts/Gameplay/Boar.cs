@@ -36,7 +36,7 @@ namespace Gameplay
             if (!layerMask.IsInLayerMask(other.gameObject.layer))
                 return;
 
-            OnCollision?.Invoke();
+            OnCollision?.Invoke(); 
         }
     }
 }

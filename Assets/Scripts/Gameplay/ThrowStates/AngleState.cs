@@ -47,7 +47,9 @@ namespace Gameplay.ThrowStates
             forceController.Hide();
             angleController.Hide();
             
-            throwManager.Angle = angleController.Angle; 
+            throwManager.Angle = angleController.Angle;
+
+            AudioManager.Instance.PlayUI("SetAngle");
             
             _tween = LeanTween.value(0, 1, 1)
                 .setOnUpdate(t =>

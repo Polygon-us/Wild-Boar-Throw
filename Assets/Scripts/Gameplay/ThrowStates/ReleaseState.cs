@@ -46,7 +46,8 @@ namespace Gameplay.ThrowStates
         private void CallOnCollision()
         {
             boar.OnCollision -= CallOnCollision;
-            
+            AudioManager.Instance.PlaySFX("PigFall", 1f);
+
             _delayCallTween = LeanTween.delayedCall(2, StateMachine.NextState).uniqueId;
         }
     }

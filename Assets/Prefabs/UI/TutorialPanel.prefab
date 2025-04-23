@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 7741133062311001003}
   - component: {fileID: 2493540027246659806}
   - component: {fileID: 5307429906482684211}
+  - component: {fileID: 4271761447022569594}
   m_Layer: 5
   m_Name: XBtn
   m_TagString: Untagged
@@ -376,7 +377,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7741133062311001003}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5307429906482684211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +416,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &4271761447022569594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3932621417308358555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe02295d5e545a342bf8c2bf8af4d7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ui_SFX_Name: Close
 --- !u!1 &4305975190005819486
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +521,7 @@ GameObject:
   - component: {fileID: 6635271322471146992}
   - component: {fileID: 30321800077981383}
   - component: {fileID: 455235756293257695}
+  - component: {fileID: 6441342008310558505}
   m_Layer: 5
   m_Name: ExitBtn
   m_TagString: Untagged
@@ -644,6 +671,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &6441342008310558505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6382232478521412117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe02295d5e545a342bf8c2bf8af4d7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ui_SFX_Name: Close
 --- !u!1 &8311013174790206063
 GameObject:
   m_ObjectHideFlags: 0

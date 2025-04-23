@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 4019471710494060865}
   - component: {fileID: 3359838750875979329}
   - component: {fileID: -1962108502046451392}
+  - component: {fileID: 2029880597434453423}
   m_Layer: 5
   m_Name: ResetBtn
   m_TagString: Untagged
@@ -289,7 +290,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -311,3 +312,16 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2029880597434453423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7661849200168353978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe02295d5e545a342bf8c2bf8af4d7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ui_SFX_Name: Click

@@ -40,6 +40,7 @@ namespace Gameplay
             }
             
             boar.MainRb.AddTorque(Vector3.right * force / forceController.MaxForce * maxTorque, forceMode);
+            AudioManager.Instance.PlaySFX("Launch", 1f);
         }
 
         public void MoveBoarWithStartingPosition()
