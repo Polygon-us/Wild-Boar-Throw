@@ -70,6 +70,10 @@ namespace Gameplay.ThrowStates
             UpdateForce(forceResistance * forceController.MaxForce * forceController.IncrementPercentage);
 
             forceController.StateText.text = $"Clicks {_numClicks}";
+
+            float pitch = 1f + (_numClicks * 0.2f);
+            pitch = Mathf.Clamp(pitch, 1f, 5f);
+            AudioManager.Instance.PlaySFX("Charge", pitch);
         }
 
         private void UpdateForce(float delta)

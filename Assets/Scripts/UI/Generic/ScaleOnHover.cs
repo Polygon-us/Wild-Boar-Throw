@@ -19,6 +19,7 @@ namespace UI.Generic
             _tweenId = LeanTween.scale(RectTransform, Vector3.one * scale, duration)
                 .setEase(leanTweenType)
                 .uniqueId;
+            AudioManager.Instance.PlayUI("Over");
         }
 
         public void OnPointerExit(PointerEventData eventData)

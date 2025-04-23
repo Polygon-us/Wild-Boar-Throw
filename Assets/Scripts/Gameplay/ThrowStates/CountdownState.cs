@@ -17,7 +17,7 @@ namespace Gameplay.ThrowStates
             
             angleController.Show();
             countdownController.Open();
-            countdownController.StartCountDown(StateMachine.NextState);
+            countdownController.StartCountDown(StateMachine.NextState); 
         }
 
         public override void OnExitState()

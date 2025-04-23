@@ -11,11 +11,12 @@ namespace Gameplay.ThrowStates
         [SerializeField] private CinemachineTargetGroup targetGroup;
         [SerializeField] private float landingCamTransitionDuration = 2f;
         [SerializeField] private Vector3 hideOnLandingPosition = new Vector3(-35f, 0.2f, 70f);
+        [SerializeField] private BoarThrower BThrower;
 
         private int _tween;
         
         public override void OnEnterState(StateMachine stateMachine)
-        {
+        {  
             base.OnEnterState(stateMachine);
 
             targetGroup.Targets[^1].Weight = 1;
@@ -39,6 +40,16 @@ namespace Gameplay.ThrowStates
                 })
                 .setOnComplete(StateMachine.NextState)
                 .uniqueId;
+
+            if(BThrower.BoarDistance< 15f)
+            {
+                AudioManager.Instance.PlayUI("BadShot");
+            }
+            else
+            {
+                AudioManager.Instance.PlayUI("NiceShot");
+
+            }
         }
 
         public override void OnReset()

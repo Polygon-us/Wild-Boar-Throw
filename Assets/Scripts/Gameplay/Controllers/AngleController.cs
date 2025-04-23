@@ -83,6 +83,7 @@ namespace Gameplay.Controllers
             _tweenId = LeanTween.move(panel, _startPos, showParams.duration)
                 .setEase(showParams.inType)
                 .uniqueId;
+            AudioManager.Instance.PlayUI("Counter");
         }
 
         public void Hide(bool instant = false)

@@ -31,7 +31,7 @@ namespace Gameplay.Controllers
         }
 
         public void StartCountDown(Action callback)
-        { 
+        {
             _countdownTween = LeanTween.value(countdownTime, 0, countdownTime)
                 .setOnUpdate(value => countText.text = Mathf.CeilToInt(value).ToString()).uniqueId;
 
