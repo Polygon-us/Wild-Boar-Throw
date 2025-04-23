@@ -21,6 +21,12 @@ namespace ForceVisualizerAnimation
             playableDirector.time = TimeForThrowAnimation;
             playableDirector.Play();
         }
+        
+        public void Restart()
+        {
+            playableDirector.Stop();
+            MovePlayableDirector(0);            
+        }
 
     }
 }

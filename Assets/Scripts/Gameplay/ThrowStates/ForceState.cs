@@ -97,7 +97,7 @@ namespace Gameplay.ThrowStates
             _force = 0;
             _numClicks = 0;
             _firstClick = false;
-            forceVisualizerController.MovePlayableDirector(0);
+            forceVisualizerController.Restart();
             countdownController.Reset();
             crowdController.MakeImpression(0);
             camerasController.Reset();
