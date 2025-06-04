@@ -10,6 +10,12 @@ namespace PlayServices
     {
         [SerializeField] private SingInView view;
 
+        private void Awake()
+        {
+            //Initialize PlayGamesPlatform
+            PlayGamesPlatform.Activate();
+        }
+        
         private void Start()
         {
             view.ShowLoading();
@@ -28,11 +34,10 @@ namespace PlayServices
             else
             {
                 view.ShowLogin(() =>
-                    {
-                        view.ShowLoading();
-                        PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication);
-                    }
-                );
+                {
+                    view.ShowLoading();
+                    PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication);
+                });
             }
         }
     }
