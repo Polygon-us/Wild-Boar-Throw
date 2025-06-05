@@ -38,7 +38,7 @@ namespace GooglePlayGames {
 
         public const string ApplicationId = "45528494795"; // Filled in automatically
         public const string IosClientId = "__IOS_CLIENTID__"; // Filled in automatically
-        public const string WebClientId = "45528494795-nf0651hvojf5q6cpk6ahsb5ufqterua7.apps.googleusercontent.com"; // Filled in automatically
+        public const string WebClientId = "45528494795-78sj66s19t9lungt9cvsdr8jjrejcnfj.apps.googleusercontent.com"; // Filled in automatically
         public const string NearbyConnectionServiceId = "com.Polygonus.com.WildBoarThrow";
 
         public static bool ApplicationIdInitialized() {
