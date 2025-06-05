@@ -25,8 +25,6 @@ namespace PlayServices
 
         private void ProcessAuthentication(SignInStatus status)
         {
-            print($"Login status: {status}");
-            
             if (status == SignInStatus.Success)
             {
                 SceneManager.LoadScene(1);
