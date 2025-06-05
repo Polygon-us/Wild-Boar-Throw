@@ -1,0 +1,10 @@
+lastUpgrade=20000
+proj.pluginVersion=2.0.0
+proj.AppId=45528494795
+proj.classDir=Assets%2fScripts
+proj.ConstantsClassName=WildBoarThrow.scripts.id
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--Google+Play+game+services+IDs.+Save+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.--%3e%0d%0a%3cresources%3e%0d%0a++%3c%21--app_id--%3e%0d%0a++%3cstring+name%3d%22app_id%22+translatable%3d%22false%22%3e45528494795%3c%2fstring%3e%0d%0a++%3c%21--package_name--%3e%0d%0a++%3cstring+name%3d%22package_name%22+translatable%3d%22false%22%3e%3c%2fstring%3e%0d%0a%3c%2fresources%3e
+and.ClientId=45528494795-78sj66s19t9lungt9cvsdr8jjrejcnfj.apps.googleusercontent.com
+android.SetupDone=true
+App.NearbdServiceId=com.Polygonus.com.WildBoarThrow
+android.NearbySetupDone=true
