@@ -10,11 +10,20 @@ namespace Gameplay.ThrowStates
         
         private InterstitialAd interstitialAd;
         
+        private bool isInitialized = false;
+        
         public override void OnEnterState(StateMachine stateMachine)
         {
             base.OnEnterState(stateMachine);
 
-            if (Random.Range(0f, 1f) > adProbability)
+            if (!isInitialized)
+            {
+                isInitialized = true;
+                stateMachine.NextState();
+                return;
+            }
+            
+            if (Random.value > adProbability)
             {
                 stateMachine.NextState();
                 return;
@@ -46,15 +55,17 @@ namespace Gameplay.ThrowStates
         {
             interstitialAd.OnAdFullScreenContentOpened += () =>
             {
-                // TODO: Mute game?
+                AudioManager.Instance.ToggleMute();
             };
+            
             // Raised when the ad closed full-screen content.
             interstitialAd.OnAdFullScreenContentClosed += () =>
             {
-                // TODO: Resume game
+                AudioManager.Instance.ToggleMute();
                 
                 StateMachine.NextState();
             };
+            
             // Raised when the ad failed to open full-screen content.
             interstitialAd.OnAdFullScreenContentFailed += (AdError error) =>
             {

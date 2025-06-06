@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else 
+        else
         {
             Destroy(gameObject);
         }
@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
         PlayMusic("Music");
         PlayAMB("Ambience");
     }
+
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(musicSounds, x => x.name == name);
@@ -102,20 +103,17 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.mute = !musicSource.mute;
     }
+
     public void ToggleSFX()
     {
         sfxSource.mute = !sfxSource.mute;
     }
-   
 
-
-
-
-
-
-
-
-
+    public void ToggleMute()
+    {
+        ToggleMusic();
+        ToggleSFX();
+    }
 
 
     //public void MusicVolume(float volume)
@@ -132,5 +130,4 @@ public class AudioManager : MonoBehaviour
 
     //To stop music
     //AudioManager.Instance.musicSource.stop();
-
 }

@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   states:
+  - {fileID: 2089577166}
   - {fileID: 1989861157}
   - {fileID: 537144641}
   - {fileID: 420501587}
@@ -158,7 +159,6 @@ MonoBehaviour:
   - {fileID: 1658575598}
   - {fileID: 1677123254}
   - {fileID: 2117003204}
-  - {fileID: 2089577166}
 --- !u!4 &346751
 Transform:
   m_ObjectHideFlags: 0
