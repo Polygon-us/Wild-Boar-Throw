@@ -13,6 +13,5 @@ namespace Gameplay.ThrowStates
             PlayerPrefs.SetInt(TutorialKey, 1);
             StateMachine.NextState();
         }
-        
     }
 }

@@ -15,12 +15,16 @@ namespace PlayServices
             //Initialize PlayGamesPlatform
             PlayGamesPlatform.Activate();
         }
-        
+
         private void Start()
         {
             view.ShowLoading();
 
+#if UNITY_EDITOR
+            SceneManager.LoadScene(1);
+#else
             PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
+#endif
         }
 
         private void ProcessAuthentication(SignInStatus status)
