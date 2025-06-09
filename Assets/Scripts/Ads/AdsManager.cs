@@ -1,3 +1,4 @@
+#if ENABLE_ADS
 using GoogleMobileAds.Api;
 using UnityEngine;
 
@@ -7,7 +8,9 @@ namespace Ads
     {
         private void Start()
         {
+            #if Enable_Ads
             MobileAds.Initialize(OnInitializationComplete);
+            #endif
         }
 
         private void OnInitializationComplete(InitializationStatus status)
@@ -33,3 +36,4 @@ namespace Ads
         }
     }
 }
+#endif
