@@ -8,9 +8,9 @@ namespace Ads
     {
         private void Start()
         {
-            #if Enable_Ads
+#if ENABLE_ADS
             MobileAds.Initialize(OnInitializationComplete);
-            #endif
+#endif
         }
 
         private void OnInitializationComplete(InitializationStatus status)
