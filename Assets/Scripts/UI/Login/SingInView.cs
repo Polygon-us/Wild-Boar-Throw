@@ -13,7 +13,7 @@ namespace UI.Login
         public void ShowLoading()
         {
             loadingTxt.gameObject.SetActive(true);
-            loginBtn.gameObject.SetActive(true);
+            loginBtn.gameObject.SetActive(false);
         }
 
         public void ShowLogin(Action callback)

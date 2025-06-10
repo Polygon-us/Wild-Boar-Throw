@@ -25,6 +25,9 @@ namespace Gameplay.ThrowStates
             if (!isInitialized)
             {
                 isInitialized = true;
+                
+                LoadInterstitialAd();
+                
                 stateMachine.NextState();
                 return;
             }
@@ -34,30 +37,39 @@ namespace Gameplay.ThrowStates
                 stateMachine.NextState();
                 return;
             }
-            
+
+            if (interstitialAd != null && interstitialAd.CanShowAd())
+                ShowInterstitialAd();
+#else
+            stateMachine.NextState();
+#endif    
+        }  
+
+#if ENABLE_ADS
+        private void LoadInterstitialAd()
+        {
             AdsManager.CleanUpAdd(ref interstitialAd);
             
             var adRequest = new AdRequest();
 
             InterstitialAd.Load(AdIds.InterstitialID, adRequest, OnAdLoaded);
-#else
-            stateMachine.NextState();
-#endif
         }
 
-#if ENABLE_ADS
         private void OnAdLoaded(InterstitialAd ad, LoadAdError error)
         {
             if (error != null || ad == null)
             {
                 Debug.Log("Interstitial ad not loaded");
-                StateMachine.NextState();
                 return;
             }
 
             interstitialAd = ad;
-            interstitialAd.Show();
+        }
 
+        private void ShowInterstitialAd()
+        {
+            interstitialAd.Show();
+            
             AddListeners();
         }
         
@@ -73,6 +85,8 @@ namespace Gameplay.ThrowStates
             {
                 AudioManager.Instance.ToggleMute();
                 
+                LoadInterstitialAd();
+                
                 StateMachine.NextState();
             };
             
@@ -82,9 +96,10 @@ namespace Gameplay.ThrowStates
                 Debug.LogError("Interstitial ad failed to open full screen content " +
                                "with error : " + error);
                 
+                LoadInterstitialAd();
+                
                 StateMachine.NextState();
             };
-    
         }
 #endif    
         
