@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45528494795",
+    "project_id": "wild-boar-throw",
+    "storage_bucket": "wild-boar-throw.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45528494795:android:5584450654edf0c5e3a14e",
+        "android_client_info": {
+          "package_name": "com.Polygonus.WildBoarThrow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpgvijyWtYlA134W4K1l-3ew2EZBLfd8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
