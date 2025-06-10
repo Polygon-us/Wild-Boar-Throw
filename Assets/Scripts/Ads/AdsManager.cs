@@ -1,4 +1,5 @@
 #if ENABLE_ADS
+using Cysharp.Threading.Tasks;
 using GoogleMobileAds.Api;
 using UnityEngine;
 
@@ -6,15 +7,13 @@ namespace Ads
 {
     public class AdsManager : MonoBehaviour
     {
-        private void Start()
+        public async UniTask LoadAds()
         {
 #if ENABLE_ADS
-            MobileAds.Initialize(OnInitializationComplete);
+            var tcs = new UniTaskCompletionSource();
+            MobileAds.Initialize(_ => tcs.TrySetResult());
+            await tcs.Task;
 #endif
-        }
-
-        private void OnInitializationComplete(InitializationStatus status)
-        {
         }
 
         public static void CleanUpAdd(ref InterstitialAd interstitialAd)

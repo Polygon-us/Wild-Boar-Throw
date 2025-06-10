@@ -1,5 +1,5 @@
-using UnityEngine.SceneManagement;
 using GooglePlayGames.BasicApi;
+using Cysharp.Threading.Tasks;
 using GooglePlayGames;
 using UnityEngine;
 using UI.Login;
@@ -10,20 +10,22 @@ namespace PlayServices
     {
         [SerializeField] private SingInView view;
 
-        private void Awake()
+        private UniTaskCompletionSource completionSource;
+        
+        public async UniTask SignIn()
         {
-            //Initialize PlayGamesPlatform
             PlayGamesPlatform.Activate();
-        }
-
-        private void Start()
-        {
+   
             view.ShowLoading();
 
 #if UNITY_EDITOR
-            SceneManager.LoadScene(1);
-#else
+            return;
+#else 
+            completionSource = new UniTaskCompletionSource();
+            
             PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
+
+            await completionSource.Task;
 #endif
         }
 
@@ -31,7 +33,7 @@ namespace PlayServices
         {
             if (status == SignInStatus.Success)
             {
-                SceneManager.LoadScene(1);
+                completionSource.TrySetResult();
             }
             else
             {
