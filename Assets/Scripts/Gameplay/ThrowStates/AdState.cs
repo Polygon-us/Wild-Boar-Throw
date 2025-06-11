@@ -68,9 +68,9 @@ namespace Gameplay.ThrowStates
 
         private void ShowInterstitialAd()
         {
-            interstitialAd.Show();
-            
             AddListeners();
+            
+            interstitialAd.Show();
         }
         
         private void AddListeners()
