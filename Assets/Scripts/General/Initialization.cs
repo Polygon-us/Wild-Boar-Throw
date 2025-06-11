@@ -13,6 +13,8 @@ namespace General
         
         private async UniTaskVoid Start()
         {
+            Application.targetFrameRate = 60;
+            
             await singInController.SignIn();
             
 #if ENABLE_ADS
