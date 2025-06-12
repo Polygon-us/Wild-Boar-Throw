@@ -7986,7 +7986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FramingMode: 1
   FramingSize: 1
-  CenterOffset: {x: 0, y: 0.4}
+  CenterOffset: {x: 0, y: 0.1}
   Damping: 3
   SizeAdjustment: 1
   LateralAdjustment: 0
