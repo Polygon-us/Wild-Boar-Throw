@@ -17,7 +17,7 @@ namespace UI.MainMenu
         {
             startButton.onClick.AddListener(StartGame);
             exitButton.onClick.AddListener(ExitGame);
-            
+
             EnableMobileKeyboard(false);
         }
 
@@ -27,7 +27,7 @@ namespace UI.MainMenu
             WebGLInput.mobileKeyboardSupport = on;
 #endif
         }
-        
+
         private void StartGame()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

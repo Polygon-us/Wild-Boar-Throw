@@ -1,4 +1,3 @@
-#if ENABLE_ADS
 using Cysharp.Threading.Tasks;
 using GoogleMobileAds.Api;
 using UnityEngine;
@@ -35,4 +34,3 @@ namespace Ads
         }
     }
 }
-#endif

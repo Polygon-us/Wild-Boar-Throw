@@ -84,10 +84,8 @@ namespace UI.Gameplay
                 _currentDistance = Vector3.Distance(MainCamera.transform.position, boar.position);
 
                 Vector3 screenPos = MainCamera.WorldToScreenPoint(boar.position);
-                screenPos.x *= _referenceResolution.x / Screen.width;
-                screenPos.y *= _referenceResolution.y / Screen.height;
-                _screenPos = screenPos +
-                             offset * _initialDistance / _currentDistance;
+                screenPos *= _referenceResolution.x / Screen.width;
+                _screenPos = screenPos + offset * _initialDistance / _currentDistance;
             }
 
             _distanceToPos = Vector2.Distance(_rectRoot.anchoredPosition, _screenPos);

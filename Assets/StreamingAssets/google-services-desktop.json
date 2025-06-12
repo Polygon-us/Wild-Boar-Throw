@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:45528494795:android:5584450654edf0c5e3a14e",
+        "mobilesdk_app_id": "1:45528494795:android:79207957de94978fe3a14e",
         "android_client_info": {
-          "package_name": "com.Polygonus.WildBoarThrow"
+          "package_name": "com.Polygonus.com.WildBoarThrow"
         }
       },
       "oauth_client": [],
