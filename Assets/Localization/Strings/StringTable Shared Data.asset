@@ -51,6 +51,14 @@ MonoBehaviour:
     m_Key: Tutorial/Angle
     m_Metadata:
       m_Items: []
+  - m_Id: 83737794965504
+    m_Key: SelectAngle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84568430735360
+    m_Key: CloseBtn
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

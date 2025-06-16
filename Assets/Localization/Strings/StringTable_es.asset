@@ -62,6 +62,14 @@ MonoBehaviour:
       los 45\xB0, \xA1mejor sera tu tiro!"
     m_Metadata:
       m_Items: []
+  - m_Id: 83737794965504
+    m_Localized: "\xA1 Ahora selecciona\nel \xE1ngulo !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84568430735360
+    m_Localized: Cerrar
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

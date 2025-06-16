@@ -61,6 +61,14 @@ MonoBehaviour:
       will be!"
     m_Metadata:
       m_Items: []
+  - m_Id: 83737794965504
+    m_Localized: "Now select \nan angle !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84568430735360
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
