@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 59170015801344
-    m_Localized: Clicks {0}
+    m_Localized: Clics {0}
     m_Metadata:
       m_Items:
       - rid: 7713385611381178447
