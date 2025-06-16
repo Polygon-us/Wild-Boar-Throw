@@ -2,6 +2,9 @@ using UnityEngine.UI;
 using UnityEngine;
 using UI.Generic;
 using TMPro;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization.PropertyVariants.TrackedProperties;
 
 namespace Gameplay.Controllers
 {
@@ -15,7 +18,7 @@ namespace Gameplay.Controllers
         [Header("UI")]
         [SerializeField] private RectTransform panel;
         [SerializeField] private Button clickBtn;
-        [SerializeField] private TMP_Text stateText;
+        [SerializeField] private LocalizeStringEvent stateText;
         [SerializeField] private TweenParams tweenParams;
         
         public float MaxForce => maxForce;
@@ -26,7 +29,7 @@ namespace Gameplay.Controllers
 
         public Button ClickBtn => clickBtn;
 
-        public TMP_Text StateText => stateText;
+        public LocalizeStringEvent StateText => stateText;
 
         private int _tweenId;
         private Vector3 _startPos;
