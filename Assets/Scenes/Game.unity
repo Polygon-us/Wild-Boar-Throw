@@ -2734,17 +2734,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 937682159626830573, guid: 38b737426155c1c4aadf079664282789, type: 3}
   m_PrefabInstance: {fileID: 293120244}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &466231524 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4226016660957327335, guid: 5c75a4d4fb0f81340b6f9f94cfad74d4, type: 3}
-  m_PrefabInstance: {fileID: 5575877911629463724}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &466231526 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2783591598316782009, guid: 5c75a4d4fb0f81340b6f9f94cfad74d4, type: 3}
@@ -3183,9 +3172,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9c43ef252da5847bccf2283c392e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialMsg: "\xA1Tendr\xE1s solo <color=#ff1414>3 segundos</color>! Pulsa r\xE1pidamente
-    en cualquier lugar de la pantalla para lanzar al jabal\xED lo m\xE1s lejos posible."
+  tutorialMsg:
+    m_TableReference:
+      m_TableCollectionName: GUID:e631c447327d2924dae9d492eeb91048
+    m_TableEntryReference:
+      m_KeyId: 70566166261760
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   tutorialController: {fileID: 566165196}
+  references:
+    version: 2
+    RefIds: []
 --- !u!4 &537144642
 Transform:
   m_ObjectHideFlags: 0
@@ -7582,6 +7581,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 674051788453701092, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
   m_PrefabInstance: {fileID: 1314296670}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1318817514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5522037506580781786, guid: 5c75a4d4fb0f81340b6f9f94cfad74d4, type: 3}
+  m_PrefabInstance: {fileID: 5575877911629463724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1331135753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8460,7 +8470,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   panel: {fileID: 466231526}
   clickBtn: {fileID: 985906556}
-  stateText: {fileID: 466231524}
+  stateText: {fileID: 1318817514}
   tweenParams:
     duration: 0.5
     inType: 6
@@ -8626,10 +8636,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9c43ef252da5847bccf2283c392e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialMsg: "\xA1Tambi\xE9n tendr\xE1s <color=#ff1414>3 segundos</color>! Ajusta
-    cuidadosamente el \xE1ngulo de lanzamiento. Entre m\xE1s cerca est\xE9s de los
-    45\xB0, \xA1mejor sera tu tiro!"
+  tutorialMsg:
+    m_TableReference:
+      m_TableCollectionName: GUID:e631c447327d2924dae9d492eeb91048
+    m_TableEntryReference:
+      m_KeyId: 70702837657600
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   tutorialController: {fileID: 566165196}
+  references:
+    version: 2
+    RefIds: []
 --- !u!4 &1502236368
 Transform:
   m_ObjectHideFlags: 0
@@ -10876,10 +10895,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9c43ef252da5847bccf2283c392e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialMsg: "\xA1Bienvenido a <color=#ff1414>Wild Boar Throw</color>!\r\n\r\n\xBFListo
-    para la acci\xF3n? Antes de empezar, te guiaremos con un breve tutorial para
-    que domines la din\xE1mica del juego.\r"
+  tutorialMsg:
+    m_TableReference:
+      m_TableCollectionName: GUID:e631c447327d2924dae9d492eeb91048
+    m_TableEntryReference:
+      m_KeyId: 69784146669568
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   tutorialController: {fileID: 566165196}
+  references:
+    version: 2
+    RefIds: []
 --- !u!4 &1989861158
 Transform:
   m_ObjectHideFlags: 0

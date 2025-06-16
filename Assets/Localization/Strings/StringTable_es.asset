@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: e631c447327d2924dae9d492eeb91048, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 7713385611381178447
+  m_TableData:
+  - m_Id: 95495417856
+    m_Localized: Jugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 173136179200
+    m_Localized: Opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 217738407936
+    m_Localized: Puntuaciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 291667210240
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59170015801344
+    m_Localized: Clics {0}
+    m_Metadata:
+      m_Items:
+      - rid: 7713385611381178447
+  - m_Id: 69698591256576
+    m_Localized: Reiniciar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69784146669568
+    m_Localized: "\xA1Bienvenido a <color=#ff1414>Wild Boar Throw</color>!\r\n\r\n\xBFListo
+      para la acci\xF3n? Antes de empezar, te guiaremos con un breve tutorial para
+      que domines la din\xE1mica del juego.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70566166261760
+    m_Localized: "\xA1Tendr\xE1s solo <color=#ff1414>3 segundos</color>! Pulsa r\xE1pidamente
+      en cualquier lugar de la pantalla para lanzar al jabal\xED lo m\xE1s lejos
+      posible."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70702837657600
+    m_Localized: "\xA1Tambi\xE9n tendr\xE1s <color=#ff1414>3 segundos</color>! Ajusta
+      cuidadosamente el \xE1ngulo de lanzamiento. Entre m\xE1s cerca est\xE9s de
+      los 45\xB0, \xA1mejor sera tu tiro!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83737794965504
+    m_Localized: "\xA1 Ahora selecciona\nel \xE1ngulo !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84568430735360
+    m_Localized: Cerrar
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 7713385611381178447
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 59170015801344
