@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: e631c447327d2924dae9d492eeb91048, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 7713385611381178450
   m_TableData:
   - m_Id: 95495417856
     m_Localized: Play
@@ -34,6 +35,38 @@ MonoBehaviour:
     m_Localized: Exit
     m_Metadata:
       m_Items: []
+  - m_Id: 59170015801344
+    m_Localized: Clics {0}
+    m_Metadata:
+      m_Items:
+      - rid: 7713385611381178450
+  - m_Id: 69698591256576
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69784146669568
+    m_Localized: "Welcome to <color=#ff1414>Wild Boar Throw</color>!\r\n\r\nReady
+      for action? Before we get started, we'll guide you through a brief tutorial
+      to help you master the dynamics of the game.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70566166261760
+    m_Localized: You will have only <color=#ff1414>3 seconds</color>! Quickly click
+      anywhere on the screen to throw the boar as far as possible.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70702837657600
+    m_Localized: "You will also have <color=#ff1414>3 seconds</color>! Carefully
+      adjust your launch angle. The closer you are to 45\xB0, the better your shot
+      will be!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 7713385611381178450
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 59170015801344

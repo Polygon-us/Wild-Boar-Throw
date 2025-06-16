@@ -1,3 +1,4 @@
+using UnityEngine.Localization;
 using Gameplay.Controllers;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace Gameplay.ThrowStates
     {
         private const string TutorialKey = "Tutorial";
         
-        [SerializeField, TextArea] private string tutorialMsg;
+        [SerializeField] private LocalizedString tutorialMsg;
         [Space]
         [SerializeField] private TutorialController tutorialController;
         
@@ -20,7 +21,7 @@ namespace Gameplay.ThrowStates
             if (IsTutorialDone)
                 StateMachine.NextState();
             else
-                tutorialController.Open(tutorialMsg, StateMachine.NextState);
+                tutorialController.Open(tutorialMsg.GetLocalizedString(), StateMachine.NextState);
         }
         
     }

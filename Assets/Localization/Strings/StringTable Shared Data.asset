@@ -31,6 +31,26 @@ MonoBehaviour:
     m_Key: ExitBtn
     m_Metadata:
       m_Items: []
+  - m_Id: 59170015801344
+    m_Key: Force
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69698591256576
+    m_Key: ResetBtn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69784146669568
+    m_Key: Tutorial/Welcome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70566166261760
+    m_Key: Tutorial/Force
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70702837657600
+    m_Key: Tutorial/Angle
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
