@@ -7,13 +7,13 @@ namespace PlayServices
     {
         public static void ShowLeaderboard()
         {
-            PlayGamesPlatform.Instance.ShowLeaderboardUI(id.leaderboard_distance);
+            PlayGamesPlatform.Instance.ShowLeaderboardUI(id.leaderboard_throw);
         }
 
         public static void PostLeaderboard(float distance)
         {
             Debug.Log("Post leaderboard");
-            PlayGamesPlatform.Instance.ReportScore((long)distance, id.leaderboard_distance, OnPostLeaderboard);
+            PlayGamesPlatform.Instance.ReportScore((long)distance, id.leaderboard_throw, OnPostLeaderboard);
         }
 
         private static void OnPostLeaderboard(bool result)

@@ -25,7 +25,7 @@ namespace PlayServices
 {
 public static class id
 {
-        public const string leaderboard_distance = "CgkIy-XWzakBEAIQAQ"; // <GPGSID>
+        public const string leaderboard_throw = "CgkIy-XWzakBEAIQAg"; // <GPGSID>
 
 }
 }
