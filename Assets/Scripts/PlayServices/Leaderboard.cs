@@ -12,7 +12,7 @@ namespace PlayServices
 
         public static void PostLeaderboard(float distance)
         {
-            Debug.Log("Post leaderboard");
+            Debug.Log($"Posted {(long)distance} to leaderboard");
             PlayGamesPlatform.Instance.ReportScore((long)distance, id.leaderboard_throw, OnPostLeaderboard);
         }
 
