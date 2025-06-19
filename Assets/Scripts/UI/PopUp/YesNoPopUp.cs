@@ -100,7 +100,7 @@ namespace UI.PopUp
 
         public void Yes()
         {
-            Close(0.1f);
+            Close(0.2f);
 
             onYes?.Invoke();
         }

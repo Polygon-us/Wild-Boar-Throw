@@ -1,9 +1,7 @@
-using System;
-using General;
-using UI.PopUp;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
 using UnityEngine;
+using UI.PopUp;
+using General;
 
 namespace Gameplay.Controllers
 {
@@ -52,8 +50,8 @@ namespace Gameplay.Controllers
             YesNoPopUp.Instance.Open
             ( 
                 "Do you want to return to main menu?",
-                "continue",
-                "exit",
+                "Exit",
+                "Continue",
                 onYesAction: GoToMainMenu,
                 onNoAction: Resume
             );

@@ -1,9 +1,8 @@
-using System;
-using General;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using PlayServices;
 using UnityEngine;
+using General;
 
 #if UNITY_EDITOR
 using UnityEditor;
