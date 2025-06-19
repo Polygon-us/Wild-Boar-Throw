@@ -46,18 +46,7 @@ namespace General
             Application.Quit();
 #endif
         }
-
-        public static void ShowCloseGameAlert()
-        {
-            YesNoPopUp.Instance.Open
-            (
-                "Vas a salirte del juego",
-                "Salir",
-                "Cancelar",
-                onYesAction: ExitGame
-            );
-        }
-
+        
         public static void AddAction(Action action)
         {
             _ = Instance;

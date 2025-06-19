@@ -5340,6 +5340,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec83a55eb1101a40aae8a832be21b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupTexts:
+    popupMessage:
+      m_TableReference:
+        m_TableCollectionName: GUID:8cbd6840281140642a0e6eabb42588be
+      m_TableEntryReference:
+        m_KeyId: 1286619918336
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    popupYesTxt:
+      m_TableReference:
+        m_TableCollectionName: GUID:8cbd6840281140642a0e6eabb42588be
+      m_TableEntryReference:
+        m_KeyId: 1452177485824
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    popupNoTxt:
+      m_TableReference:
+        m_TableCollectionName: GUID:8cbd6840281140642a0e6eabb42588be
+      m_TableEntryReference:
+        m_KeyId: 1507076730880
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &920227809
 PrefabInstance:
   m_ObjectHideFlags: 0

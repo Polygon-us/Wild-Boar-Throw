@@ -78,10 +78,6 @@ MonoBehaviour:
     m_Localized: Continuar
     m_Metadata:
       m_Items: []
-  - m_Id: 724618716934144
-    m_Localized: "\xBFQuieres salir al men\xFA principal?"
-    m_Metadata:
-      m_Items: []
   references:
     version: 2
     RefIds:

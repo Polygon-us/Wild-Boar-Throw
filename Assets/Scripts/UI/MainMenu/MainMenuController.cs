@@ -2,7 +2,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using PlayServices;
 using UnityEngine;
+using UI.PopUp;
 using General;
+using Utils;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -16,14 +18,17 @@ namespace UI.MainMenu
         [SerializeField] private Button leaderboardButton;
         [SerializeField] private Button exitButton;
 
+        [Header("Popup")] 
+        [SerializeField] private PopupLocalizedText popupTexts;
+        
         private void OnEnable()
         {
-            ExitController.AddAction(ExitController.ShowCloseGameAlert);
+            ExitController.AddAction(ShowCloseGameAlert);
         }
 
         private void OnDisable()
         {
-            ExitController.RemoveAction(ExitController.ShowCloseGameAlert);
+            ExitController.RemoveAction(ShowCloseGameAlert);
         }
 
         private void Awake()
@@ -47,6 +52,17 @@ namespace UI.MainMenu
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
+        private void ShowCloseGameAlert()
+        {
+            YesNoPopUp.Instance.Open
+            (
+                popupTexts.popupMessage.GetLocalizedString(),
+                popupTexts.popupYesTxt.GetLocalizedString(),
+                popupTexts.popupNoTxt.GetLocalizedString(),
+                ExitGame
+            );
+        }
+        
         private static void ShowLeaderboard()
         {
             Leaderboard.ShowLeaderboard();

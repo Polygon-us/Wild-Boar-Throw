@@ -2,11 +2,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using UI.PopUp;
 using General;
+using Utils;
 
 namespace Gameplay.Controllers
 {
     public class PauseController : MonoBehaviour
     {
+        [Header("Popup")] [SerializeField] private PopupLocalizedText popupTexts;
+
         private bool isPaused;
 
         private void OnEnable()
@@ -23,7 +26,7 @@ namespace Gameplay.Controllers
         {
             isPaused = false;
         }
-        
+
         private void TogglePause()
         {
             if (isPaused)
@@ -48,10 +51,10 @@ namespace Gameplay.Controllers
         private void Open()
         {
             YesNoPopUp.Instance.Open
-            ( 
-                "Do you want to return to main menu?",
-                "Exit",
-                "Continue",
+            (
+                popupTexts.popupMessage.GetLocalizedString(),
+                popupTexts.popupYesTxt.GetLocalizedString(),
+                popupTexts.popupNoTxt.GetLocalizedString(),
                 onYesAction: GoToMainMenu,
                 onNoAction: Resume
             );

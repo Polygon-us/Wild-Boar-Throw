@@ -2703,6 +2703,37 @@ MonoBehaviour:
   startButton: {fileID: 1712634649}
   leaderboardButton: {fileID: 1094725030}
   exitButton: {fileID: 1829428172}
+  popupTexts:
+    popupMessage:
+      m_TableReference:
+        m_TableCollectionName: GUID:8cbd6840281140642a0e6eabb42588be
+      m_TableEntryReference:
+        m_KeyId: 992414658560
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    popupYesTxt:
+      m_TableReference:
+        m_TableCollectionName: GUID:8cbd6840281140642a0e6eabb42588be
+      m_TableEntryReference:
+        m_KeyId: 1135255875584
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    popupNoTxt:
+      m_TableReference:
+        m_TableCollectionName: GUID:8cbd6840281140642a0e6eabb42588be
+      m_TableEntryReference:
+        m_KeyId: 1181091229696
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1829428170
 GameObject:
   m_ObjectHideFlags: 0

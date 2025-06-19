@@ -67,10 +67,6 @@ MonoBehaviour:
     m_Key: CancelBtn
     m_Metadata:
       m_Items: []
-  - m_Id: 724618716934144
-    m_Key: ExitTxt
-    m_Metadata:
-      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
