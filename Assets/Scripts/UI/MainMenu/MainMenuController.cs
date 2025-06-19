@@ -1,3 +1,5 @@
+using System;
+using General;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using PlayServices;
@@ -14,6 +16,16 @@ namespace UI.MainMenu
         [SerializeField] private Button startButton;
         [SerializeField] private Button leaderboardButton;
         [SerializeField] private Button exitButton;
+
+        private void OnEnable()
+        {
+            ExitController.AddAction(ExitController.ShowCloseGameAlert);
+        }
+
+        private void OnDisable()
+        {
+            ExitController.RemoveAction(ExitController.ShowCloseGameAlert);
+        }
 
         private void Awake()
         {
@@ -41,13 +53,9 @@ namespace UI.MainMenu
             Leaderboard.ShowLeaderboard();
         }
 
-        private void ExitGame()
+        private static void ExitGame()
         {
-#if UNITY_EDITOR
-            EditorApplication.ExitPlaymode();
-#else
-            Application.Quit();
-#endif
+            ExitController.ExitGame();
         }
     }
 }
