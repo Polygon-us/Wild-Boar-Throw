@@ -7,6 +7,9 @@ namespace Gameplay.ThrowStates
 {
     public class LandedState : StateBase
     {
+        private const string BadShotTxt = "BadShot";
+        private const string NiceShotTxt = "NiceShot";
+        
         [SerializeField] private CamerasController cameraController;
         [SerializeField] private Transform hideOnLanding;
         [SerializeField] private CinemachineTargetGroup targetGroup;
@@ -32,25 +35,12 @@ namespace Gameplay.ThrowStates
                     targetGroup.Targets[^1].Weight = value + 1;
                     targetGroup.Targets[0].Weight = 1 - value;
                 })
-                .setOnComplete(OnLandedComplete)
+                .setOnComplete(StateMachine.NextState)
                 .uniqueId;
 
-            if(BThrower.BoarDistance< 15f)
-            {
-                AudioManager.Instance.PlayUI("BadShot");
-            }
-            else
-            {
-                AudioManager.Instance.PlayUI("NiceShot");
-
-            }
-        }
-
-        private void OnLandedComplete()
-        {
-            Leaderboard.PostLeaderboard(BThrower.BoarDistance);
+            AudioManager.Instance.PlayUI(BThrower.BoarDistance < 15f ? BadShotTxt : NiceShotTxt);
             
-            StateMachine.NextState();
+            Leaderboard.PostLeaderboard(BThrower.BoarDistance);
         }
 
         public override void OnReset()

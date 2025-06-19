@@ -1,4 +1,3 @@
-
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -20,8 +19,8 @@ namespace Gameplay.Controllers
         {
             isPaused = false;
             
-            exitButton.onClick.AddListener(GoToMainMenu);
-            continueButton.onClick.AddListener(Resume);
+            exitButton.onClick.AddListener(OnExit);
+            continueButton.onClick.AddListener(OnContinue);
         }
 
         private void Start()
@@ -39,6 +38,17 @@ namespace Gameplay.Controllers
                 Resume();
             else
                 Pause();
+        }
+        
+        private void OnExit()
+        {
+            Resume();
+            GoToMainMenu();
+        }
+        
+        private void OnContinue()
+        {
+            Resume();
         }
 
         private void Pause()
