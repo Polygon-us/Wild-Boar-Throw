@@ -10,7 +10,9 @@ namespace Gameplay.Controllers
     {
         [Header("Popup")] [SerializeField] private PopupLocalizedText popupTexts;
 
-        private bool isPaused;
+        private static bool isPaused;
+        
+        public static bool IsPaused => isPaused;
 
         private void OnEnable()
         {

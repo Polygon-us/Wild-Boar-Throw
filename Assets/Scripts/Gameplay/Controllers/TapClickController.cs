@@ -18,6 +18,9 @@ namespace Gameplay.Controllers
 
         private static void Click(InputAction.CallbackContext context)
         {
+            if (PauseController.IsPaused)
+                return;
+            
             OnClick?.Invoke();
         }
 
