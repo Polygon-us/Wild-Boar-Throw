@@ -21,7 +21,7 @@ namespace Ads
 
         private void AddListeners()
         {
-            bannerView.OnBannerAdLoaded += () => SafeArea.OnAdSafeAreaChanged(bannerView.GetHeightInPixels());
+            bannerView.OnBannerAdLoaded += () => SafeArea.SetAdSafeArea(bannerView.GetHeightInPixels());
         }
         
         private void OnDestroy()

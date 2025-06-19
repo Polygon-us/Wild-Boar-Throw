@@ -1,16 +1,19 @@
 using Gameplay.Controllers;
 using Unity.Cinemachine;
+using PlayServices;
 using UnityEngine;
 
 namespace Gameplay.ThrowStates
 {
     public class LandedState : StateBase
     {
+        private const string BadShotTxt = "BadShot";
+        private const string NiceShotTxt = "NiceShot";
+        
         [SerializeField] private CamerasController cameraController;
         [SerializeField] private Transform hideOnLanding;
         [SerializeField] private CinemachineTargetGroup targetGroup;
         [SerializeField] private float landingCamTransitionDuration = 2f;
-        [SerializeField] private Vector3 hideOnLandingPosition = new Vector3(-35f, 0.2f, 70f);
         [SerializeField] private BoarThrower BThrower;
 
         private int _tween;
@@ -31,25 +34,13 @@ namespace Gameplay.ThrowStates
                 {
                     targetGroup.Targets[^1].Weight = value + 1;
                     targetGroup.Targets[0].Weight = 1 - value;
-
-                    /*if (value <= 0.5)
-                    {
-                        hideOnLanding.localPosition = new Vector3(-35f, 0.2f, 70f);
-                        hideOnLanding.eulerAngles = new Vector3(0, 0, 20);
-                    }*/
                 })
                 .setOnComplete(StateMachine.NextState)
                 .uniqueId;
 
-            if(BThrower.BoarDistance< 15f)
-            {
-                AudioManager.Instance.PlayUI("BadShot");
-            }
-            else
-            {
-                AudioManager.Instance.PlayUI("NiceShot");
-
-            }
+            AudioManager.Instance.PlayUI(BThrower.BoarDistance < 15f ? BadShotTxt : NiceShotTxt);
+            
+            Leaderboard.PostLeaderboard(BThrower.BoarDistance);
         }
 
         public override void OnReset()

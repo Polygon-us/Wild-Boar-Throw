@@ -1,6 +1,10 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using PlayServices;
 using UnityEngine;
+using UI.PopUp;
+using General;
+using Utils;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -11,11 +15,26 @@ namespace UI.MainMenu
     public class MainMenuController : MonoBehaviour
     {
         [SerializeField] private Button startButton;
+        [SerializeField] private Button leaderboardButton;
         [SerializeField] private Button exitButton;
+
+        [Header("Popup")] 
+        [SerializeField] private PopupLocalizedText popupTexts;
+        
+        private void OnEnable()
+        {
+            ExitController.AddAction(ShowCloseGameAlert);
+        }
+
+        private void OnDisable()
+        {
+            ExitController.RemoveAction(ShowCloseGameAlert);
+        }
 
         private void Awake()
         {
             startButton.onClick.AddListener(StartGame);
+            leaderboardButton.onClick.AddListener(ShowLeaderboard);
             exitButton.onClick.AddListener(ExitGame);
 
             EnableMobileKeyboard(false);
@@ -33,13 +52,25 @@ namespace UI.MainMenu
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
-        private void ExitGame()
+        private void ShowCloseGameAlert()
         {
-#if UNITY_EDITOR
-            EditorApplication.ExitPlaymode();
-#else
-            Application.Quit();
-#endif
+            YesNoPopUp.Instance.Open
+            (
+                popupTexts.popupMessage.GetLocalizedString(),
+                popupTexts.popupYesTxt.GetLocalizedString(),
+                popupTexts.popupNoTxt.GetLocalizedString(),
+                ExitGame
+            );
+        }
+        
+        private static void ShowLeaderboard()
+        {
+            Leaderboard.ShowLeaderboard();
+        }
+
+        private static void ExitGame()
+        {
+            ExitController.ExitGame();
         }
     }
 }

@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Popups Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Popups
+  m_TableCollectionNameGuidString: 8cbd6840281140642a0e6eabb42588be
+  m_Entries:
+  - m_Id: 992414658560
+    m_Key: Exit/Msg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1135255875584
+    m_Key: Exit/Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1181091229696
+    m_Key: Exit/No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1286619918336
+    m_Key: MainMenu/Msg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1452177485824
+    m_Key: MainMenu/Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1507076730880
+    m_Key: MainMenu/No
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7713385679503753291
+  references:
+    version: 2
+    RefIds:
+    - rid: 7713385679503753291
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1750367166201

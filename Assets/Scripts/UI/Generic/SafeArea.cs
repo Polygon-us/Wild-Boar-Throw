@@ -10,7 +10,7 @@ namespace UI.Generic
         private Vector2 minAnchor;
         private Vector2 maxAnchor;
 
-        public static Action<float> OnAdSafeAreaChanged;
+        private static Action<float> OnAdSafeAreaChanged;
 
         private void OnEnable()
         {
@@ -27,6 +27,11 @@ namespace UI.Generic
             rectTransform = GetComponent<RectTransform>();
 
             CalculateAnchors(Screen.safeArea);
+        }
+
+        public static void SetAdSafeArea(float height)
+        {
+            OnAdSafeAreaChanged?.Invoke(height);       
         }
         
         private void CalculateAnchors(Rect _safeArea)

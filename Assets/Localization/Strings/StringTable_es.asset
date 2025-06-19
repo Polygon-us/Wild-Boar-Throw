@@ -70,6 +70,14 @@ MonoBehaviour:
     m_Localized: Cerrar
     m_Metadata:
       m_Items: []
+  - m_Id: 723864002260992
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723912685547520
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

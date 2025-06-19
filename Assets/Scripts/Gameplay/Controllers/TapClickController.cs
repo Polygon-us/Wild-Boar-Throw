@@ -13,18 +13,17 @@ namespace Gameplay.Controllers
         private void Start()
         {
             clickAction = InputSystem.actions.FindAction("Click");
+            clickAction.started += Click;
         }
 
-        private void Update()
+        private static void Click(InputAction.CallbackContext context)
         {
-            if (clickAction.WasPressedThisFrame())
-            {
-                OnClick?.Invoke();
-            }
+            OnClick?.Invoke();
+        }
 
-            if (clickAction.WasReleasedThisFrame())
-            {
-            }
+        private void OnDisable()
+        {
+            clickAction.performed -= Click;
         }
     }
 }

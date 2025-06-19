@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 99c9720ab356a0642a771bea13969a05
+  m_OcclusionCullingData: {fileID: 36300000, guid: e419e556029504e40b8fb87716435d49, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -305,6 +305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -381,6 +385,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (113)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -521,6 +529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (95)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -591,6 +603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -657,6 +673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -722,6 +742,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (104)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -884,6 +908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -949,6 +977,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (122)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1016,6 +1048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (107)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1081,6 +1117,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1148,6 +1188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1213,6 +1257,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (124)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1330,6 +1378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1395,6 +1447,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1522,6 +1578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (111)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1584,6 +1644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1594,37 +1658,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 674051788453701092, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
   m_PrefabInstance: {fileID: 256887156}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &263315192
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 263315193}
-  m_Layer: 0
-  m_Name: Crowd
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &263315193
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263315192}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.9, y: 44.648525, z: 128.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 367327112}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &269532572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1680,6 +1713,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (110)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1807,6 +1844,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2146,6 +2187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2156,38 +2201,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 674051788453701092, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
   m_PrefabInstance: {fileID: 349745324}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &367327111
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 367327112}
-  m_Layer: 0
-  m_Name: LeftSide
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &367327112
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367327111}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.1, y: 0, z: 54.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 263315193}
-  m_Father: {fileID: 466523641}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &395251145
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,6 +2417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2521,6 +2538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (94)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2586,6 +2607,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2653,6 +2678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2719,6 +2748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (99)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2768,7 +2801,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 367327112}
   - {fileID: 951621524}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2823,6 +2855,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2889,6 +2925,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2960,6 +3000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3025,6 +3069,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3095,6 +3143,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3252,6 +3304,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3317,6 +3373,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (96)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3433,6 +3493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3503,6 +3567,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3621,6 +3689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3683,6 +3755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (84)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3744,6 +3820,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3811,6 +3891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3876,6 +3960,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (123)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4196,6 +4284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4432,6 +4524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (112)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4493,6 +4589,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4564,6 +4664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4629,6 +4733,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (98)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4701,6 +4809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (117)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4762,6 +4874,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4882,6 +4998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4947,6 +5067,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5014,6 +5138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5079,6 +5207,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5150,6 +5282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5160,6 +5296,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 674051788453701092, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
   m_PrefabInstance: {fileID: 900596415}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &915862874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 915862875}
+  - component: {fileID: 915862876}
+  m_Layer: 0
+  m_Name: PauseController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &915862875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915862874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1210890702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &915862876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915862874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec83a55eb1101a40aae8a832be21b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupTexts:
+    popupMessage:
+      m_TableReference:
+        m_TableCollectionName: GUID:8cbd6840281140642a0e6eabb42588be
+      m_TableEntryReference:
+        m_KeyId: 1286619918336
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    popupYesTxt:
+      m_TableReference:
+        m_TableCollectionName: GUID:8cbd6840281140642a0e6eabb42588be
+      m_TableEntryReference:
+        m_KeyId: 1452177485824
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    popupNoTxt:
+      m_TableReference:
+        m_TableCollectionName: GUID:8cbd6840281140642a0e6eabb42588be
+      m_TableEntryReference:
+        m_KeyId: 1507076730880
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &920227809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5215,6 +5426,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5297,6 +5512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (103)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5362,6 +5581,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5506,6 +5729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5567,6 +5794,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5634,6 +5865,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (115)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5700,6 +5935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (105)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5761,6 +6000,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5850,6 +6093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5920,6 +6167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5985,6 +6236,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6105,6 +6360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6171,6 +6430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6232,6 +6495,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6298,6 +6565,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6370,6 +6641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (114)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6436,6 +6711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6497,6 +6776,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6564,6 +6847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (109)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6629,6 +6916,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6696,6 +6987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6761,6 +7056,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6903,6 +7202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7008,6 +7311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7077,6 +7384,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (102)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7148,6 +7459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (100)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7191,6 +7506,7 @@ Transform:
   - {fileID: 1490453891}
   - {fileID: 1648399723}
   - {fileID: 2136060922}
+  - {fileID: 915862875}
   - {fileID: 198341330}
   - {fileID: 610457162}
   - {fileID: 665959104}
@@ -7300,6 +7616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (121)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7369,6 +7689,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7443,6 +7767,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7509,6 +7837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7570,6 +7902,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7652,6 +7988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7729,6 +8069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (119)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7795,6 +8139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7856,6 +8204,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7927,6 +8279,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8098,6 +8454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8163,6 +8523,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8234,6 +8598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (101)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8295,6 +8663,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8531,6 +8903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8596,6 +8972,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8716,6 +9096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8777,6 +9161,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8844,6 +9232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8910,6 +9302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8971,6 +9367,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9085,6 +9485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9146,6 +9550,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9212,6 +9620,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9283,6 +9695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9349,6 +9765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9414,6 +9834,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (108)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9579,10 +10003,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraController: {fileID: 610457163}
-  hideOnLanding: {fileID: 367327112}
+  hideOnLanding: {fileID: 0}
   targetGroup: {fileID: 219884065}
   landingCamTransitionDuration: 2
-  hideOnLandingPosition: {x: -13.1, y: 0, z: 54.4}
   BThrower: {fileID: 198341329}
 --- !u!1001 &1679983431
 PrefabInstance:
@@ -9639,6 +10062,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9810,6 +10237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9871,6 +10302,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9938,6 +10373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (106)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10000,6 +10439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10061,6 +10504,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10175,6 +10622,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10445,6 +10896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (116)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10511,6 +10966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10576,6 +11035,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10647,6 +11110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10712,6 +11179,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10779,6 +11250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10844,6 +11319,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10975,6 +11454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11045,6 +11528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11114,6 +11601,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11225,6 +11716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (120)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11332,6 +11827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11398,6 +11897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcosTribuna (118)
       objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11459,6 +11962,10 @@ PrefabInstance:
     - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
       propertyPath: m_Name
       value: OrcosTribuna (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377435558875261437, guid: c61ea32b40cb48243b8f10cdc942e87f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
