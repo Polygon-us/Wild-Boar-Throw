@@ -12,8 +12,9 @@ namespace PlayServices
 
         public static void PostLeaderboard(float distance)
         {
+            long score = (long)(distance * 10);
             Debug.Log($"Posted {(long)distance} to leaderboard");
-            PlayGamesPlatform.Instance.ReportScore((long)distance, id.leaderboard_throw, OnPostLeaderboard);
+            PlayGamesPlatform.Instance.ReportScore(score, id.leaderboard_throw, OnPostLeaderboard);
         }
 
         private static void OnPostLeaderboard(bool result)
