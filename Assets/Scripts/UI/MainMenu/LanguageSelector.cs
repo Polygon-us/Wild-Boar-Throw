@@ -23,7 +23,7 @@ namespace UI.MainMenu
                 var locale = LocalizationSettings.AvailableLocales.Locales[i];
                 if (LocalizationSettings.SelectedLocale == locale)
                     selected = i;
-                options.Add(new TMP_Dropdown.OptionData(locale.name));
+                options.Add(new TMP_Dropdown.OptionData(locale.LocaleName));
             }
 
             dropdown.options = options;
