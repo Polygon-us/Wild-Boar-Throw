@@ -13,6 +13,11 @@ namespace UI.Generic
         
         private RectTransform RectTransform => (RectTransform)transform;
 
+        private void OnDisable()
+        {
+            OnPointerExit(null);
+        }
+
         public void OnPointerEnter(PointerEventData eventData)
         {
             LeanTween.cancel(_tweenId);

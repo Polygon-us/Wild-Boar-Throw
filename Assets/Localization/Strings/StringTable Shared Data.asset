@@ -67,6 +67,14 @@ MonoBehaviour:
     m_Key: CancelBtn
     m_Metadata:
       m_Items: []
+  - m_Id: 5776864177582080
+    m_Key: LanguageTxt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5778822691057664
+    m_Key: BackBtn
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
