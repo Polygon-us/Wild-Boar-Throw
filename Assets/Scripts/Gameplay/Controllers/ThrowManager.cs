@@ -1,4 +1,4 @@
-using Gameplay.ThrowStates;
+using Gameplay.States;
 using UnityEngine;
 using System;
 

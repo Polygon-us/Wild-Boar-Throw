@@ -5,7 +5,7 @@ using GoogleMobileAds.Api;
 using UnityEngine;
 using Ads;
 
-namespace Gameplay.ThrowStates
+namespace Gameplay.States
 {
     public class AdState : StateBase
     {

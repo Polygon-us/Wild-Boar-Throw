@@ -1,9 +1,9 @@
 using ForceVisualizerAnimation;
 using Gameplay.Controllers;
-using UnityEngine;
 using UI.Gameplay;
+using UnityEngine;
 
-namespace Gameplay.ThrowStates
+namespace Gameplay.States
 {
     public class ReleaseState : StateBase
     {

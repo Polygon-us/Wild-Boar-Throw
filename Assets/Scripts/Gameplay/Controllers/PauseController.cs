@@ -62,7 +62,7 @@ namespace Gameplay.Controllers
             );
         }
 
-        private void GoToMainMenu()
+        public void GoToMainMenu()
         {
             Resume();
             SceneManager.LoadScene(1);

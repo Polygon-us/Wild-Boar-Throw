@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Gameplay.ThrowStates
+namespace Gameplay.States
 {
     public abstract class StateBase : MonoBehaviour
     {

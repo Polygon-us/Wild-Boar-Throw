@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gameplay.ThrowStates
+namespace Gameplay.States
 {
     public class StateMachine : MonoBehaviour
     {

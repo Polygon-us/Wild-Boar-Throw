@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: EndGame_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 46b48d1b7259ce2418715a145c7f20a4, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 80106099523453008
+  m_TableData:
+  - m_Id: 6648360960
+    m_Localized: Fin del juego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 434970685440
+    m_Localized: Distancia {global.distance:N1}m
+    m_Metadata:
+      m_Items:
+      - rid: 80106099523453008
+  - m_Id: 576536834048
+    m_Localized: Reiniciar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 654047571968
+    m_Localized: Puntuaciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 715687063552
+    m_Localized: "Men\xFA principal"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 80106099523453008
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 434970685440

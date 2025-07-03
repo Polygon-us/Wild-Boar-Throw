@@ -1,4 +1,3 @@
-using Gameplay.ThrowStates;
 using UnityEngine;
 using TMPro;
 using UI.Generic;

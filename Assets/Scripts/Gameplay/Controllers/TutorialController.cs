@@ -2,6 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UI.Generic;
 using System;
+using Utils;
 using TMPro;
 
 namespace Gameplay.Controllers
@@ -41,23 +42,16 @@ namespace Gameplay.Controllers
 
             LeanTween.value(0f, 0.5f, tweenParams.duration)
                 .setEase(tweenParams.inType)
-                .setOnUpdate(SetColor);
+                .setOnUpdate(_backgroundImage.SetAlpha);
             LeanTween.moveY(banner, 0, tweenParams.duration)
                 .setEase(tweenParams.inType);
-        }
-
-        private void SetColor(float value)
-        {
-            Color c = _backgroundImage.color;
-            c.a = value;
-            _backgroundImage.color = c;
         }
 
         private void Close()
         {
             LeanTween.value(0.5f, 0.0f, tweenParams.duration)
                 .setEase(tweenParams.outType)
-                .setOnUpdate(SetColor);
+                .setOnUpdate(_backgroundImage.SetAlpha);
 
             LeanTween.moveY(banner, UpPosition, tweenParams.duration)
                 .setEase(tweenParams.outType)

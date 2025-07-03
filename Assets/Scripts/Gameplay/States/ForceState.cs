@@ -2,7 +2,7 @@ using ForceVisualizerAnimation;
 using Gameplay.Controllers;
 using UnityEngine;
 
-namespace Gameplay.ThrowStates
+namespace Gameplay.States
 {
     public class ForceState : StateBase
     {

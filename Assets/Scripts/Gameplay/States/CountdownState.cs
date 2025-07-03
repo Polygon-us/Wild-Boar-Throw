@@ -1,7 +1,7 @@
 using Gameplay.Controllers;
 using UnityEngine;
 
-namespace Gameplay.ThrowStates
+namespace Gameplay.States
 {
     public class CountdownState : StateBase
     {

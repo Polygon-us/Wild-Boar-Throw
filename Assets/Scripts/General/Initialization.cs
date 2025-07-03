@@ -11,10 +11,13 @@ namespace General
     {
         [SerializeField] private SingInController singInController;
         [SerializeField] private AdsManager adsManager;
+        [SerializeField] private SoundController soundController;
         
         private async UniTaskVoid Start()
         {
             Application.targetFrameRate = 60;
+            
+            soundController.SetCurrentVolume();
             
             await LocalizationSettings.InitializationOperation;
             

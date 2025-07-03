@@ -1,8 +1,8 @@
-using UnityEngine.Localization;
 using Gameplay.Controllers;
 using UnityEngine;
+using UnityEngine.Localization;
 
-namespace Gameplay.ThrowStates
+namespace Gameplay.States
 {
     public class TutorialState : StateBase
     {

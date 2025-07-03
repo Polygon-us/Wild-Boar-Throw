@@ -1,9 +1,9 @@
 using Gameplay.Controllers;
-using Unity.Cinemachine;
 using PlayServices;
+using Unity.Cinemachine;
 using UnityEngine;
 
-namespace Gameplay.ThrowStates
+namespace Gameplay.States
 {
     public class LandedState : StateBase
     {
@@ -11,7 +11,6 @@ namespace Gameplay.ThrowStates
         private const string NiceShotTxt = "NiceShot";
         
         [SerializeField] private CamerasController cameraController;
-        [SerializeField] private Transform hideOnLanding;
         [SerializeField] private CinemachineTargetGroup targetGroup;
         [SerializeField] private float landingCamTransitionDuration = 2f;
         [SerializeField] private BoarThrower BThrower;

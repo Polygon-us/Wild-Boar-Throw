@@ -3,10 +3,10 @@ using System;
 namespace UI.Generic
 {
     [Serializable]
-    public struct TweenParams
+    public class TweenParams
     {
-        public float duration;
-        public LeanTweenType inType;
-        public LeanTweenType outType;
+        public float duration = 0.2f;
+        public LeanTweenType inType = LeanTweenType.easeInCubic;
+        public LeanTweenType outType = LeanTweenType.easeOutCubic;
     }
 }

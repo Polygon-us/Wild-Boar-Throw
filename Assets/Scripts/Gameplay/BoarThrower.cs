@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Gameplay.Controllers;
 using UnityEngine;
+using UnityEngine.Localization.SmartFormat.PersistentVariables;
 
 namespace Gameplay
 {
@@ -12,16 +13,29 @@ namespace Gameplay
         [SerializeField] private Boar boar;
         [SerializeField] private ForceMode forceMode;
         [SerializeField] private float maxTorque;
-
+        [SerializeField] private VariablesGroupAsset globals;
+        
         private List<Vector3> initialPositions;
         private List<Quaternion> initialRotations;
-
+        private FloatVariable distanceVariable;
+        
         [SerializeField] private Vector3 boarOffsetFromStartPoint = new Vector3(0f, 0f, 0f);
 
-        public float BoarDistance => boar.transform.position.z - startingPoint.position.z;
+        public float BoarDistance
+        {
+            get
+            {
+                float distance = boar.transform.position.z - startingPoint.position.z;
+
+                distanceVariable.Value = distance;
+
+                return distance;
+            }
+        }
 
         private void Awake()
         {
+            distanceVariable = globals["distance"] as FloatVariable;
             initialPositions = boar.BoarRbs.Select(x => x.position - boar.Parent.position).ToList();
             initialRotations = boar.BoarRbs.Select(x => x.rotation).ToList();
         }
