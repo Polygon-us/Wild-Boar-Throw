@@ -14,7 +14,8 @@ namespace UI.MainMenu
         [SerializeField] private Button settingsButton;
         [SerializeField] private Button exitButton;
 
-        [Header("Popup")] [SerializeField] private PopupLocalizedText popupTexts;
+        [Header("Popup")] 
+        [SerializeField] private PopupLocalizedText popupTexts;
 
         public Action OnStartGame;
         public Action OnLeaderboard;

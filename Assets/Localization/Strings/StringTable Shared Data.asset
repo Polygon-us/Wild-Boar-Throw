@@ -75,6 +75,14 @@ MonoBehaviour:
     m_Key: BackBtn
     m_Metadata:
       m_Items: []
+  - m_Id: 6149982814334976
+    m_Key: MusicTxt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6150061994405888
+    m_Key: SFXTxt
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -34,9 +34,12 @@ namespace UI.MainMenu
             settingsPanel.OnBack -= ShowMainMenuPanel;
         }
 
-        private void Awake()
+        private void Start()
         {
             ShowMainMenuPanel();
+            
+            settingsPanel.SetCurrentVolume();
+            
             EnableMobileKeyboard(false);
         }
 

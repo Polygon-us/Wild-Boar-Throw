@@ -7,6 +7,7 @@ namespace UI.MainMenu
 {
     public class SettingsPanel : MonoBehaviour
     {
+        [SerializeField] private SoundController soundController;
         [SerializeField] private Button backBtn;
 
         public Action OnBack;
@@ -26,6 +27,11 @@ namespace UI.MainMenu
             backBtn.onClick.AddListener(OnBackClicked);
         }
 
+        public void SetCurrentVolume()
+        {
+            soundController.SetCurrentVolume();
+        }
+        
         private void OnBackClicked()
         {
             OnBack?.Invoke();

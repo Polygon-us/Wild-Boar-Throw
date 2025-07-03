@@ -1,3 +1,4 @@
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 using Cysharp.Threading.Tasks;
 using PlayServices;
@@ -14,6 +15,8 @@ namespace General
         private async UniTaskVoid Start()
         {
             Application.targetFrameRate = 60;
+            
+            await LocalizationSettings.InitializationOperation;
             
             await singInController.SignIn();
             

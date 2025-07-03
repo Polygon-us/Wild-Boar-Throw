@@ -1,6 +1,6 @@
 using UnityEngine.Localization.Settings;
 using System.Collections.Generic;
-using System.Collections;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using TMPro;
 
@@ -10,10 +10,10 @@ namespace UI.MainMenu
     {
         public TMP_Dropdown dropdown;
 
-        private IEnumerator Start()
+        private async UniTaskVoid Start()
         {
             // Wait for the localization system to initialize
-            yield return LocalizationSettings.InitializationOperation;
+            await LocalizationSettings.InitializationOperation;
 
             // Generate list of available Locales
             var options = new List<TMP_Dropdown.OptionData>();
